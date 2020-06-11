@@ -1,0 +1,115 @@
+.header {
+  position: relative;
+
+  min-height: 906px;
+
+  background-color: $color-secondary;
+  background-image: url("../../img/bg-main-desktop@1x.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h1 {
+    width: 350px;
+    margin: 428px auto 0 auto;
+
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+
+    color: $color-secondary;
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+      width: 290px;
+      margin-top: 240px;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 628px;
+    bottom: 40px;
+    left: calc(50% - 38px);
+
+    width: 76px;
+    height: 131px;
+
+    background-image: url("../../img/scroll.png");
+
+    @media (max-width: $mobile-width) {
+      top: 500px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 605px;
+
+    background-image: url("../../img/bg-main-mobile@1x.png");
+    background-size: cover;
+    background-position: center 30px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/bg-main-mobile@2x.png");
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/bg-main-desktop@2x.png");
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 32px 110px;
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    flex-direction: column;
+    padding-left: 140px;
+    padding-right: 10px;
+    padding-top: 20px;
+    align-items: flex-end;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.header__logo {
+  width: 137px;
+  height: 48px;
+  margin-right: 20px;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+
+    width: 120px;
+    height: 42px;
+  }
+}
+
+.header__button {
+  margin: 0;
+
+  font-variant: small-caps;
+  background: none;
+  border: none;
+  border-bottom: 1px dashed $color-main;
+  cursor: pointer;
+}
+
+.header__tel {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 8px;
+  }
+}

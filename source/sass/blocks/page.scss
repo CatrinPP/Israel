@@ -1,0 +1,29 @@
+.page {
+  min-width: 320px;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: $font-main;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-main;
+  font-style: normal;
+
+  background-color: $color-secondary;
+}
+
+.page a {
+  color: $color-main;
+  text-decoration: none;
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page * {
+  box-sizing: border-box;
+}
