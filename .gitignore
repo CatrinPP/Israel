@@ -8,6 +8,7 @@ package-lock.json
 *.psd
 *.sublime*
 node_modules/
+preview/
 npm-debug.*
 source/css/*.css
 source/css/*.map
