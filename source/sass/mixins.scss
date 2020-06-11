@@ -1,0 +1,32 @@
+@mixin firasans($font, $weight) {
+  @font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/#{$font}.woff2") format("woff2"),
+      url("../fonts/#{$font}.woff") format("woff");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@mixin montserrat($font, $weight) {
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/#{$font}.woff2") format("woff2"),
+      url("../fonts/#{$font}.woff") format("woff");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@mixin raleway($font, $weight) {
+  @font-face {
+    font-family: "Raleway";
+    src: url("../fonts/#{$font}.woff2") format("woff2"),
+      url("../fonts/#{$font}.woff") format("woff");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}
