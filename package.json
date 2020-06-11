@@ -1,7 +1,7 @@
 {
   "name": "israel",
   "version": "1.0.0",
-  "description": "Проект онбордина Израиль",
+  "description": "Проект онбординга Израиль",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
