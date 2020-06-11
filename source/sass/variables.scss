@@ -1,0 +1,22 @@
+//Цвета
+$black: #484848;
+$blue: #1FC0FC;
+$white: #ffffff;
+$yellow: #FFC341;
+
+$gradient: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+
+$color-main: $black;
+$color-secondary: $white;
+$color-heading: $blue;
+
+//Шрифты
+$font-main: "Fira Sans", Arial, sans-serif;
+$font-secondary: "Raleway", Arial, sans-serif;
+$font-headers: "Montserrat", Arial, sans-serif;
+
+//Версии экранов
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
