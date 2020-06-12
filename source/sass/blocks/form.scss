@@ -1,0 +1,75 @@
+.form {
+  input {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    position: relative;
+    width: 100%;
+    padding: 20px 40px;
+    margin-bottom: 8px;
+
+    border: 2px solid $color-input;
+    border-radius: 80px;
+  }
+
+  input::placeholder {
+    color: rgba($color: $color-main, $alpha: 0.5);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    width: 264px;
+    display: block;
+    margin: 0 auto;
+    padding-left: 24px;
+
+    color: rgba($color: $color-main, $alpha: 0.74);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../img/icon-box.svg");
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    background-image: $gradient;
+  }
+
+  button {
+    width: 264px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+}
+
+.form__fieldset {
+  margin-bottom: 27px;
+}
+
+.form__bottom-wrapper {
+  position: relative;
+  left: 12px;
+
+  @media (max-width: $mobile-width) {
+    left: auto;
+  }
+}

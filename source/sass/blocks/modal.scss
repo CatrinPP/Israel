@@ -1,0 +1,159 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba($color: $color-overlay, $alpha: 0.95);
+
+  &--show {
+    display: flex;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+
+    color: $color-heading;
+    font-family: $font-headers;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+
+    @media (max-width: $mobile-width) {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  p {
+    width: 355px;
+    margin: 0;
+    margin-bottom: 32px;
+    margin-right: 0;
+
+    font-weight: 400;
+    line-height: 170%;
+
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+      line-height: 160%;
+    }
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+
+  width: 480px;
+  min-height: 521px;
+  padding: 56px 72px 40px 48px;
+
+  background-color: $color-secondary;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 169px;
+
+    text-align: center;
+
+    p {
+      width: 290px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 33px;
+  top: 40px;
+
+  width: 18px;
+  height: 18px;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    right: 25px;
+    top: 32px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 2px;
+
+    background-image: $gradient;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 2px;
+
+    background-image: $gradient;
+    transform: rotate(45deg);
+  }
+}
+
+.modal--success .modal__wrapper {
+  padding-top: 216px;
+  padding-right: 48px;
+  text-align: center;
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 120px;
+    left: calc(50% - 32px);
+
+    width: 71px;
+    height: 64px;
+
+    background-image: url("../img/icon-ok.svg");
+
+    @media (max-width: $mobile-width) {
+      top: 200px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 296px;
+    padding-right: 16px;
+  }
+}
+
+.modal__success-button {
+  width: 264px;
+}

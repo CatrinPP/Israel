@@ -3,12 +3,19 @@ $black: #484848;
 $blue: #1fc0fc;
 $white: #ffffff;
 $yellow: #ffc341;
+$darkyellow: #ffd701;
+$gray: #e3e3e3;
+$lightgray: #ebebeb;
 
-$gradient: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+$gradient: linear-gradient(108.42deg, $yellow 20.46%, $darkyellow 65.31%);
+$gradient-hover: linear-gradient(143.55deg, $yellow -50.3%, $darkyellow 63.1%);
+$radial-gradient:  radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%);
 
 $color-main: $black;
 $color-secondary: $white;
 $color-heading: $blue;
+$color-overlay: $lightgray;
+$color-input: $gray;
 
 //Шрифты
 $font-main: "Fira Sans", "Arial", sans-serif;

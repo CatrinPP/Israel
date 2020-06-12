@@ -1,0 +1,27 @@
+.button {
+  padding: 20px;
+
+  color: $color-secondary;
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 15px;
+  font-variant: small-caps;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  background: $gradient;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: $gradient-hover;
+  }
+
+  &:active {
+    background: $radial-gradient, $gradient;
+  }
+}
