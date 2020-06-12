@@ -41,9 +41,9 @@
       <form class="modal__form  form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="form__fieldset">
           <label class="visually-hidden" for="user-name">Имя</label>
-          <input id="user-name" type="text" placeholder="Имя" autofocus="" required="">
+          <input id="user-name" name="name" type="text" placeholder="Имя" autofocus="" required="">
           <label class="visually-hidden" for="user-tel">Телефон</label>
-          <input id="user-tel" type="tel" pattern="^[ 0-9]+$" placeholder="Телефон" required="">
+          <input id="user-tel" name="tel" type="tel" pattern="^[ 0-9]+$" placeholder="Телефон" required="">
         </div>
         <div class="form__bottom-wrapper">
           <button class="button" type="submit">Перезвоните мне</button>
@@ -62,6 +62,6 @@
       <button class="modal__success-button  button" type="button">Понятно</button>
     </div>
   </section>
-
+  <script src="./js/main.js"></script>
 </body>
 </html>
