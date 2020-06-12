@@ -38,7 +38,7 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 0;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Fira Sans", arial, sans-serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 500;
@@ -61,8 +61,7 @@
 .header {
   position: relative;
   min-height: 906px;
-  background-image: linear-gradient(#ffffff 0%, #ffffff 100px, #C19F88 100px, #C19F88 100%);
-  background-image: url("../img/bg-main-desktop@1x.jpg");
+  background-image: url("../img/bg-main-desktop@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -93,16 +92,16 @@
         top: 415px; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header {
-      background-image: url("../img/bg-main-desktop@2x.jpg"); } }
+      background-image: url("../img/bg-main-desktop@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
   @media (max-width: 767px) {
     .header {
       min-height: 605px;
-      background-image: url("../img/bg-main-mobile@1x.jpg");
+      background-image: url("../img/bg-main-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%);
       background-size: cover;
       background-position: center 30px; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .header {
-      background-image: url("../img/bg-main-mobile@2x.jpg"); } }
+      background-image: url("../img/bg-main-mobile@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
 
 .header__top {
   display: -webkit-box;
