@@ -22,6 +22,7 @@
   var closePopup = function (popup) {
     popup.classList.remove('modal--show');
     document.removeEventListener('keydown', onEscPress);
+    document.body.style.overflow = 'visible';
   };
 
   var closeAnyActivePopup = function () {
@@ -56,6 +57,7 @@
   var onCallButtonClick = function (evt) {
     evt.preventDefault();
     callPopup.classList.add('modal--show');
+    document.body.style.overflow = 'hidden';
     callPopup.querySelector('input[type="text"]').value = '';
     callPopup.querySelector('input[type="tel"]').value = '';
     callPopup.querySelector('input[type="checkbox"]').checked = false;
