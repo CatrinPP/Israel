@@ -251,7 +251,7 @@ input[type="radio"].visually-hidden {
 .modal__close {
   position: absolute;
   right: 33px;
-  top: 40px;
+  top: 33px;
   width: 18px;
   height: 18px;
   border: none;
@@ -264,7 +264,7 @@ input[type="radio"].visually-hidden {
   .modal__close::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: 6px;
     left: 0;
     width: 20px;
     height: 2px;
@@ -274,7 +274,7 @@ input[type="radio"].visually-hidden {
   .modal__close::after {
     position: absolute;
     content: "";
-    top: 0;
+    top: 6px;
     left: 0;
     width: 20px;
     height: 2px;

@@ -83,7 +83,7 @@
 .modal__close {
   position: absolute;
   right: 33px;
-  top: 40px;
+  top: 33px;
 
   width: 18px;
   height: 18px;
@@ -100,7 +100,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: 6px;
     left: 0;
 
     width: 20px;
@@ -113,7 +113,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 0;
+    top: 6px;
     left: 0;
 
     width: 20px;
