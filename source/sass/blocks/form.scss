@@ -10,6 +10,10 @@
     padding: 20px 40px;
     margin-bottom: 8px;
 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+
     border: 2px solid $color-input;
     border-radius: 80px;
 
@@ -43,7 +47,6 @@
     }
 
     &:focus + label {
-      content: "";
       position: absolute;
       top: 0;
       bottom: 0;
@@ -59,6 +62,7 @@
   input::placeholder {
     color: rgba($color: $color-main, $alpha: 0.5);
     font-weight: 500;
+    font-size: 15px;
     text-transform: uppercase;
   }
 

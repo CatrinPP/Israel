@@ -317,6 +317,9 @@ input[type="radio"].visually-hidden {
   width: 100%;
   padding: 20px 40px;
   margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
   border: 2px solid #e3e3e3;
   border-radius: 80px; }
   .form input[type="text"]:invalid:not(:placeholder-shown),
@@ -344,7 +347,6 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff; }
   .form input[type="text"]:focus + label,
   .form input[type="tel"]:focus + label {
-    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -357,26 +359,31 @@ input[type="radio"].visually-hidden {
 .form input::-webkit-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
   font-weight: 500;
+  font-size: 15px;
   text-transform: uppercase; }
 
 .form input::-moz-placeholder {
   color: rgba(72, 72, 72, 0.5);
   font-weight: 500;
+  font-size: 15px;
   text-transform: uppercase; }
 
 .form input:-ms-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
   font-weight: 500;
+  font-size: 15px;
   text-transform: uppercase; }
 
 .form input::-ms-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
   font-weight: 500;
+  font-size: 15px;
   text-transform: uppercase; }
 
 .form input::placeholder {
   color: rgba(72, 72, 72, 0.5);
   font-weight: 500;
+  font-size: 15px;
   text-transform: uppercase; }
 
 .form input[type="checkbox"] + label {
