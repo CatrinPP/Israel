@@ -51,7 +51,8 @@
     openSuccessPopup();
   };
 
-  var onCallButtonClick = function () {
+  var onCallButtonClick = function (evt) {
+    evt.preventDefault();
     callPopup.classList.add('modal--show');
     callPopup.querySelector('input[type="text"]').value = '';
     callPopup.querySelector('input[type="tel"]').value = '';
@@ -59,8 +60,8 @@
     callPopupCloseButton.addEventListener('click', function () {
       closePopup(callPopup);
     });
-    callPopup.addEventListener('click', function (evt) {
-      if (evt.target === callPopup) {
+    callPopup.addEventListener('click', function (e) {
+      if (e.target === callPopup) {
         closePopup(callPopup);
       }
     });

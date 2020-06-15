@@ -193,11 +193,12 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(235, 235, 235, 0.95); }
-  .modal--show {
+  .modal--show, .modal--window {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  .modal h2 {
+  .modal h2,
+  .modal h1 {
     margin: 0;
     padding: 0;
     margin-bottom: 16px;
@@ -207,7 +208,8 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
     line-height: 34px; }
     @media (max-width: 767px) {
-      .modal h2 {
+      .modal h2,
+      .modal h1 {
         font-size: 24px;
         line-height: 29px;
         letter-spacing: -0.02em; } }

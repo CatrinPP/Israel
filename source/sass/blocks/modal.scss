@@ -12,11 +12,13 @@
 
   background-color: rgba($color: $color-overlay, $alpha: 0.95);
 
-  &--show {
+  &--show,
+  &--window {
     display: flex;
   }
 
-  h2 {
+  h2,
+  h1 {
     margin: 0;
     padding: 0;
     margin-bottom: 16px;
