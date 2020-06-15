@@ -49,6 +49,8 @@
   };
 
   var onSubmit = function (evt) {
+    localStorage.setItem('userName', evt.target.querySelector('#user-name').value);
+    localStorage.setItem('userTel', evt.target.querySelector('#user-tel').value);
     evt.preventDefault();
     closeAnyActivePopup();
     openSuccessPopup();
