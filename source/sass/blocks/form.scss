@@ -12,6 +12,48 @@
 
     border: 2px solid $color-input;
     border-radius: 80px;
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: $color-input--invalid;
+      outline: none;
+    }
+
+    &:invalid:not(:placeholder-shown) + label::before {
+      content: "Ошибка: неверный формат";
+      position: absolute;
+
+      left: 25px;
+      bottom: 0;
+      z-index: 10;
+
+      color: rgba($color: $color-input--invalid, $alpha: 0.75);
+      font-size: 13px;
+    }
+
+    &:valid:not(:placeholder-shown) {
+      border-color: $color-input--filled;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid transparent;
+      z-index: 10;
+      background-clip: padding-box;
+      background-color: #ffffff;
+    }
+
+    &:focus + label {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+
+      background-image: $gradient;
+      border-radius: 80px;
+    }
   }
 
   input::placeholder {
@@ -63,6 +105,10 @@
 
 .form__fieldset {
   margin-bottom: 27px;
+}
+
+.form__field {
+  position: relative;
 }
 
 .form__bottom-wrapper {

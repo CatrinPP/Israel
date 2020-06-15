@@ -5,7 +5,9 @@ $white: #ffffff;
 $yellow: #ffc341;
 $darkyellow: #ffd701;
 $gray: #e3e3e3;
+$darkgray: #484848;
 $lightgray: #ebebeb;
+$red: #ff0000;
 
 $gradient: linear-gradient(108.42deg, $yellow 20.46%, $darkyellow 65.31%);
 $gradient-hover: linear-gradient(143.55deg, $yellow -50.3%, $darkyellow 63.1%);
@@ -16,6 +18,8 @@ $color-secondary: $white;
 $color-heading: $blue;
 $color-overlay: $lightgray;
 $color-input: $gray;
+$color-input--invalid: $red;
+$color-input--filled: $darkgray;
 
 //Шрифты
 $font-main: "Fira Sans", "Arial", sans-serif;

@@ -40,10 +40,14 @@
         и обязательно поможем найти ответ на&nbsp;ваш вопрос!</p>
       <form class="modal__form  form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="form__fieldset">
-          <label class="visually-hidden" for="user-name">Имя</label>
-          <input id="user-name" name="name" type="text" placeholder="Имя" autofocus required>
-          <label class="visually-hidden" for="user-tel">Телефон</label>
-          <input id="user-tel" name="tel" type="tel" pattern="^[ 0-9]+$" placeholder="Телефон" required>
+          <div class="form__field">
+            <input id="user-name" name="name" type="text" placeholder="Имя" autofocus required>
+            <label for="user-name"></label>
+          </div>
+          <div class="form__field">
+            <input id="user-tel" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required>
+            <label for="user-tel"></label>
+          </div>
         </div>
         <div class="form__bottom-wrapper">
           <button class="button" type="submit">Перезвоните мне</button>

@@ -1,6 +1,8 @@
 'use strict';
 
 (function () {
+
+  /* Открытие и закрытие модальных окон */
   var ESC_KEYCODE = 27;
 
   var callPopup = document.querySelector('.modal--callback');
@@ -70,4 +72,52 @@
 
   document.addEventListener('submit', onSubmit);
   callButton.addEventListener('click', onCallButtonClick);
+
+  /* Маска для ввода телефона */
+  var input = document.querySelector('#user-tel');
+
+  var setCursorPosition = function (position, element) {
+    element.focus();
+    if (element.setSelectionRange) {
+      element.setSelectionRange(position, position);
+    } else if (element.createTextRange) {
+      var range = element.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', position);
+      range.moveStart('character', position);
+      range.select();
+    }
+  };
+
+  var mask = function (event) {
+    var matrix = '+7 (___) ___ __ __';
+    var index = 0;
+    var newValue = matrix.replace(/\D/g, '');
+    var value = input.value.replace(/\D/g, '');
+
+    if (newValue.length >= value.length) {
+      value = newValue;
+    }
+
+    input.value = matrix.replace(/./g, function (char) {
+      if (/[_\d]/.test(char) && index < value.length) {
+        return value.charAt(index++);
+      } else if (index >= value.length) {
+        return '';
+      }
+      return char;
+    });
+    if (event.type === 'blur') {
+      if (input.value.length === 2) {
+        input.value = '';
+      }
+    } else {
+      setCursorPosition(input.value.length, input);
+    }
+  };
+
+  input.addEventListener('input', mask, false);
+  input.addEventListener('focus', mask, false);
+  input.addEventListener('blur', mask, false);
+
 })();

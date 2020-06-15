@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Fira Sans";
   src: url("../fonts/firasans-regular.woff2") format("woff2"), url("../fonts/firasans-regular.woff") format("woff");
@@ -318,6 +319,40 @@ input[type="radio"].visually-hidden {
   margin-bottom: 8px;
   border: 2px solid #e3e3e3;
   border-radius: 80px; }
+  .form input[type="text"]:invalid:not(:placeholder-shown),
+  .form input[type="tel"]:invalid:not(:placeholder-shown) {
+    border-color: #ff0000;
+    outline: none; }
+  .form input[type="text"]:invalid:not(:placeholder-shown) + label::before,
+  .form input[type="tel"]:invalid:not(:placeholder-shown) + label::before {
+    content: "Ошибка: неверный формат";
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    z-index: 10;
+    color: rgba(255, 0, 0, 0.75);
+    font-size: 13px; }
+  .form input[type="text"]:valid:not(:placeholder-shown),
+  .form input[type="tel"]:valid:not(:placeholder-shown) {
+    border-color: #484848; }
+  .form input[type="text"]:focus,
+  .form input[type="tel"]:focus {
+    outline: none;
+    border: 2px solid transparent;
+    z-index: 10;
+    background-clip: padding-box;
+    background-color: #ffffff; }
+  .form input[type="text"]:focus + label,
+  .form input[type="tel"]:focus + label {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    border-radius: 80px; }
 
 .form input::-webkit-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
@@ -377,6 +412,9 @@ input[type="radio"].visually-hidden {
 
 .form__fieldset {
   margin-bottom: 27px; }
+
+.form__field {
+  position: relative; }
 
 .form__bottom-wrapper {
   position: relative;
