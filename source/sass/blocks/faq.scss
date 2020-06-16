@@ -1,0 +1,91 @@
+.faq {
+  padding-top: 79px;
+  padding-bottom: 124px;
+  padding-left: 108px;
+
+  background-color: $color-secondary;
+  background-image: url("../img/bg-girls-desktop@1x.png"),
+    url("../img/bag-desktop@1x.png"),
+    url("../img/bg-watercolor3-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 77px, -40px bottom, left top;
+}
+
+.faq__content {
+  width: 43%;
+
+  h2 {
+    @include header;
+    margin-bottom: 10px;
+  }
+}
+
+.faq__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.faq__item {
+  width: 100%;
+  padding: 35px 60px 30px 0;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba($color: $color-main, $alpha: 0.2);
+
+  button {
+    position: relative;
+    padding-left: 30px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+
+    border: none;
+    background: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../img/icon-1.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-top: 27px;
+
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &--2 button::before {
+    background-image: url("../img/icon-2.svg");
+  }
+
+  &--3 button::before {
+    background-image: url("../img/icon-3.svg");
+  }
+
+  &--4 button::before {
+    background-image: url("../img/icon-4.svg");
+  }
+
+  &--5 button::before {
+    background-image: url("../img/icon-5.svg");
+  }
+
+  &--6 button::before {
+    background-image: url("../img/icon-6.svg");
+  }
+}

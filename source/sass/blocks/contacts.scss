@@ -1,0 +1,84 @@
+.contacts {
+  padding-left: 110px;
+  padding-bottom: 60px;
+
+  background-color: $color-secondary;
+  background-image: url("../img/bg-watercolor5-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: left -90px;
+
+  h2 {
+    @include header;
+    margin-bottom: 49px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 702px;
+    height: 448px;
+  }
+}
+
+.contacts__content {
+  position: relative;
+
+  padding-right: 710px;
+}
+
+.contacts__city {
+  position: relative;
+
+  display: flex;
+  width: 260px;
+  margin-bottom: 38px;
+  padding-left: 22px;
+  padding-right: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 0;
+
+    width: 12px;
+    height: 18px;
+
+    background-image: url("../img/pin-gray.png");
+  }
+
+  button {
+    position: relative;
+    padding: 0;
+
+    font-size: 12px;
+    line-height: 150%;
+    text-transform: uppercase;
+
+    border: none;
+    background: none;
+    border-bottom: 1px dashed $color-heading;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: -28px;
+
+      width: 16px;
+      height: 15px;
+
+      background-image: url("../img/gps.png");
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-right: 21px;
+
+    font-weight: 400;
+    line-height: 150%;
+  }
+}

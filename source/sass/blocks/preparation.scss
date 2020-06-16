@@ -1,0 +1,149 @@
+.preparation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 707px;
+  padding-top: 159px;
+  padding-bottom: 168px;
+
+  background-color: $color-secondary;
+  background-image: url("../img/bg-howto-desktop@1x.png"),
+    url("../img/stamp-desktop@1x.png"),
+    url("../img/bg-watercolorhowto-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 12px 128px, 112% 340px, left -72px;
+}
+
+.preparation__content {
+  width: 684px;
+  padding-left: 17px;
+  padding-right: 130px;
+
+  h2 {
+    @include header;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 37px;
+
+    font-weight: 400;
+    line-height: 170%;
+
+    & + p {
+      margin-bottom: 32px;
+    }
+  }
+
+  p b {
+    display: inline-block;
+    width: 480px;
+
+    font-size: 17px;
+    line-height: 170%;
+  }
+}
+
+.preparation__requirements {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+  padding-left: 44px;
+
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+
+    width: 2px;
+    height: 100%;
+    background-image: url("../img/dashed.svg");
+    opacity: 0.2;
+  }
+}
+
+.preparation__requirements-item {
+  position: relative;
+
+  margin-bottom: 42px;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%;
+
+  &:first-child {
+    margin-bottom: 56px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 18px);
+    left: -60px;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    background-color: $color-secondary;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
+  //переписать в inline svg
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: calc(50% -18px);
+  //   left: -48px;
+
+  //   width: 36px;
+  //   height: 36px;
+
+  //   background-image: url("../img/icon-1.svg");
+  //   background-repeat: no-repeat;
+  // }
+
+  &--2::after {
+    background-image: url("../img/icon-2.svg");
+  }
+
+  &--3::after {
+    top: calc(50% - 10px);
+    background-image: url("../img/icon-3.svg");
+  }
+
+  &--4::after {
+    top: calc(50% - 10px);
+    background-image: url("../img/icon-4.svg");
+  }
+}
+
+.preparation__annotaion {
+  position: relative;
+
+  padding-left: 18px;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%;
+
+  opacity: 0.5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background-image: $gradient;
+  }
+}

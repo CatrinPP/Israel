@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 110px;
+
+  border-top: 1px solid rgba($color: $color-main, $alpha: 0.2);
+
+  p {
+    margin: 0;
+    padding-left: 22px;
+    align-self: center;
+
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 400;
+
+    opacity: 0.5;
+  }
+}
+
+.footer__logo {
+  img {
+    width: 85px;
+    height: 27px;
+  }
+}
+
+.footer__social {
+  margin-top: 3px;
+  margin-right: 7px;
+}

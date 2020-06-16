@@ -107,8 +107,29 @@
   }
 }
 
+.form--line {
+  display: flex;
+
+  button {
+    width: 216px;
+    margin: 0;
+
+    align-self: flex-start;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 255px;
+    margin-right: 20px;
+  }
+}
+
 .form__fieldset {
   margin-bottom: 27px;
+
+  &--line {
+    display: flex;
+  }
 }
 
 .form__field {
@@ -121,5 +142,57 @@
 
   @media (max-width: $mobile-width) {
     left: auto;
+  }
+}
+
+.form__text {
+  width: 376px;
+
+  p {
+    margin: 0;
+    margin-bottom: 11px;
+    margin-top: 12px;
+    margin-right: 15px;
+
+    color: rgba($color: $color-main, $alpha: 0.5);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  p + p {
+    margin-top: 18px;
+  }
+
+  b {
+    margin-bottom: 20px;
+    color: rgba($color: $color-main, $alpha: 0.87);
+    font-size: 17px;
+  }
+}
+
+.form--single-input {
+  position: relative;
+
+  width: 477px;
+  padding-right: 216px;
+
+  border: 2px solid $color-input;
+  border-radius: 80px;
+
+  input[type="tel"] {
+    margin-bottom: 0;
+
+    border: none;
+  }
+
+  button {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+
+    width: 216px;
+    padding: 22px;
+    margin-bottom: 0;
   }
 }

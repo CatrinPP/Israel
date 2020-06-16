@@ -1,0 +1,43 @@
+.about {
+  padding-bottom: 98px;
+
+  background-color: $color-secondary;
+  background-image: url("../img/bg-watercolor1-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  h2 {
+    @include header;
+    text-align: center;
+  }
+
+  p {
+    width: 720px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 170%;
+    text-align: center;
+  }
+}
+
+.about__video {
+  position: relative;
+
+  margin: 0 auto;
+  width: 870px;
+  height: 460px;
+
+  svg {
+    position: absolute;
+    top: calc(50% - 48px);
+    left: calc(50% - 48px);
+
+    width: 96px;
+    height: 96px;
+
+    cursor: pointer;
+  }
+}

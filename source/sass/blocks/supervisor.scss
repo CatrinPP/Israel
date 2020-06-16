@@ -1,0 +1,50 @@
+.supervisor {
+  margin-bottom: 128px;
+
+  p {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 170%;
+  }
+}
+
+.supervisor__details {
+  position: relative;
+
+  width: 384px;
+  min-height: 112px;
+  padding-left: 137px;
+  margin-bottom: 28px;
+
+  p {
+    width: 98%;
+    margin: 0;
+    margin-bottom: 13px;
+
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  p + p {
+    font-size: 13px;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 112px;
+    height: 112px;
+
+    border-radius: 50%;
+  }
+
+  span {
+    margin-right: 5px;
+
+    color: $color-heading;
+  }
+}

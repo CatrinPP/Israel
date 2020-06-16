@@ -1,0 +1,129 @@
+.review {
+  display: none;
+  padding-left: 103px;
+
+  &--active {
+    display: flex;
+  }
+
+  img {
+    width: 354px;
+    height: 480px;
+
+    mask-image: url("../img/mask-review.png");
+  }
+}
+
+.review__text {
+  width: 727px;
+  margin: 0;
+  padding-left: 45px;
+  padding-top: 40px;
+
+  cite {
+    font-size: 24px;
+    line-height: 150%;
+    font-style: normal;
+
+    & + p {
+      margin-bottom: 30px;
+
+      font-size: 15px;
+      line-height: 140%;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-top: 10px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 170%;
+
+    & + p {
+      margin-bottom: 21px;
+    }
+  }
+
+  span {
+    margin-right: 5px;
+
+    color: $color-heading;
+  }
+
+  a {
+    color: $color-heading;
+    font-size: 17px;
+    line-height: 150%;
+    text-decoration: underline;
+  }
+}
+
+.review__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 57px;
+}
+
+.review__navigation {
+  display: flex;
+
+  p {
+    margin: 0;
+    margin-right: 27px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.5;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.review__button {
+  position: relative;
+
+  width: 12px;
+  height: 2px;
+  margin: 0;
+  padding: 0;
+  margin-top: 6px;
+  margin-right: 10px;
+
+  background: transparent;
+  border: none;
+  background-color: rgba($color: $color-main, $alpha: 0.2);
+  box-shadow: 0 -4px 4px rgba($color: $color-main, $alpha: 0.2);
+  transform: rotate(135deg);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 6px;
+
+    width: 12px;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    background-color: rgba($color: $color-main, $alpha: 0.2);
+    box-shadow: 0 -4px 4px rgba($color: $color-main, $alpha: 0.2);
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+  &--next {
+    transform: rotate(-135deg);
+
+    &::before {
+      top: -6px;
+      left: auto;
+      right: 6px;
+    }
+  }
+}

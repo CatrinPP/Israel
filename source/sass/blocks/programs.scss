@@ -1,0 +1,117 @@
+.programs {
+  position: relative;
+
+  padding-top: 104px;
+  padding-left: 210px;
+  margin-bottom: 12px;
+
+  background-image: url("../img/bg-sketch-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 56px;
+
+  h2 {
+    @include header;
+  }
+
+  h3 {
+    @include header;
+    font-size: 28px;
+    line-height: 34px;
+    text-transform: none;
+  }
+}
+
+.programs__slider {
+  width: 870px;
+  padding-right: 560px;
+  padding-top: 42px;
+}
+
+.programs__item-description {
+  position: absolute;
+  left: 502px;
+  top: 236px;
+
+  width: 560px;
+
+  opacity: 0;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-weight: 400;
+    line-height: 170%;
+  }
+}
+
+.programs__item {
+  label {
+    position: relative;
+
+    display: block;
+    width: 228px;
+    padding: 25px 40px 29px 72px;
+    margin-right: 64px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 24px;
+
+      width: 36px;
+      height: 36px;
+
+      background-image: url("../img/sprite.png");
+      background-position: 0 78px;
+    }
+
+    &:hover {
+      background: $gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &::before {
+        background-position-y: 35px;
+      }
+    }
+  }
+
+  input:checked {
+    & ~ .programs__item-description {
+      opacity: 1;
+    }
+
+    & ~ label {
+      color: $color-secondary;
+      background-image: url("../img/rectangle.svg");
+      background-repeat: no-repeat;
+    }
+
+    & ~ label::before {
+      background-position-y: 0;
+    }
+  }
+}
+
+.programs__item--academy label::before {
+  background-position-x: -45px;
+}
+
+.programs__item--internship label::before {
+  background-position-x: -95px;
+}
+
+.programs__item--volunteer label::before {
+  background-position-x: -145px;
+}
+
+.programs__item--religion label::before {
+  width: 28px;
+  background-position-x: -187px;
+}

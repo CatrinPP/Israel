@@ -30,3 +30,15 @@
     font-display: swap;
   }
 }
+
+@mixin header {
+  margin: 0;
+  margin-bottom: 24px;
+
+  color: $color-heading;
+  font-family: $font-headers;
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

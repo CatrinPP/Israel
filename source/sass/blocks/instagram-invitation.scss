@@ -1,0 +1,39 @@
+.instagram-invitation {
+  min-height: 583px;
+  display: flex;
+  flex-direction: column;
+  padding: 120px 167px;
+  margin-bottom: 60px;
+
+  background-color: #c19f88;
+  background-image: url("../img/bg-masa-desktop@1x.jpg");
+  background-size: cover;
+}
+
+.instagram-invitaion__content {
+  margin-left: auto;
+  width: 400px;
+
+  h2 {
+    @include header;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 70px;
+
+    color: $color-secondary;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 170%;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  a {
+    padding-left: 68px;
+    padding-right: 42px;
+
+    color: $color-secondary;
+    text-align: center;
+  }
+}
