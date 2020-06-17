@@ -864,7 +864,7 @@ input[type="radio"].visually-hidden {
       min-height: 595px;
       width: 100%;
       padding: 56px 16px 308px;
-      margin-bottom: 80px;
+      margin-bottom: 69px;
       background-image: url("../img/backpack-mobile@1x.png"), url("../img/bg-girl-mobile@1x.png");
       background-position: -53px 9px, center bottom;
       background-size: auto; }
@@ -918,11 +918,28 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/stamp-desktop@1x.png"), url("../img/bg-watercolorhowto-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: 12px 128px, 112% 340px, left -72px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .preparation {
+      background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("../img/bg-watercolorhowto-desktop@2x.png"); } }
+  @media (max-width: 1023px) {
+    .preparation {
+      padding-top: 10px;
+      padding-left: 55px;
+      padding-right: 55px;
+      background-image: url("../img/stamp-mobile@1x.png");
+      background-position: 103px 280px; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .preparation {
+      background-image: url("../img/stamp-mobile@2x.png"); } }
+  @media (max-width: 767px) {
+    .preparation {
+      padding-left: 0;
+      padding-right: 0; } }
 
 .preparation__content {
-  width: 684px;
+  width: 50%;
   padding-left: 17px;
-  padding-right: 130px; }
+  padding-right: 134px; }
   .preparation__content h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -949,6 +966,21 @@ input[type="radio"].visually-hidden {
     width: 480px;
     font-size: 17px;
     line-height: 170%; }
+  @media (max-width: 1023px) {
+    .preparation__content {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px; }
+      .preparation__content h2 {
+        text-align: center; }
+      .preparation__content p {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 160%; }
+      .preparation__content p b {
+        width: 100%;
+        font-size: 16px;
+        line-height: 160%; } }
 
 .preparation__requirements {
   position: relative;
@@ -966,6 +998,10 @@ input[type="radio"].visually-hidden {
     height: 100%;
     background-image: url("../img/dashed.svg");
     opacity: 0.2; }
+  @media (max-width: 1023px) {
+    .preparation__requirements::before {
+      left: 9px;
+      top: -9px; } }
 
 .preparation__requirements-item {
   position: relative;
@@ -986,14 +1022,29 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
-  .preparation__requirements-item--2::after {
-    background-image: url("../img/icon-2.svg"); }
-  .preparation__requirements-item--3::after {
-    top: calc(50% - 10px);
-    background-image: url("../img/icon-3.svg"); }
-  .preparation__requirements-item--4::after {
-    top: calc(50% - 10px);
-    background-image: url("../img/icon-4.svg"); }
+  .preparation__requirements-item span {
+    position: absolute;
+    top: calc(50% - 14px);
+    left: -48px;
+    color: #ffc341;
+    font-size: 17px;
+    line-height: 170%;
+    font-weight: 700; }
+  @media (max-width: 1023px) {
+    .preparation__requirements-item {
+      margin-bottom: 32px;
+      font-size: 14px;
+      line-height: 160%; }
+      .preparation__requirements-item:last-child {
+        margin-bottom: 22px; }
+      .preparation__requirements-item::before {
+        top: calc(44% - 18px);
+        left: -51px; }
+      .preparation__requirements-item span {
+        top: calc(44% - 14px);
+        left: -38px; }
+      .preparation__requirements-item:first-child {
+        margin-bottom: 61px; } }
 
 .preparation__annotaion {
   position: relative;
@@ -1010,6 +1061,13 @@ input[type="radio"].visually-hidden {
     width: 4px;
     height: 100%;
     background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
+  @media (max-width: 1023px) {
+    .preparation__annotaion {
+      padding-left: 8px;
+      font-size: 14px;
+      line-height: 160%; }
+      .preparation__annotaion::before {
+        left: -5px; } }
 
 .israel {
   min-height: 843px;
