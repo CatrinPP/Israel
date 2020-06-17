@@ -179,11 +179,13 @@
 
   border: 2px solid $color-input;
   border-radius: 80px;
+  background-color: $color-secondary;
 
   input[type="tel"] {
     margin-bottom: 0;
 
     border: none;
+    background-color: transparent;
   }
 
   button {
@@ -194,5 +196,38 @@
     width: 216px;
     padding: 22px;
     margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-left: 55px;
+    padding-right: 55px;
+
+    border: none;
+    border-radius: 0;
+
+    input[type="tel"] {
+      max-width: 70%;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      border: 2px solid $color-input;
+    }
+
+    button {
+      position: static;
+      width: 264px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 0;
+    padding-left: 0;
+
+    input[type="tel"] {
+      max-width: 100%;
+      margin-bottom: 3px;
+    }
   }
 }

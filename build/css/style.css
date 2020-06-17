@@ -471,10 +471,12 @@ input[type="radio"].visually-hidden {
   width: 477px;
   padding-right: 216px;
   border: 2px solid #e3e3e3;
-  border-radius: 80px; }
+  border-radius: 80px;
+  background-color: #ffffff; }
   .form--single-input input[type="tel"] {
     margin-bottom: 0;
-    border: none; }
+    border: none;
+    background-color: transparent; }
   .form--single-input button {
     position: absolute;
     top: -2px;
@@ -482,6 +484,29 @@ input[type="radio"].visually-hidden {
     width: 216px;
     padding: 22px;
     margin-bottom: 0; }
+  @media (max-width: 1023px) {
+    .form--single-input {
+      width: 100%;
+      padding-left: 55px;
+      padding-right: 55px;
+      border: none;
+      border-radius: 0; }
+      .form--single-input input[type="tel"] {
+        max-width: 70%;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #e3e3e3; }
+      .form--single-input button {
+        position: static;
+        width: 264px; } }
+  @media (max-width: 767px) {
+    .form--single-input {
+      padding-right: 0;
+      padding-left: 0; }
+      .form--single-input input[type="tel"] {
+        max-width: 100%;
+        margin-bottom: 3px; } }
 
 .button {
   padding: 20px;
@@ -684,7 +709,7 @@ input[type="radio"].visually-hidden {
     .programs {
       min-height: 525px;
       padding-left: 0;
-      padding-bottom: 500px;
+      padding-bottom: 420px;
       padding-top: 0;
       background-image: url("../img/bg-sketch-mobile@1x.png"); }
       .programs h2 {
@@ -799,13 +824,16 @@ input[type="radio"].visually-hidden {
   background-position-x: -187px; }
 
 .request {
-  padding-top: 209px;
-  padding-left: 209px;
+  padding-top: 213px;
+  padding-left: 14%;
   padding-bottom: 160px;
   background-image: url("../img/backpack-desktop@1x.png"), url("../img/bg-girl-desktop@1x.png");
-  background-position: -73px center, right top;
+  background-position: -73px 138px, right top;
   background-repeat: no-repeat;
-  background-size: 50vw; }
+  background-size: auto, 60vw; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .request {
+      background-image: url("../img/backpack-desktop@2x.png"), url("../img/bg-girl-desktop@2x.png"); } }
   .request h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -815,18 +843,62 @@ input[type="radio"].visually-hidden {
     line-height: 49px;
     font-weight: 700;
     letter-spacing: -0.02em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-left: 20px; }
     @media (max-width: 767px) {
       .request h2 {
         font-size: 32px;
         line-height: 39px; } }
   .request p {
-    width: 480px;
+    width: 410px;
     margin: 0;
     margin-bottom: 64px;
+    padding-left: 20px;
     font-size: 17px;
     font-weight: 400;
-    line-height: 170%; }
+    line-height: 170%;
+    background-color: #ffffff;
+    border-radius: 80px; }
+  @media (max-width: 1023px) {
+    .request {
+      min-height: 595px;
+      width: 100%;
+      padding: 56px 16px 308px;
+      margin-bottom: 80px;
+      background-image: url("../img/backpack-mobile@1x.png"), url("../img/bg-girl-mobile@1x.png");
+      background-position: -53px 9px, center bottom;
+      background-size: auto; }
+      .request h2 {
+        padding: 0;
+        text-align: center; }
+      .request p {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 0;
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        background: none;
+        border-radius: 0; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .request {
+      background-image: url("../img/backpack-mobile@2x.png"), url("../img/bg-girl-mobile@2x.png"); } }
+  @media (max-width: 767px) {
+    .request p {
+      text-align: left; } }
+
+.request__form {
+  margin-left: 20px; }
+  @media (max-width: 1023px) {
+    .request__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-left: 0; } }
 
 .preparation {
   display: -webkit-box;

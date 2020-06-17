@@ -1,24 +1,87 @@
 .request {
-  padding-top: 209px;
-  padding-left: 209px;
+  padding-top: 213px;
+  padding-left: 14%;
   padding-bottom: 160px;
 
   background-image: url("../img/backpack-desktop@1x.png"),
     url("../img/bg-girl-desktop@1x.png");
-  background-position: -73px center, right top;
+  background-position: -73px 138px, right top;
   background-repeat: no-repeat;
+  background-size: auto, 60vw;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack-desktop@2x.png"),
+      url("../img/bg-girl-desktop@2x.png");
+  }
 
   h2 {
     @include header;
+    padding-left: 20px;
   }
 
   p {
-    width: 480px;
+    width: 410px;
     margin: 0;
     margin-bottom: 64px;
+    padding-left: 20px;
 
     font-size: 17px;
     font-weight: 400;
     line-height: 170%;
+
+    background-color: $color-secondary;
+    border-radius: 80px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 595px;
+    width: 100%;
+    padding: 56px 16px 308px;
+    margin-bottom: 80px;
+
+    background-image: url("../img/backpack-mobile@1x.png"),
+      url("../img/bg-girl-mobile@1x.png");
+    background-position: -53px 9px, center bottom;
+    background-size: auto;
+
+    h2 {
+      padding: 0;
+
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 0;
+
+      font-size: 16px;
+      line-height: 160%;
+      text-align: center;
+
+      background: none;
+      border-radius: 0;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backpack-mobile@2x.png"),
+        url("../img/bg-girl-mobile@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    p {
+      text-align: left;
+    }
+  }
+}
+
+.request__form {
+  margin-left: 20px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
   }
 }
