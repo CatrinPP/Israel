@@ -40,5 +40,11 @@
   font-size: 40px;
   line-height: 49px;
   font-weight: 700;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    font-size: 32px;
+    line-height: 39px;
+  }
 }

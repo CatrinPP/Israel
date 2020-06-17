@@ -16,12 +16,27 @@
 
     opacity: 0.5;
   }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding: 32px 55px;
+    align-items: center;
+
+    p {
+      padding-left: 0;
+      margin-bottom: 28px;
+    }
+  }
 }
 
 .footer__logo {
   img {
     width: 85px;
     height: 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 24px;
   }
 }
 

@@ -31,12 +31,13 @@
         Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
         В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
         <div class="about__video">
-          <video width="870" height="460" poster="./img/about-desktop@1x.png"></video>
-          <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle opacity="0.32" cx="48" cy="48" r="48" fill="white"/>
-            <circle cx="48" cy="48" r="32" fill="white"/>
-            <path d="M58 47.5L43 57V38L58 47.5Z" fill="#1FC0FC"/>
-          </svg>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/about-mobile@1x.webp 1x, ./img/about-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="./img/about-desktop@1x.webp 1x, ./img/about-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/about-mobile@1x.png 1x, ./img/about-mobile@2x.png 2x">
+            <img src="./img/about-desktop@1x.png" srcset="./img/about-desktop@2x.png 2x" width="870" height="460" alt="Группа ребят у костра">
+          </picture>
+          <button class="about__play-button" type="button"><span class="visually-hidden">Включить видео</span></button>
         </div>
     </article>
 
@@ -238,9 +239,14 @@
       <h2>Отзывы</h2>
       <ul class="reviews__list">
         <li class="reviews__item  review  review--active">
-          <picture>
-            <img src="./img/review-desktop@1x.jpg" width="364" height="480" alt="">
-          </picture>
+          <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <mask id="mask">
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                </mask>
+            </defs>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+          </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
             <p><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
@@ -265,9 +271,14 @@
           </blockquote>
         </li>
         <li class="reviews__item  review">
-          <picture>
-            <img src="./img/review-desktop@1x.jpg" width="364" height="480" alt="">
-          </picture>
+          <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <mask id="mask">
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                </mask>
+            </defs>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+          </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
             <p><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
@@ -292,9 +303,14 @@
           </blockquote>
         </li>
         <li class="reviews__item  review">
-          <picture>
-            <img src="./img/review-desktop@1x.jpg" width="364" height="480" alt="">
-          </picture>
+          <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <mask id="mask">
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                </mask>
+            </defs>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+          </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
             <p><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
@@ -319,9 +335,14 @@
           </blockquote>
         </li>
         <li class="reviews__item  review">
-          <picture>
-            <img src="./img/review-desktop@1x.jpg" width="364" height="480" alt="">
-          </picture>
+          <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <mask id="mask">
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                </mask>
+            </defs>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+          </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
             <p><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
@@ -346,9 +367,14 @@
           </blockquote>
         </li>
         <li class="reviews__item  review">
-          <picture>
-            <img src="./img/review-desktop@1x.jpg" width="364" height="480" alt="">
-          </picture>
+          <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <mask id="mask">
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                </mask>
+            </defs>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+          </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
             <p><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
@@ -373,9 +399,14 @@
           </blockquote>
         </li>
         <li class="reviews__item  review">
-          <picture>
-            <img src="./img/review-desktop@1x.jpg" width="364" height="480" alt="">
-          </picture>
+          <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <mask id="mask">
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                </mask>
+            </defs>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+          </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
             <p><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
