@@ -546,6 +546,7 @@ input[type="radio"].visually-hidden {
   @media (max-width: 767px) {
     .about {
       padding-top: 27px;
+      padding-bottom: 80px;
       background-image: url("../img/bg-watercolor1-mobile@1x.png");
       background-position: center; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
@@ -633,11 +634,17 @@ input[type="radio"].visually-hidden {
 .programs {
   position: relative;
   padding-top: 104px;
-  padding-left: 210px;
+  padding-left: calc(16% - 10px);
   margin-bottom: 12px;
   background-image: url("../img/bg-sketch-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: right 56px; }
+  background-size: contain;
+  background-position: right 56px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs {
+      background-image: url("../img/bg-sketch-desktop@2x.png"); } }
   .programs h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -664,28 +671,49 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
     font-size: 28px;
     line-height: 34px;
-    text-transform: none; }
+    text-transform: none;
+    letter-spacing: -0.02em; }
     @media (max-width: 767px) {
       .programs h3 {
         font-size: 32px;
         line-height: 39px; } }
+  @media (max-width: 1023px) {
+    .programs {
+      padding-left: calc(10% - 10px); } }
+  @media (max-width: 767px) {
+    .programs {
+      min-height: 525px;
+      padding-left: 0;
+      padding-bottom: 500px;
+      padding-top: 0;
+      background-image: url("../img/bg-sketch-mobile@1x.png"); }
+      .programs h2 {
+        margin-bottom: 6px;
+        text-align: center; }
+      .programs h3 {
+        margin-bottom: 18px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .programs {
+      background-image: url("../img/bg-sketch-mobile@2x.png"); } }
 
 .programs__slider {
-  width: 870px;
-  padding-right: 560px;
+  padding-right: 77%;
   padding-top: 42px; }
-
-.programs__item-description {
-  position: absolute;
-  left: 502px;
-  top: 236px;
-  width: 560px;
-  opacity: 0; }
-  .programs__item-description p {
-    margin: 0;
-    margin-bottom: 20px;
-    font-weight: 400;
-    line-height: 170%; }
+  @media (max-width: 1023px) {
+    .programs__slider {
+      padding-right: 67%; } }
+  @media (max-width: 767px) {
+    .programs__slider {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      padding: 0;
+      overflow-x: auto; } }
 
 .programs__item label {
   position: relative;
@@ -723,11 +751,45 @@ input[type="radio"].visually-hidden {
 .programs__item input:checked ~ label::before {
   background-position-y: 0; }
 
+@media (max-width: 767px) {
+  .programs__item label {
+    min-width: 181px;
+    margin-right: 0; } }
+
 .programs__item--academy label::before {
   background-position-x: -45px; }
 
 .programs__item--internship label::before {
   background-position-x: -95px; }
+
+.programs__item-description {
+  position: absolute;
+  left: calc(30% + 93px);
+  top: 236px;
+  width: 41%;
+  opacity: 0; }
+  .programs__item-description p {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 170%; }
+  @media (max-width: 1023px) {
+    .programs__item-description {
+      left: calc(31% + 60px);
+      top: 200px;
+      width: 58%; } }
+  @media (max-width: 767px) {
+    .programs__item-description {
+      min-height: 400px;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+      left: 0;
+      top: 135px; }
+      .programs__item-description p {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 160%; } }
 
 .programs__item--volunteer label::before {
   background-position-x: -145px; }
@@ -742,7 +804,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 160px;
   background-image: url("../img/backpack-desktop@1x.png"), url("../img/bg-girl-desktop@1x.png");
   background-position: -73px center, right top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 50vw; }
   .request h2 {
     margin: 0;
     margin-bottom: 24px;
