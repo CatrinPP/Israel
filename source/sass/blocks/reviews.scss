@@ -6,13 +6,40 @@
   background-image: url("../img/bg-watercolor4-desktop@1x.png"),
     url("../img/bg-sketch2-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: cover, auto;
+  background-size: contain, 535px;
   background-position: center, 101% 83px;
 
   h2 {
     @include header;
     margin-bottom: 8px;
     text-align: center;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor4-desktop@2x.png"),
+      url("../img/bg-sketch2-desktop@2x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    background-size: contain, 439px;
+    background-position: center, 32px 551px;
+
+    background-image: url("../img/bg-watercolor4-mobile@1x.png"),
+      url("../img/bg-sketch2-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-watercolor4-mobile@2x.png"),
+        url("../img/bg-sketch2-mobile@2x.png");
+    }
+
+    h2 {
+      @include header;
+      margin-bottom: 24px;
+      text-align: center;
+    }
   }
 }
 
