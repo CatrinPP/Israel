@@ -20,9 +20,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 10px;
-    padding-left: 55px;
-    padding-right: 55px;
+    min-height: 607px;
+    padding: 10px 55px 96px;
 
     background-image: url("../img/stamp-mobile@1x.png");
     background-position: 103px 280px;
@@ -35,6 +34,7 @@
   @media (max-width: $mobile-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 55px;
   }
 }
 

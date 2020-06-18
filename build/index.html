@@ -145,40 +145,62 @@
         </div>
     </section>
 
-    <!-- <article class="main__israel  israel">
-      <h2>Жизнь в Израиле</h2>
-      <p>Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране
-        и&nbsp;познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
-      <div class="israel__gallery">
-        <div class="israel__picture">
+    <article class="main__gallery  gallery">
+      <h2>Жизнь в&nbsp;Израиле</h2>
+      <p>Помимо учёбы, в рамках программе у&nbsp;вас будет возможность путешествовать по стране и
+        познакомиться с богатой культурно&#8209;исторической жизнью Израиля и его жителей.</p>
+      <div class="gallery__wrapper">
+        <div class="gallery__picture  gallery__picture--active">
           <picture>
-            <img src="./img/lifefoto1-desktop@1x.png" width="482" height="732" alt="">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.webp 1x, ./img/lifefoto1-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="./img/lifefoto1-desktop@1x.webp 1x, ./img/lifefoto1-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.png 1x, ./img/lifefoto1-mobile@2x.png 2x">
+            <img src="./img/lifefoto1-desktop@1x.png" width="482" height="732" alt="Купольный храм">
           </picture>
           <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
         </div>
-        <div class="israel__picture">
+        <div class="gallery__picture">
           <picture>
-            <img src="./img/lifefoto2-desktop@1x.png" width="211" height="318" alt="">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.webp 1x, ./img/lifefoto2-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="./img/lifefoto2-desktop@1x.webp 1x, ./img/lifefoto2-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.png 1x, ./img/lifefoto2-mobile@2x.png 2x">
+            <img src="./img/lifefoto2-desktop@1x.png" width="211" height="318" alt="Молодой человек работает за ноутбуком">
           </picture>
           <p>Изучение иврита</p>
         </div>
-        <div class="israel__picture">
+        <div class="gallery__picture">
           <picture>
-            <img src="./img/lifefoto3-desktop@1x.png" width="411" height="318" alt="">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.webp 1x, ./img/lifefoto3-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="./img/lifefoto3-desktop@1x.webp 1x, ./img/lifefoto3-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.png 1x, ./img/lifefoto3-mobile@2x.png 2x">
+            <img src="./img/lifefoto3-desktop@1x.png" width="411" height="318" alt="Молодой человек обучает другого">
           </picture>
           <p>Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
         </div>
-        <div class="israel__picture">
+        <div class="gallery__picture">
           <picture>
-            <img src="./img/lifefoto4-desktop@1x.png" width="411" height="318" alt="">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.webp 1x, ./img/lifefoto4-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="./img/lifefoto4-desktop@1x.webp 1x, ./img/lifefoto4-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.png 1x, ./img/lifefoto4-mobile@2x.png 2x">
+            <img src="./img/lifefoto4-desktop@1x.png" width="411" height="318" alt="Компания улыбающихся ребят">
           </picture>
           <p>Совместные творческие проекты с израильской молодёжью</p>
         </div>
-        <div class="israel__picture">
+        <div class="gallery__picture">
           <picture>
-            <img src="./img/lifefoto5-desktop@1x.png" width="214" height="318"  alt="">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.webp 1x, ./img/lifefoto5-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="./img/lifefoto5-desktop@1x.webp 1x, ./img/lifefoto5-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.png 1x, ./img/lifefoto5-mobile@2x.png 2x">
+            <img src="./img/lifefoto5-desktop@1x.png" width="214" height="318" alt="Мужчина в горах смотрит в закат">
           </picture>
           <p>Развитие лидерства</p>
+        </div>
+        <div class="gallery__controls">
+          <button class="gallery__control  gallery__control--active" type="button" aria-label="Показать первое фото"></button>
+          <button class="gallery__control" type="button" aria-label="Показать второе фото"></button>
+          <button class="gallery__control" type="button" aria-label="Показать третье фото"></button>
+          <button class="gallery__control" type="button" aria-label="Показать четвертое фото"></button>
+          <button class="gallery__control" type="button" aria-label="Показать пятое фото"></button>
         </div>
       </div>
     </article>
@@ -227,7 +249,7 @@
           </li>
           <li class="faq__item  faq__item--6">
             <button type="button">Как выглдядит полный процесс регистрации на&nbsp;программу «Маса»?</button>
-            <p class="visually-hidden" >Полная стоимость определяется организаторами в зависимости от направления.
+            <p class="visually-hidden">Полная стоимость определяется организаторами в зависимости от направления.
               В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
               и поэтому предусматривается определённая доля личного участия.</p>
           </li>
@@ -242,10 +264,10 @@
           <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <mask id="mask">
-                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"></image>
                 </mask>
             </defs>
-            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"></image>
           </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
@@ -274,10 +296,10 @@
           <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <mask id="mask">
-                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"></image>
                 </mask>
             </defs>
-            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"></image>
           </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
@@ -306,10 +328,10 @@
           <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <mask id="mask">
-                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"></image>
                 </mask>
             </defs>
-            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"></image>
           </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
@@ -338,10 +360,10 @@
           <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <mask id="mask">
-                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"></image>
                 </mask>
             </defs>
-            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"></image>
           </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
@@ -370,10 +392,10 @@
           <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <mask id="mask">
-                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"></image>
                 </mask>
             </defs>
-            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"></image>
           </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
@@ -402,10 +424,10 @@
           <svg viewbox="0 0 354 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <mask id="mask">
-                    <image width="354" height="480" xlink:href="./img/mask-review2.png"/>
+                    <image width="354" height="480" xlink:href="./img/mask-review2.png"></image>
                 </mask>
             </defs>
-            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"/>
+            <image xlink:href="./img/review-desktop@1x.jpg" width="354" height="480" mask="url(#mask)"></image>
           </svg>
           <blockquote class="review__text">
             <cite>Ольга Михайлова</cite>
@@ -468,17 +490,17 @@
         </div>
         <div class="form__fieldset  form__fieldset--line">
           <div class="form__field">
-            <input id="user-name--contacts" name="name" type="text" placeholder="Имя" required>
+            <input id="user-name--contacts" name="name" type="text" placeholder="Имя" required="">
             <label for="user-name--contacts"></label>
           </div>
           <div class="form__field">
-            <input id="user-tel--contacts" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required>
+            <input id="user-tel--contacts" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
             <label for="user-tel--contacts"></label>
           </div>
         </div>
           <button class="button" type="submit">Перезвоните мне</button>
       </form>
-    </section> -->
+    </section>
   </main>
 
   <footer class="page__footer  footer">
