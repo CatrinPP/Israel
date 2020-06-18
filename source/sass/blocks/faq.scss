@@ -9,6 +9,29 @@
     url("../img/bg-watercolor3-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right 77px, -40px bottom, left top;
+  background-size: 47%, 194px, contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-girls-desktop@2x.png"),
+      url("../img/bag-desktop@2x.png"),
+      url("../img/bg-watercolor3-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+
+    background-image: url("../img/bag-desktop@1x.png");
+    background-size: 194px;
+    background-position: -48px 78%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bag-desktop@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 26px;
+  }
 }
 
 .faq__content {
@@ -17,6 +40,25 @@
   h2 {
     @include header;
     margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-left: 55px;
+    padding-right: 55px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    h2 {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -28,6 +70,7 @@
 }
 
 .faq__item {
+
   width: 100%;
   padding: 35px 60px 30px 0;
 
@@ -37,7 +80,9 @@
 
   button {
     position: relative;
+
     padding-left: 30px;
+    width: 100%;
 
     font-size: 17px;
     font-weight: 400;
@@ -46,6 +91,7 @@
 
     border: none;
     background: none;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -56,7 +102,7 @@
       width: 20px;
       height: 20px;
 
-      background-image: url("../img/icon-1.svg");
+      background-image: url("../img/1.svg");
       background-repeat: no-repeat;
     }
   }
@@ -70,22 +116,50 @@
   }
 
   &--2 button::before {
-    background-image: url("../img/icon-2.svg");
+    background-image: url("../img/2.svg");
   }
 
   &--3 button::before {
-    background-image: url("../img/icon-3.svg");
+    background-image: url("../img/3.svg");
   }
 
   &--4 button::before {
-    background-image: url("../img/icon-4.svg");
+    background-image: url("../img/4.svg");
   }
 
   &--5 button::before {
-    background-image: url("../img/icon-5.svg");
+    background-image: url("../img/5.svg");
   }
 
   &--6 button::before {
-    background-image: url("../img/icon-6.svg");
+    background-image: url("../img/6.svg");
+  }
+
+  svg {
+    position: absolute;
+    top: 10px;
+    right: -45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 28px 24px 23px 0;
+
+    button {
+      padding-left: 25px;
+
+      font-size: 16px;
+      line-height: 170%;
+    }
+
+    p {
+      margin-top: 15px;
+
+      font-size: 14px;
+      line-height: 165%;
+    }
+
+    svg {
+      right: -25px;
+    }
   }
 }
