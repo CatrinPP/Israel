@@ -1074,7 +1074,7 @@ input[type="radio"].visually-hidden {
   min-height: 843px;
   padding-left: calc(35% - 370px);
   padding-right: calc(35% - 388px);
-  padding-bottom: 130px;
+  padding-bottom: 120px;
   background-color: #ffffff;
   background-image: url("../img/bg-watercolor2-desktop@1x.png"), url("../img/watch-desktop@1x.png");
   background-position: center -42px, 103% 72%;
@@ -1120,8 +1120,10 @@ input[type="radio"].visually-hidden {
         text-align: center; } }
   @media (max-width: 767px) {
     .gallery {
+      min-height: 783px;
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 75px;
       background: none; }
       .gallery h2 {
         padding-left: 16px;
@@ -1257,15 +1259,29 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 120px 167px;
+  padding: 120px calc(50% - 518px);
   margin-bottom: 60px;
   background-color: #c19f88;
   background-image: url("../img/bg-masa-desktop@1x.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .instagram-invitation {
+      background-image: url("../img/bg-masa-desktop@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .instagram-invitation {
+      padding-top: 0;
+      background-color: transparent;
+      background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%);
+      background-position: calc(50% + 85px) 45px;
+      background-size: 632px; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .instagram-invitation {
+      background-image: url("../img/bg-masa-mobile@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
 
 .instagram-invitaion__content {
   margin-left: auto;
-  width: 400px; }
+  max-width: 400px; }
   .instagram-invitaion__content h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -1289,10 +1305,45 @@ input[type="radio"].visually-hidden {
     line-height: 170%;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
   .instagram-invitaion__content a {
+    position: relative;
     padding-left: 68px;
     padding-right: 42px;
     color: #ffffff;
     text-align: center; }
+  .instagram-invitaion__content svg {
+    position: absolute;
+    left: 35px;
+    top: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    fill: #ffffff; }
+  @media (max-width: 1023px) {
+    .instagram-invitaion__content {
+      padding-top: 150px; } }
+  @media (max-width: 767px) {
+    .instagram-invitaion__content {
+      padding-top: 0;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: auto; }
+      .instagram-invitaion__content h2 {
+        margin-bottom: 97px;
+        font-size: 40px;
+        line-height: 49px;
+        text-align: center; }
+      .instagram-invitaion__content p {
+        max-width: 756px;
+        padding-left: calc(80% - 232px);
+        padding-right: 16px;
+        margin-bottom: 76px;
+        font-size: 16px;
+        line-height: 165%; }
+      .instagram-invitaion__content a {
+        padding-left: 93px;
+        padding-right: 60px;
+        margin-left: calc(80% - 232px); }
+      .instagram-invitaion__content svg {
+        left: 60px; } }
 
 .faq {
   padding-top: 79px;

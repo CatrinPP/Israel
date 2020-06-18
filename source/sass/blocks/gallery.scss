@@ -3,7 +3,7 @@
   min-height: 843px;
   padding-left: calc(35% - 370px);
   padding-right: calc(35% - 388px);
-  padding-bottom: 130px;
+  padding-bottom: 120px;
 
   background-color: $color-secondary;
   background-image: url("../img/bg-watercolor2-desktop@1x.png"),
@@ -53,8 +53,10 @@
   }
 
   @media (max-width: $mobile-width) {
+    min-height: 783px;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 75px;
 
     background: none;
 

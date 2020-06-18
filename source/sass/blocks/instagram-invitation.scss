@@ -2,17 +2,35 @@
   min-height: 583px;
   display: flex;
   flex-direction: column;
-  padding: 120px 167px;
+  padding: 120px calc(50% - 518px);
   margin-bottom: 60px;
 
   background-color: #c19f88;
   background-image: url("../img/bg-masa-desktop@1x.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-masa-desktop@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+
+    background-color: transparent;
+    background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
+    background-position: calc(50% + 85px) 45px;
+    background-size: 632px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-masa-mobile@2x.jpg"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
+    }
+  }
 }
 
 .instagram-invitaion__content {
   margin-left: auto;
-  width: 400px;
+  max-width: 400px;
 
   h2 {
     @include header;
@@ -30,10 +48,62 @@
   }
 
   a {
+    position: relative;
+
     padding-left: 68px;
     padding-right: 42px;
 
     color: $color-secondary;
     text-align: center;
+  }
+
+  svg {
+    position: absolute;
+    left: 35px;
+    top: calc(50% - 12px);
+
+    width: 24px;
+    height: 24px;
+
+    fill: #ffffff;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 150px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+
+    h2 {
+      margin-bottom: 97px;
+
+      font-size: 40px;
+      line-height: 49px;
+      text-align: center;
+    }
+
+    p {
+      max-width: 756px;
+      padding-left: calc(80% - 232px);
+      padding-right: 16px;
+      margin-bottom: 76px;
+
+      font-size: 16px;
+      line-height: 165%;
+    }
+
+    a {
+      padding-left: 93px;
+      padding-right: 60px;
+      margin-left: calc(80% - 232px);
+    }
+
+    svg {
+      left: 60px;
+    }
   }
 }
