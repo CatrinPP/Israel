@@ -11,6 +11,8 @@
   <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" crossorigin="anonymous">
   <title>Проект "Маса": учеба и стажировка в Израиле</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <script src="./js/vendor.js"></script>
+  <script>svg4everybody();</script>
 </head>
 <body class="page">
   <header class="page__header  header">
@@ -43,11 +45,16 @@
 
     <section class="main__programs  programs">
       <h2>Программы</h2>
-      <div class="programs__slider">
-        <div class="programs__item  programs__item--general">
-          <input class="visually-hidden" type="radio" name="program" id="general">
-          <label for="general">Общие</label>
-          <div class="programs__item-description">
+      <div class="programs__wrapper">
+        <div class="programs__controls">
+          <button class="programs__button  programs__button--general" type="button" data-title="general">Общие</button>
+          <button class="programs__button  programs__button--active  programs__button--academy" type="button" data-title="academy">Академические</button>
+          <button class="programs__button  programs__button--internship" type="button" data-title="internship">Стажировки</button>
+          <button class="programs__button  programs__button--volunteer" type="button" data-title="volunteer">Волонтерство</button>
+          <button class="programs__button  programs__button--religion" type="button" data-title="religion">Религиозные</button>
+        </div>
+        <div class="programs__list">
+          <div class="programs__item  programs__item--general">
             <h3>Общие</h3>
             <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,
               традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только
@@ -55,13 +62,9 @@
               творческого исследования.</p>
             <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии,
               сравнительной религии, законодательного и&nbsp;делового администрирования или искусства?
-              Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
+                Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
           </div>
-        </div>
-        <div class="programs__item  programs__item--academy">
-          <input class="visually-hidden" type="radio" name="program" id="academy" checked>
-          <label for="academy">Академические</label>
-          <div class="programs__item-description">
+          <div class="programs__item  programs__item--active  programs__item--academy">
             <h3>Академические</h3>
             <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,
               традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только
@@ -71,11 +74,7 @@
               сравнительной религии, законодательного и&nbsp;делового администрирования или искусства?
               Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
           </div>
-        </div>
-        <div class="programs__item  programs__item--internship">
-          <input class="visually-hidden" type="radio" name="program" id="internship">
-          <label for="internship">Стажировки</label>
-          <div class="programs__item-description">
+          <div class="programs__item  programs__item--internship">
             <h3>Стажировки</h3>
             <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,
               традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только
@@ -85,11 +84,7 @@
               сравнительной религии, законодательного и&nbsp;делового администрирования или искусства?
               Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
           </div>
-        </div>
-        <div class="programs__item  programs__item--volunteer">
-          <input class="visually-hidden" type="radio" name="program" id="volunteer">
-          <label for="volunteer">Волонтёрство</label>
-          <div class="programs__item-description">
+          <div class="programs__item  programs__item--volunteer">
             <h3>Волонтёрство</h3>
             <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,
               традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только
@@ -99,11 +94,7 @@
               сравнительной религии, законодательного и&nbsp;делового администрирования или искусства?
               Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
           </div>
-        </div>
-        <div class="programs__item  programs__item--religion">
-          <input class="visually-hidden" type="radio" name="program" id="religion">
-          <label for="religion">Религиозные</label>
-          <div class="programs__item-description">
+          <div class="programs__item  programs__item--religion">
             <h3>Религиозные</h3>
             <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,
               традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только
