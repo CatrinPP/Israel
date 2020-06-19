@@ -12,6 +12,7 @@
     url("../img/bg-watercolorhowto-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: 12px 128px, 112% 340px, left -72px;
+  background-size: 581px, 337px, contain;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-howto-desktop@2x.png"),
@@ -22,9 +23,9 @@
   @media (max-width: $tablet-width) {
     min-height: 607px;
     padding: 10px 55px 96px;
-
     background-image: url("../img/stamp-mobile@1x.png");
     background-position: 103px 280px;
+    background-size: 264px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/stamp-mobile@2x.png");

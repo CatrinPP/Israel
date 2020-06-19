@@ -7,7 +7,7 @@
     url("../img/bg-girl-desktop@1x.png");
   background-position: -73px 138px, right top;
   background-repeat: no-repeat;
-  background-size: auto, 60vw;
+  background-size: 220px, 60vw;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/backpack-desktop@2x.png"),
@@ -42,7 +42,7 @@
     background-image: url("../img/backpack-mobile@1x.png"),
       url("../img/bg-girl-mobile@1x.png");
     background-position: -53px 9px, center bottom;
-    background-size: auto;
+    background-size: 158px, 424px;
 
     h2 {
       padding: 0;

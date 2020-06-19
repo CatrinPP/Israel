@@ -7,7 +7,7 @@
 
   background-image: url("../img/bg-sketch-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 680px;
   background-position: right 56px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -39,6 +39,7 @@
     padding-top: 0;
 
     background-image: url("../img/bg-sketch-mobile@1x.png");
+    background-size: 296px;
 
     h2 {
       margin-bottom: 6px;

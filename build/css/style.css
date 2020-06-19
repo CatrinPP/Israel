@@ -708,7 +708,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 12px;
   background-image: url("../img/bg-sketch-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 680px;
   background-position: right 56px;
   overflow-y: auto;
   overflow-x: hidden; }
@@ -756,7 +756,8 @@ input[type="radio"].visually-hidden {
       padding-left: 0;
       padding-bottom: 420px;
       padding-top: 0;
-      background-image: url("../img/bg-sketch-mobile@1x.png"); }
+      background-image: url("../img/bg-sketch-mobile@1x.png");
+      background-size: 296px; }
       .programs h2 {
         margin-bottom: 6px;
         text-align: center; }
@@ -875,7 +876,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/backpack-desktop@1x.png"), url("../img/bg-girl-desktop@1x.png");
   background-position: -73px 138px, right top;
   background-repeat: no-repeat;
-  background-size: auto, 60vw; }
+  background-size: 220px, 60vw; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .request {
       background-image: url("../img/backpack-desktop@2x.png"), url("../img/bg-girl-desktop@2x.png"); } }
@@ -912,7 +913,7 @@ input[type="radio"].visually-hidden {
       margin-bottom: 69px;
       background-image: url("../img/backpack-mobile@1x.png"), url("../img/bg-girl-mobile@1x.png");
       background-position: -53px 9px, center bottom;
-      background-size: auto; }
+      background-size: 158px, 424px; }
       .request h2 {
         padding: 0;
         text-align: center; }
@@ -962,7 +963,8 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/stamp-desktop@1x.png"), url("../img/bg-watercolorhowto-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: 12px 128px, 112% 340px, left -72px; }
+  background-position: 12px 128px, 112% 340px, left -72px;
+  background-size: 581px, 337px, contain; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .preparation {
       background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("../img/bg-watercolorhowto-desktop@2x.png"); } }
@@ -971,7 +973,8 @@ input[type="radio"].visually-hidden {
       min-height: 607px;
       padding: 10px 55px 96px;
       background-image: url("../img/stamp-mobile@1x.png");
-      background-position: 103px 280px; } }
+      background-position: 103px 280px;
+      background-size: 264px; } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
     .preparation {
       background-image: url("../img/stamp-mobile@2x.png"); } }
