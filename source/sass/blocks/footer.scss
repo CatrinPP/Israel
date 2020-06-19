@@ -19,12 +19,12 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    padding: 32px 55px;
+    padding: 32px 55px 28px;
     align-items: center;
 
     p {
       padding-left: 0;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -43,4 +43,13 @@
 .footer__social {
   margin-top: 3px;
   margin-right: 7px;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 15px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }

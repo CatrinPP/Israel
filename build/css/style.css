@@ -1580,7 +1580,7 @@ input[type="radio"].visually-hidden {
   padding-right: 186px; }
   .review--active {
     display: block; }
-  .review svg {
+  .review > svg {
     float: left;
     width: 354px;
     height: 480px;
@@ -1601,7 +1601,7 @@ input[type="radio"].visually-hidden {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-      .review svg {
+      .review > svg {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1;
@@ -1741,19 +1741,12 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   width: 24px;
   height: 24px;
-  opacity: 0.2;
-  background-image: url("../img/icon-fb.svg");
-  background-repeat: no-repeat; }
-  .social__link--twitter {
-    background-image: url("../img/icon-twitter.svg"); }
-  .social__link--instagram {
-    background-image: url("../img/icon-instagram.svg"); }
-  .social__link--telegram {
-    background-image: url("../img/icon-telegram.svg"); }
-  .social__link--whatsapp {
-    background-image: url("../img/icon-whatsapp.svg"); }
+  opacity: 0.2; }
   .social__link:not(:last-child) {
     margin-right: 14px; }
+  @media (max-width: 767px) {
+    .social__link:not(:last-child) {
+      margin-right: 25px; } }
 
 .social--supervisor .social__link {
   margin-right: 5px; }
@@ -1989,13 +1982,13 @@ input[type="radio"].visually-hidden {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      padding: 32px 55px;
+      padding: 32px 55px 28px;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
       .footer p {
         padding-left: 0;
-        margin-bottom: 28px; } }
+        margin-bottom: 25px; } }
 
 .footer__logo img {
   width: 85px;
@@ -2008,3 +2001,9 @@ input[type="radio"].visually-hidden {
 .footer__social {
   margin-top: 3px;
   margin-right: 7px; }
+  @media (max-width: 767px) {
+    .footer__social {
+      margin-right: 15px; }
+      .footer__social svg {
+        width: 32px;
+        height: 32px; } }

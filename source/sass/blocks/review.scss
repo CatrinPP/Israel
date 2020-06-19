@@ -7,7 +7,7 @@
     display: block;
   }
 
-  svg {
+  & > svg {
     float: left;
     width: 354px;
     height: 480px;
@@ -28,7 +28,7 @@
     padding-right: 0;
     padding-left: 0;
 
-    svg {
+    & > svg {
       order: 1;
 
       width: 240px;

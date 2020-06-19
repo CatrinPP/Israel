@@ -4,27 +4,15 @@
   height: 24px;
 
   opacity: 0.2;
-  background-image: url("../img/icon-fb.svg");
-  background-repeat: no-repeat;
-
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &--instagram {
-    background-image: url("../img/icon-instagram.svg");
-  }
-
-  &--telegram {
-    background-image: url("../img/icon-telegram.svg");
-  }
-
-  &--whatsapp {
-    background-image: url("../img/icon-whatsapp.svg");
-  }
 
   &:not(:last-child) {
     margin-right: 14px;
+  }
+
+  @media (max-width: $mobile-width) {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
   }
 }
 
