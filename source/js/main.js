@@ -1,6 +1,27 @@
 'use strict';
 
 (function () {
+  /* Проверка поддержки webp */
+  function checkSupport(fn) {
+    var html = document.documentElement;
+    var WebP = new Image();
+
+    WebP.onload = WebP.onerror = function () {
+      var isSupported = (WebP.height === 2);
+
+      if (isSupported) {
+        if (html.className.indexOf('no-webp') >= 0) {
+          html.className = html.className.replace(/\bno-webp\b/, 'webp');
+        } else {
+          html.className += ' webp';
+        }
+      }
+      fn(isSupported);
+    };
+    WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  }
+
+  checkSupport();
 
   /* Открытие и закрытие модальных окон */
   var ESC_KEYCODE = 27;
@@ -123,5 +144,37 @@
   input.addEventListener('input', mask, false);
   input.addEventListener('focus', mask, false);
   input.addEventListener('blur', mask, false);
+
+
+  /* Переключение табов программ */
+  var programsControlsBlock = document.querySelector('.programs__controls');
+  var programButtons = programsControlsBlock.querySelectorAll('.programs__button');
+  var programs = document.querySelectorAll('.programs__item');
+
+  function disactivateProgramsButtons() {
+    programButtons.forEach(function (button) {
+      button.classList.remove('programs__button--active');
+    });
+  }
+
+  function hideAllPrograms() {
+    programs.forEach(function (program) {
+      program.classList.remove('programs__item--active');
+    });
+  }
+
+  function showProgram(title) {
+    var programClass = '.programs__item--' + title;
+    document.querySelector(programClass).classList.add('programs__item--active');
+  }
+
+  function onControlsClick(evt) {
+    var title = evt.target.dataset.title;
+    hideAllPrograms();
+    disactivateProgramsButtons();
+    showProgram(title);
+    evt.target.classList.add('programs__button--active');
+  }
+  programsControlsBlock.addEventListener('click', onControlsClick);
 
 })();
