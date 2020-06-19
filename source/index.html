@@ -458,8 +458,12 @@
     <section class="main__contacts  contacts">
       <div class="contacts__content">
         <h2>Узнать подробности</h2>
+        <picture>
+          <source type="image/webp" srcset="./img/map-desktop@1x.webp 1x, ./img/map-desktop@1x.webp 2x">
+          <img src="./img/map-desktop@1x.png" srcset="./img/map-desktop@1x.png 2x" width="702" height="448" alt="">
+        </picture>
         <div class="contacts__city">
-          <p>Ваш город</p>
+          <p>Ваш город:</p>
           <button type="button">Новосибирск</button>
         </div>
         <div class="contacs__supervisor  supervisor">
@@ -472,15 +476,13 @@
               <a class="social__link  social__link--telegram" href="#" aria-label="Связаться в Telegram"></a>
             </div>
             <picture>
-              <img src="./img/contact@1x.jpg" width="112" height="112" alt="">
+              <source type="image/webp" srcset="./img/contact@1x.webp 1x, ./img/contact@2x.webp 2x">
+              <img src="./img/contact@1x.jpg" srcset="./img/contact@1x.jpg 2x" width="112" height="112" alt="Карта расположения культурногоцентра по адресу: г.Новосибирск, ул.Щетинкина 68">
             </picture>
           </div>
           <p>Куратор является опытным специалистом агентства Сохнут и&nbsp;знает&nbsp;о проекте «Маса» всё!
             Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою!</p>
         </div>
-        <picture>
-          <img src="./img/map-desktop@1x.png" width="702" height="448" alt="">
-        </picture>
       </div>
       <form class="contacts__form  form  form--line" action="https://echo.htmlacademy.ru" method="POST">
         <div class="form__text">

@@ -109,6 +109,8 @@
 
 .form--line {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 
   button {
     width: 216px;
@@ -122,6 +124,34 @@
     width: 255px;
     margin-right: 20px;
   }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    width: 100%;
+    max-width: 715px;
+    flex-wrap: wrap;
+    padding-left: 16px;
+    padding-right: 0;
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 95%;
+      margin-right: 0;
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+
+    button {
+      width: 264px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    button {
+      margin-right: 28px;
+    }
+  }
 }
 
 .form__fieldset {
@@ -129,6 +159,12 @@
 
   &--line {
     display: flex;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 18px;
+    }
   }
 }
 
@@ -168,6 +204,23 @@
     margin-bottom: 20px;
     color: rgba($color: $color-main, $alpha: 0.87);
     font-size: 17px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+
+    b {
+      font-size: 16px;
+    }
+
+    p {
+      line-height: 165%;
+    }
+
+    p + p {
+      margin-top: 13px;
+      margin-bottom: 32px;
+    }
   }
 }
 
