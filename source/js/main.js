@@ -227,4 +227,41 @@
   faqButtons.forEach(function (button) {
     button.addEventListener('click', onFaqButtonClick);
   });
+
+  /* Слайдер отзывы */
+  var reviews = Array.from(document.querySelectorAll('.review'));
+  var previousButtons = Array.from(document.querySelectorAll('.review__button--previous'));
+  var nextButtons = Array.from(document.querySelectorAll('.review__button--next'));
+
+  function hideAllReviews() {
+    reviews.forEach(function (review) {
+      review.classList.remove('review--active');
+    });
+  }
+
+  function showReview(index) {
+    reviews[index].classList.add('review--active');
+  }
+
+  function onPreviousButtonClick(evt) {
+    evt.preventDefault();
+    hideAllReviews();
+    var index = previousButtons.indexOf(evt.target);
+    showReview(index - 1);
+  }
+
+  function onNextButtonClick(evt) {
+    evt.preventDefault();
+    hideAllReviews();
+    var index = nextButtons.indexOf(evt.target);
+    showReview(index + 1);
+  }
+
+  previousButtons.forEach(function (button) {
+    button.addEventListener('click', onPreviousButtonClick);
+  });
+
+  nextButtons.forEach(function (button) {
+    button.addEventListener('click', onNextButtonClick);
+  });
 })();

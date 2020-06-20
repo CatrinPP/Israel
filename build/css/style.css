@@ -1692,7 +1692,11 @@ input[type="radio"].visually-hidden {
 .review__navigation {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex; }
+  display: inline-flex;
+  width: 106px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .review__navigation p {
     margin: 0;
     margin-right: 27px;
@@ -1709,6 +1713,12 @@ input[type="radio"].visually-hidden {
       margin: 0 auto; }
       .review__navigation p {
         margin-right: 24px; } }
+
+.review__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50px; }
 
 .review__button {
   position: relative;
@@ -1744,6 +1754,7 @@ input[type="radio"].visually-hidden {
             transform: rotate(90deg);
     cursor: pointer; }
   .review__button--next {
+    margin-left: auto;
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg); }
     .review__button--next::before {

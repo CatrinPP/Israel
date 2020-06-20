@@ -123,6 +123,8 @@
 
 .review__navigation {
   display: inline-flex;
+  width: 106px;
+  justify-content: space-between;
 
   p {
     margin: 0;
@@ -144,6 +146,11 @@
       margin-right: 24px;
     }
   }
+}
+
+.review__controls {
+  display: flex;
+  width: 50px;
 }
 
 .review__button {
@@ -183,6 +190,8 @@
   }
 
   &--next {
+    margin-left: auto;
+
     transform: rotate(-135deg);
 
     &::before {
