@@ -120,6 +120,7 @@
     border: none;
     background: none;
     border-bottom: 1px dashed $color-heading;
+    cursor: pointer;
 
     &::after {
       content: "";
@@ -131,6 +132,10 @@
       height: 15px;
 
       background-image: url("../img/gps.png");
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 

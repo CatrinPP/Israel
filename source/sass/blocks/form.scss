@@ -39,7 +39,8 @@
       border-color: $color-input--filled;
     }
 
-    &:focus {
+    &:focus,
+    &:hover {
       outline: none;
       border: 2px solid transparent;
       z-index: 10;
@@ -47,14 +48,15 @@
       background-color: #ffffff;
     }
 
-    &:focus + label {
+    &:focus + label,
+    &:hover + label {
       position: absolute;
       top: 0;
-      // bottom: 0;
-      height: 59px;
       left: 0;
       right: 0;
       z-index: 5;
+
+      height: 59px;
 
       background-image: $gradient;
       border-radius: 80px;
@@ -128,7 +130,9 @@
   }
 
   input[type="text"]:focus + label,
-  input[type="tel"]:focus + label {
+  input[type="tel"]:focus + label,
+  input[type="text"]:hover + label,
+  input[type="tel"]:hover + label {
     width: 255px;
     bottom: 28px;
   }
@@ -151,7 +155,9 @@
     }
 
     input[type="text"]:focus + label,
-    input[type="tel"]:focus + label {
+    input[type="tel"]:focus + label,
+    input[type="text"]:hover + label,
+    input[type="tel"]:hover + label {
       width: 100%;
     }
 
@@ -189,6 +195,14 @@
 .form__bottom-wrapper {
   position: relative;
   left: 12px;
+
+  label {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 
   @media (max-width: $mobile-width) {
     left: auto;

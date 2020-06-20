@@ -82,6 +82,10 @@
     font-size: 17px;
     line-height: 150%;
     text-decoration: underline;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -187,6 +191,11 @@
     box-shadow: 0 -4px 4px rgba($color: $color-main, $alpha: 0.2);
     transform: rotate(90deg);
     cursor: pointer;
+  }
+
+  &:hover,
+  &:hover::before {
+    background-color: rgba($color: $color-main, $alpha: 0.7);
   }
 
   &--next {

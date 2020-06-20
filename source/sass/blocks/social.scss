@@ -9,6 +9,10 @@
     margin-right: 14px;
   }
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   @media (max-width: $mobile-width) {
     &:not(:last-child) {
       margin-right: 25px;

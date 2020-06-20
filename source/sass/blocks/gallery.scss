@@ -200,6 +200,10 @@
   background: rgba($color: $color-main, $alpha: 0.2);
   cursor: pointer;
 
+  &:hover {
+    background: rgba($color: $color-main, $alpha: 0.7);
+  }
+
   &:not(:last-child) {
     margin-right: 8px;
   }
