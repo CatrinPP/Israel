@@ -1502,6 +1502,7 @@ input[type="radio"].visually-hidden {
       background-image: url("../img/1.svg");
       background-repeat: no-repeat; }
   .faq__item p {
+    display: none;
     margin: 0;
     margin-top: 27px;
     font-weight: 400;
@@ -1533,6 +1534,9 @@ input[type="radio"].visually-hidden {
         line-height: 165%; }
       .faq__item svg {
         right: -25px; } }
+
+.faq__item--active p {
+  display: block; }
 
 .reviews {
   padding-top: 27px;

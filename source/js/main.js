@@ -209,4 +209,22 @@
   galleryControls.forEach(function (control) {
     control.addEventListener('click', onGalleryControlClick);
   });
+
+  /* Аккордеон FAQ */
+  var faqButtons = document.querySelectorAll('.faq__button');
+
+  function toggleFaqItemStatus(id) {
+    var faqItemClassName = '.faq__item--' + id;
+    document.querySelector(faqItemClassName).classList.toggle('faq__item--active');
+  }
+
+  function onFaqButtonClick(evt) {
+    evt.preventDefault();
+    var id = evt.currentTarget.dataset.id;
+    toggleFaqItemStatus(id);
+  }
+
+  faqButtons.forEach(function (button) {
+    button.addEventListener('click', onFaqButtonClick);
+  });
 })();

@@ -109,6 +109,7 @@
   }
 
   p {
+    display: none;
     margin: 0;
     margin-top: 27px;
 
@@ -162,5 +163,11 @@
     svg {
       right: -25px;
     }
+  }
+}
+
+.faq__item--active {
+  p {
+    display: block;
   }
 }

@@ -177,7 +177,7 @@
   }
   programsControlsBlock.addEventListener('click', onControlsClick);
 
-  /* Переключение табов программ */
+  /* Слайдер галереи */
   var galleryControls = Array.from(document.querySelectorAll('.gallery__control'));
   var galleryPictures = Array.from(document.querySelectorAll('.gallery__picture'));
 
@@ -199,7 +199,6 @@
 
   function onGalleryControlClick(evt) {
     evt.preventDefault();
-    debugger;
     var index = galleryControls.indexOf(evt.target);
     disactivateGalleryControls();
     evt.target.classList.add('gallery__control--active');
@@ -211,4 +210,21 @@
     control.addEventListener('click', onGalleryControlClick);
   });
 
+  /* Аккордеон FAQ */
+  var faqButtons = document.querySelectorAll('.faq__button');
+
+  function toggleFaqItemStatus(id) {
+    var faqItemClassName = '.faq__item--' + id;
+    document.querySelector(faqItemClassName).classList.toggle('faq__item--active');
+  }
+
+  function onFaqButtonClick(evt) {
+    evt.preventDefault();
+    var id = evt.currentTarget.dataset.id;
+    toggleFaqItemStatus(id);
+  }
+
+  faqButtons.forEach(function (button) {
+    button.addEventListener('click', onFaqButtonClick);
+  });
 })();
