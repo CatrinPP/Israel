@@ -119,8 +119,7 @@
     background-position: 0 78px;
   }
 
-  &--active,
-  &--focus {
+  &--active {
     color: $color-secondary;
     text-transform: lowercase;
     font-variant: small-caps;
@@ -134,7 +133,8 @@
       background-position-y: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.87;
     }
   }

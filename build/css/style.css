@@ -315,6 +315,7 @@ input[type="radio"].visually-hidden {
 .form input[type="tel"] {
   position: relative;
   width: 100%;
+  height: 59px;
   padding: 20px 40px;
   margin-bottom: 8px;
   font-size: 16px;
@@ -349,7 +350,7 @@ input[type="radio"].visually-hidden {
   .form input[type="tel"]:focus + label {
     position: absolute;
     top: 0;
-    bottom: 0;
+    height: 59px;
     left: 0;
     right: 0;
     z-index: 5;
@@ -433,6 +434,10 @@ input[type="radio"].visually-hidden {
   .form--line input[type="tel"] {
     width: 255px;
     margin-right: 20px; }
+  .form--line input[type="text"]:focus + label,
+  .form--line input[type="tel"]:focus + label {
+    width: 255px;
+    bottom: 28px; }
   @media (max-width: 1023px) {
     .form--line {
       -webkit-box-orient: vertical;
@@ -447,10 +452,13 @@ input[type="radio"].visually-hidden {
       padding-right: 0; }
       .form--line input[type="text"],
       .form--line input[type="tel"] {
-        width: 95%;
+        width: 100%;
         margin-right: 0;
         padding-top: 17px;
         padding-bottom: 17px; }
+      .form--line input[type="text"]:focus + label,
+      .form--line input[type="tel"]:focus + label {
+        width: 100%; }
       .form--line button {
         width: 264px;
         margin: 0 auto; } }
@@ -513,45 +521,34 @@ input[type="radio"].visually-hidden {
 
 .form--single-input {
   position: relative;
-  width: 477px;
-  padding-right: 216px;
-  border: 2px solid #e3e3e3;
-  border-radius: 80px;
-  background-color: #ffffff; }
+  width: 477px; }
   .form--single-input input[type="tel"] {
-    margin-bottom: 0;
-    border: none;
-    background-color: transparent; }
+    padding-right: 222px; }
   .form--single-input button {
     position: absolute;
-    top: -2px;
+    top: 0;
     right: -2px;
+    z-index: 200;
     width: 216px;
     padding: 22px;
     margin-bottom: 0; }
   @media (max-width: 1023px) {
     .form--single-input {
-      width: 100%;
-      padding-left: 55px;
-      padding-right: 55px;
-      border: none;
-      border-radius: 0; }
+      width: 70%; }
       .form--single-input input[type="tel"] {
-        max-width: 70%;
         margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
         border: 2px solid #e3e3e3; }
       .form--single-input button {
         position: static;
         width: 264px; } }
   @media (max-width: 767px) {
     .form--single-input {
+      width: 100%;
       padding-right: 0;
       padding-left: 0; }
       .form--single-input input[type="tel"] {
-        max-width: 100%;
-        margin-bottom: 3px; } }
+        margin-bottom: 3px;
+        padding-right: 20px; } }
 
 .button {
   padding: 20px;
@@ -822,7 +819,7 @@ input[type="radio"].visually-hidden {
     height: 36px;
     background-image: url("../img/sprite.png");
     background-position: 0 78px; }
-  .programs__button--active, .programs__button--focus {
+  .programs__button--active {
     color: #ffffff;
     text-transform: lowercase;
     font-variant: small-caps;
@@ -830,9 +827,9 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/rectangle.svg");
     background-repeat: no-repeat;
     outline: none; }
-    .programs__button--active::before, .programs__button--focus::before {
+    .programs__button--active::before {
       background-position-y: 0; }
-    .programs__button--active:hover, .programs__button--focus:hover {
+    .programs__button--active:hover, .programs__button--active:focus {
       opacity: 0.87; }
   .programs__button:hover:not(.programs__button--active) {
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
@@ -890,7 +887,7 @@ input[type="radio"].visually-hidden {
 .request {
   padding-top: 209px;
   padding-left: 14%;
-  padding-bottom: 160px;
+  padding-bottom: 153px;
   background-image: url("../img/backpack-desktop@1x.png"), url("../img/bg-girl-desktop@1x.png");
   background-position: -73px 138px, right top;
   background-repeat: no-repeat;
@@ -962,7 +959,7 @@ input[type="radio"].visually-hidden {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      margin-left: 0; } }
+      margin: 0 auto; } }
 
 .preparation {
   display: -webkit-box;
