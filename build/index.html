@@ -10,6 +10,7 @@
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" crossorigin="anonymous">
   <title>Проект "Маса": учеба и стажировка в Израиле</title>
+  <meta name="description" content="Более 250 учебных программ и возможность стажировки в Израиле для еврейской молодежи">
   <link rel="stylesheet" href="./css/style.min.css">
   <script src="./js/vendor.js"></script>
   <script>svg4everybody();</script>
@@ -113,7 +114,7 @@
       <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
       <form class="request__form  form  form--single-input" action="https://echo.htmlacademy.ru" method="POST">
         <input id="user-tel--request" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
-        <label for="user-tel--request"></label>
+        <label for="user-tel--request" aria-label="Введите номер телефона"></label>
         <button class="button" type="submit">Перезвоните мне</button>
       </form>
     </section>
@@ -540,11 +541,11 @@
         <div class="form__fieldset  form__fieldset--line">
           <div class="form__field">
             <input id="user-name--contacts" name="name" type="text" placeholder="Имя" required="">
-            <label for="user-name--contacts"></label>
+            <label for="user-name--contacts" aria-label="Введите свое имя"></label>
           </div>
           <div class="form__field">
             <input id="user-tel--contacts" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
-            <label for="user-tel--contacts"></label>
+            <label for="user-tel--contacts" aria-label="Введите номер телефона"></label>
           </div>
         </div>
           <button class="button" type="submit">Перезвоните мне</button>
@@ -580,11 +581,11 @@
         <div class="form__fieldset">
           <div class="form__field">
             <input id="user-name" name="name" type="text" placeholder="Имя" autofocus="" required="">
-            <label for="user-name"></label>
+            <label for="user-name" aria-label="Введите свое имя"></label>
           </div>
           <div class="form__field">
             <input id="user-tel" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
-            <label for="user-tel"></label>
+            <label for="user-tel" aria-label="Введите номер телефона"></label>
           </div>
         </div>
         <div class="form__bottom-wrapper">
