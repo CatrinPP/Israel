@@ -177,4 +177,38 @@
   }
   programsControlsBlock.addEventListener('click', onControlsClick);
 
+  /* Переключение табов программ */
+  var galleryControls = Array.from(document.querySelectorAll('.gallery__control'));
+  var galleryPictures = Array.from(document.querySelectorAll('.gallery__picture'));
+
+  function disactivateGalleryControls() {
+    galleryControls.forEach(function (control) {
+      control.classList.remove('gallery__control--active');
+    });
+  }
+
+  function hideAllGalleryPictures() {
+    galleryPictures.forEach(function (picture) {
+      picture.classList.remove('gallery__picture--active');
+    });
+  }
+
+  function showPicture(index) {
+    galleryPictures[index].classList.add('gallery__picture--active');
+  }
+
+  function onGalleryControlClick(evt) {
+    evt.preventDefault();
+    debugger;
+    var index = galleryControls.indexOf(evt.target);
+    disactivateGalleryControls();
+    evt.target.classList.add('gallery__control--active');
+    hideAllGalleryPictures();
+    showPicture(index);
+  }
+
+  galleryControls.forEach(function (control) {
+    control.addEventListener('click', onGalleryControlClick);
+  });
+
 })();
