@@ -1348,10 +1348,10 @@ input[type="radio"].visually-hidden {
     .instagram-invitation {
       background-image: url("../img/bg-masa-mobile@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
 
-.instagram-invitaion__content {
+.instagram-invitation__content {
   margin-left: auto;
   max-width: 400px; }
-  .instagram-invitaion__content h2 {
+  .instagram-invitation__content h2 {
     margin: 0;
     margin-bottom: 24px;
     color: #1fc0fc;
@@ -1362,10 +1362,10 @@ input[type="radio"].visually-hidden {
     letter-spacing: -0.02em;
     text-transform: uppercase; }
     @media (max-width: 767px) {
-      .instagram-invitaion__content h2 {
+      .instagram-invitation__content h2 {
         font-size: 32px;
         line-height: 39px; } }
-  .instagram-invitaion__content p {
+  .instagram-invitation__content p {
     margin: 0;
     margin-bottom: 70px;
     color: #ffffff;
@@ -1373,13 +1373,13 @@ input[type="radio"].visually-hidden {
     font-weight: 400;
     line-height: 170%;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
-  .instagram-invitaion__content a {
+  .instagram-invitation__content a {
     position: relative;
     padding-left: 68px;
     padding-right: 42px;
     color: #ffffff;
     text-align: center; }
-  .instagram-invitaion__content svg {
+  .instagram-invitation__content svg {
     position: absolute;
     left: 35px;
     top: calc(50% - 12px);
@@ -1387,31 +1387,31 @@ input[type="radio"].visually-hidden {
     height: 24px;
     fill: #ffffff; }
   @media (max-width: 1023px) {
-    .instagram-invitaion__content {
+    .instagram-invitation__content {
       padding-top: 150px; } }
   @media (max-width: 767px) {
-    .instagram-invitaion__content {
+    .instagram-invitation__content {
       padding-top: 0;
       max-width: 100%;
       margin-left: 0;
       margin-right: auto; }
-      .instagram-invitaion__content h2 {
+      .instagram-invitation__content h2 {
         margin-bottom: 97px;
         font-size: 40px;
         line-height: 49px;
         text-align: center; }
-      .instagram-invitaion__content p {
+      .instagram-invitation__content p {
         max-width: 756px;
         padding-left: calc(80% - 232px);
         padding-right: 16px;
         margin-bottom: 76px;
         font-size: 16px;
         line-height: 165%; }
-      .instagram-invitaion__content a {
+      .instagram-invitation__content a {
         padding-left: 93px;
         padding-right: 60px;
         margin-left: calc(80% - 232px); }
-      .instagram-invitaion__content svg {
+      .instagram-invitation__content svg {
         left: 60px; } }
 
 .faq {
@@ -1924,7 +1924,7 @@ input[type="radio"].visually-hidden {
         left: 20px; } }
 
 @media (max-width: 1023px) {
-  .contacs__supervisor {
+  .contacts__supervisor {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0; } }
