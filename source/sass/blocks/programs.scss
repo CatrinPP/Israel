@@ -5,16 +5,11 @@
   padding-left: calc(16% - 10px);
   margin-bottom: 12px;
 
-  background-image: url("../img/bg-sketch-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 680px;
   background-position: right 56px;
   overflow-y: auto;
   overflow-x: hidden;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-sketch-desktop@2x.png");
-  }
 
   h2 {
     @include header;
@@ -39,7 +34,6 @@
     padding-bottom: 0;
     padding-top: 0;
 
-    background-image: url("../img/bg-sketch-mobile@1x.png");
     background-size: 296px;
 
     h2 {
@@ -55,12 +49,41 @@
       font-weight: 700;
       line-height: 29px;
     }
+  }
+}
+
+.programs.nowebp {
+  background-image: url("../img/bg-sketch-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-sketch-desktop@2x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-sketch-mobile@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-sketch-mobile@2x.png");
     }
   }
 }
+
+.programs.webp {
+  background-image: url("../img/bg-sketch-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-sketch-desktop@2x.webp");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-sketch-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-sketch-mobile@2x.webp");
+    }
+  }
+}
+
 
 .programs__wrapper {
   display: flex;

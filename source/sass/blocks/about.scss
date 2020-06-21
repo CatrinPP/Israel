@@ -4,14 +4,9 @@
   padding-bottom: 98px;
 
   background-color: $color-secondary;
-  background-image: url("../img/bg-watercolor1-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-watercolor1-desktop@2x.png");
-  }
 
   h2 {
     @include header;
@@ -43,12 +38,7 @@
     padding-top: 27px;
     padding-bottom: 80px;
 
-    background-image: url("../img/bg-watercolor1-mobile@1x.png");
     background-position: center;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-watercolor1-mobile@2x.png");
-    }
 
     p {
       padding-left: 16px;
@@ -56,6 +46,38 @@
 
       font-size: 16px;
       line-height: 165%;
+    }
+  }
+}
+
+.about.nowebp {
+  background-image: url("../img/bg-watercolor1-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor1-desktop@2x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-watercolor1-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-watercolor1-mobile@2x.png");
+    }
+  }
+}
+
+.about.webp {
+  background-image: url("../img/bg-watercolor1-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor1-desktop@2x.webp");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-watercolor1-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-watercolor1-mobile@2x.webp");
     }
   }
 }

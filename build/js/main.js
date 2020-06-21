@@ -2,26 +2,43 @@
 
 (function () {
   /* Проверка поддержки webp */
-  function checkSupport(fn) {
-    var html = document.documentElement;
+  function checkWebpSupport() {
+    var headerElement = document.querySelector('.header');
+    var aboutElement = document.querySelector('.about');
+    var programsElement = document.querySelector('.programs');
+    var requestElement = document.querySelector('.request');
+    var preparationElement = document.querySelector('.preparation');
+    var galleryElement = document.querySelector('.gallery');
+    var invitationElement = document.querySelector('.instagram-invitation');
+    var faqElement = document.querySelector('.faq');
+    var reviewsElement = document.querySelector('.reviews');
+    var contactsElement = document.querySelector('.contacts');
     var WebP = new Image();
+
+    function renameElement(element) {
+      element.className = element.className.replace(/\bwebp\b/, 'nowebp');
+    }
 
     WebP.onload = WebP.onerror = function () {
       var isSupported = (WebP.height === 2);
 
-      if (isSupported) {
-        if (html.className.indexOf('no-webp') >= 0) {
-          html.className = html.className.replace(/\bno-webp\b/, 'webp');
-        } else {
-          html.className += ' webp';
-        }
+      if (!isSupported) {
+        renameElement(headerElement);
+        renameElement(aboutElement);
+        renameElement(programsElement);
+        renameElement(requestElement);
+        renameElement(preparationElement);
+        renameElement(galleryElement);
+        renameElement(invitationElement);
+        renameElement(faqElement);
+        renameElement(reviewsElement);
+        renameElement(contactsElement);
       }
-      fn(isSupported);
     };
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
 
-  checkSupport();
+  checkWebpSupport();
 
   /* Открытие и закрытие модальных окон */
   var ESC_KEYCODE = 27;

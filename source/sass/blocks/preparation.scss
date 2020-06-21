@@ -7,12 +7,28 @@
   padding-bottom: 168px;
 
   background-color: $color-secondary;
-  background-image: url("../img/bg-howto-desktop@1x.png"),
-    url("../img/stamp-desktop@1x.png"),
-    url("../img/bg-watercolorhowto-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: 12px 128px, 112% 340px, left -72px;
   background-size: 581px, 337px, contain;
+
+  @media (max-width: $tablet-width) {
+    min-height: 607px;
+    padding: 10px 55px 96px;
+    background-position: 103px 280px;
+    background-size: 264px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 55px;
+  }
+}
+
+.preparation.nowebp {
+  background-image: url("../img/bg-howto-desktop@1x.png"),
+    url("../img/stamp-desktop@1x.png"),
+    url("../img/bg-watercolorhowto-desktop@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-howto-desktop@2x.png"),
@@ -21,21 +37,31 @@
   }
 
   @media (max-width: $tablet-width) {
-    min-height: 607px;
-    padding: 10px 55px 96px;
     background-image: url("../img/stamp-mobile@1x.png");
-    background-position: 103px 280px;
-    background-size: 264px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/stamp-mobile@2x.png");
     }
   }
+}
 
-  @media (max-width: $mobile-width) {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 55px;
+.preparation.webp {
+  background-image: url("../img/bg-howto-desktop@1x.webp"),
+    url("../img/stamp-desktop@1x.webp"),
+    url("../img/bg-watercolorhowto-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-howto-desktop@2x.webp"),
+      url("../img/stamp-desktop@2x.webp"),
+      url("../img/bg-watercolorhowto-desktop@2x.webp");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/stamp-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/stamp-mobile@2x.webp");
+    }
   }
 }
 

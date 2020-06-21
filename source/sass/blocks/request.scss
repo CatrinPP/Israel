@@ -3,16 +3,9 @@
   padding-left: 14%;
   padding-bottom: 153px;
 
-  background-image: url("../img/backpack-desktop@1x.png"),
-    url("../img/bg-girl-desktop@1x.png");
   background-position: -73px 138px, right top;
   background-repeat: no-repeat;
   background-size: 220px, 60vw;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/backpack-desktop@2x.png"),
-      url("../img/bg-girl-desktop@2x.png");
-  }
 
   h2 {
     @include header;
@@ -39,8 +32,6 @@
     padding: 56px 16px 308px;
     margin-bottom: 69px;
 
-    background-image: url("../img/backpack-mobile@1x.png"),
-      url("../img/bg-girl-mobile@1x.png");
     background-position: -53px 9px, center bottom;
     background-size: 158px, 424px;
 
@@ -62,16 +53,51 @@
       background: none;
       border-radius: 0;
     }
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/backpack-mobile@2x.png"),
-        url("../img/bg-girl-mobile@2x.png");
-    }
   }
 
   @media (max-width: $mobile-width) {
     p {
       text-align: left;
+    }
+  }
+}
+
+.request.nowebp {
+  background-image: url("../img/backpack-desktop@1x.png"),
+    url("../img/bg-girl-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack-desktop@2x.png"),
+      url("../img/bg-girl-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/backpack-mobile@1x.png"),
+      url("../img/bg-girl-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backpack-mobile@2x.png"),
+        url("../img/bg-girl-mobile@2x.jpg");
+    }
+  }
+}
+
+.request.webp {
+  background-image: url("../img/backpack-desktop@1x.webp"),
+    url("../img/bg-girl-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack-desktop@2x.webp"),
+      url("../img/bg-girl-desktop@2x.webp");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/backpack-mobile@1x.webp"),
+      url("../img/bg-girl-mobile@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backpack-mobile@2x.webp"),
+        url("../img/bg-girl-mobile@2x.webp");
     }
   }
 }

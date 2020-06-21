@@ -16,7 +16,7 @@
   <script>svg4everybody();</script>
 </head>
 <body class="page">
-  <header class="page__header  header">
+  <header class="page__header  header  webp">
     <div class="header__top">
       <a class="header__tel" href="tel:+97226216581">+ (972) 2 &ndash; 621 &ndash; 6581</a>
       <a class="header__logo">
@@ -28,23 +28,25 @@
   </header>
 
   <main class="page__main  main">
-    <article class="main__about  about">
+    <article class="main__about  about  webp">
       <h2>О программе</h2>
       <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.
         Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
         В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
         <div class="about__video">
           <picture>
+            <!-- 1х: 424px; 2x: 848px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/about-mobile@1x.webp 1x, ./img/about-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/about-desktop@1x.webp 1x, ./img/about-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/about-mobile@1x.png 1x, ./img/about-mobile@2x.png 2x">
-            <img src="./img/about-desktop@1x.png" srcset="./img/about-desktop@2x.png 2x" width="870" height="460" alt="Группа ребят у костра">
+            <!-- 1х: 870px; 2x: 1740px -->
+            <img src="./img/about-desktop@1x.png" srcset="./img/about-desktop@2x.png 2x" loading="lazy" width="870" height="460" alt="Группа ребят у костра">
           </picture>
           <button class="about__play-button" type="button"><span class="visually-hidden">Включить видео</span></button>
         </div>
     </article>
 
-    <section class="main__programs  programs">
+    <section class="main__programs  programs  webp">
       <h2>Программы</h2>
       <div class="programs__wrapper">
         <div class="programs__controls">
@@ -109,7 +111,7 @@
       </div>
     </section>
 
-    <section class="main__request  request">
+    <section class="main__request  request  webp">
       <h2>Хочу поехать!</h2>
       <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
       <form class="request__form  form  form--single-input" action="https://echo.htmlacademy.ru" method="POST">
@@ -119,7 +121,7 @@
       </form>
     </section>
 
-    <section class="main__preparation  preparation">
+    <section class="main__preparation  preparation  webp">
       <div class="preparation__content">
         <h2>Как поехать</h2>
         <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе.
@@ -137,53 +139,63 @@
         </div>
     </section>
 
-    <article class="main__gallery  gallery">
+    <article class="main__gallery  gallery  webp">
       <h2>Жизнь в&nbsp;Израиле</h2>
       <p>Помимо учёбы, в рамках программе у&nbsp;вас будет возможность путешествовать по стране и
         познакомиться с богатой культурно&#8209;исторической жизнью Израиля и его жителей.</p>
       <div class="gallery__wrapper">
         <div class="gallery__picture  gallery__picture--active">
           <picture>
+            <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.webp 1x, ./img/lifefoto1-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/lifefoto1-desktop@1x.webp 1x, ./img/lifefoto1-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.png 1x, ./img/lifefoto1-mobile@2x.png 2x">
-            <img src="./img/lifefoto1-desktop@1x.png" width="482" height="732" alt="Купольный храм">
+            <!-- 1х: 482px; 2x: 964px -->
+            <img src="./img/lifefoto1-desktop@1x.png" loading="lazy" width="482" height="732" alt="Купольный храм">
           </picture>
           <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
         </div>
         <div class="gallery__picture">
           <picture>
+            <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.webp 1x, ./img/lifefoto2-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/lifefoto2-desktop@1x.webp 1x, ./img/lifefoto2-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.png 1x, ./img/lifefoto2-mobile@2x.png 2x">
-            <img src="./img/lifefoto2-desktop@1x.png" width="211" height="318" alt="Молодой человек работает за ноутбуком">
+            <!-- 1х: 211px; 2x: 422px -->
+            <img src="./img/lifefoto2-desktop@1x.png" loading="lazy" width="211" height="318" alt="Молодой человек работает за ноутбуком">
           </picture>
           <p>Изучение иврита</p>
         </div>
         <div class="gallery__picture">
           <picture>
+            <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.webp 1x, ./img/lifefoto3-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/lifefoto3-desktop@1x.webp 1x, ./img/lifefoto3-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.png 1x, ./img/lifefoto3-mobile@2x.png 2x">
-            <img src="./img/lifefoto3-desktop@1x.png" width="411" height="318" alt="Молодой человек обучает другого">
+            <!-- 1х: 411px; 2x: 822px -->
+            <img src="./img/lifefoto3-desktop@1x.png" loading="lazy" width="411" height="318" alt="Молодой человек обучает другого">
           </picture>
           <p>Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
         </div>
         <div class="gallery__picture">
           <picture>
+            <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.webp 1x, ./img/lifefoto4-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/lifefoto4-desktop@1x.webp 1x, ./img/lifefoto4-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.png 1x, ./img/lifefoto4-mobile@2x.png 2x">
-            <img src="./img/lifefoto4-desktop@1x.png" width="411" height="318" alt="Компания улыбающихся ребят">
+            <!-- 1х: 411px; 2x: 822px -->
+            <img src="./img/lifefoto4-desktop@1x.png" loading="lazy" width="411" height="318" alt="Компания улыбающихся ребят">
           </picture>
           <p>Совместные творческие проекты с израильской молодёжью</p>
         </div>
         <div class="gallery__picture">
           <picture>
+            <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.webp 1x, ./img/lifefoto5-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/lifefoto5-desktop@1x.webp 1x, ./img/lifefoto5-desktop@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.png 1x, ./img/lifefoto5-mobile@2x.png 2x">
-            <img src="./img/lifefoto5-desktop@1x.png" width="214" height="318" alt="Мужчина в горах смотрит в закат">
+            <!-- 1х: 214px; 2x: 428px -->
+            <img src="./img/lifefoto5-desktop@1x.png" loading="lazy" width="214" height="318" alt="Мужчина в горах смотрит в закат">
           </picture>
           <p>Развитие лидерства</p>
         </div>
@@ -197,7 +209,7 @@
       </div>
     </article>
 
-    <section class="main__instagram-invitation  instagram-invitation">
+    <section class="main__instagram-invitation  instagram-invitation  webp">
       <div class="instagram-invitation__content">
         <h2>#Masaisrael</h2>
         <p>Познакомьтесь с программой  от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
@@ -207,7 +219,7 @@
       </div>
     </section>
 
-    <section class="main__faq  faq">
+    <section class="main__faq  faq  webp">
       <div class="faq__content">
         <h2>Частые вопросы</h2>
         <ul class="faq__list">
@@ -263,7 +275,7 @@
       </div>
     </section>
 
-    <section class="main__reviews  reviews">
+    <section class="main__reviews  reviews  webp">
       <h2>Отзывы</h2>
       <ul class="reviews__list">
         <li class="reviews__item  review">
@@ -497,12 +509,13 @@
       </ul>
     </section>
 
-    <section class="main__contacts  contacts">
+    <section class="main__contacts  contacts  webp">
       <div class="contacts__content">
         <h2>Узнать подробности</h2>
         <picture>
+          <!-- 1х: 702px; 2x: 1404px -->
           <source type="image/webp" srcset="./img/map-desktop@1x.webp 1x, ./img/map-desktop@1x.webp 2x">
-          <img src="./img/map-desktop@1x.png" srcset="./img/map-desktop@1x.png 2x" width="702" height="448" alt="">
+          <img src="./img/map-desktop@1x.png" srcset="./img/map-desktop@1x.png 2x" loading="lazy" width="702" height="448" alt="">
         </picture>
         <div class="contacts__city">
           <p>Ваш город:</p>
@@ -525,7 +538,8 @@
             </div>
             <picture>
               <source type="image/webp" srcset="./img/contact@1x.webp 1x, ./img/contact@2x.webp 2x">
-              <img src="./img/contact@1x.jpg" srcset="./img/contact@1x.jpg 2x" width="112" height="112" alt="Карта расположения культурногоцентра по адресу: г.Новосибирск, ул.Щетинкина 68">
+              <!-- 1х: 112px; 2x: 224px -->
+              <img src="./img/contact@1x.jpg" srcset="./img/contact@1x.jpg 2x" loading="lazy" width="112" height="112" alt="Карта расположения культурногоцентра по адресу: г.Новосибирск, ул.Щетинкина 68">
             </picture>
           </div>
           <p>Куратор является опытным специалистом агентства Сохнут и&nbsp;знает&nbsp;о проекте «Маса» всё!
@@ -555,7 +569,7 @@
 
   <footer class="page__footer  footer">
     <a class="footer__logo">
-      <img src="./img/logo-gray.png" width="85" height="27" alt="Серый логотип проекта Маса">
+      <img src="./img/logo-gray.png" loading="lazy" width="85" height="27" alt="Серый логотип проекта Маса">
     </a>
     <p>Copyright someDesignCompany ©2019</p>
     <div class="footer__social  social">

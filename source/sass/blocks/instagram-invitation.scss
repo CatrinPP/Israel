@@ -8,13 +8,8 @@
   margin-bottom: 60px;
 
   background-color: #c19f88;
-  background-image: url("../img/bg-masa-desktop@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-masa-desktop@2x.jpg");
-  }
 
   @media (max-width: $mobile-width) {
     min-height: 400px;
@@ -24,12 +19,39 @@
     margin-bottom: 0;
 
     background-color: transparent;
-    background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
     background-position: calc(50% + 85px) 45px;
     background-size: 632px;
+  }
+}
+
+.instagram-invitation.nowebp {
+  background-image: url("../img/bg-masa-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-masa-desktop@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-masa-mobile@2x.jpg"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
+    }
+  }
+}
+
+.instagram-invitation.webp {
+  background-image: url("../img/bg-masa-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-masa-desktop@2x.webp");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-masa-mobile@1x.webp"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-masa-mobile@2x.webp"), linear-gradient($color-secondary 0%, $color-secondary 100px, #c19f88 100px, #c19f88 200px, $color-secondary 200px, $color-secondary 100%);
     }
   }
 }

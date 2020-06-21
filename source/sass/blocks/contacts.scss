@@ -3,14 +3,9 @@
   padding-bottom: 60px;
 
   background-color: $color-secondary;
-  background-image: url("../img/bg-watercolor5-desktop@1x.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left -90px;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-watercolor5-desktop@2x.png");
-  }
 
   @media (max-width: $tablet-width) {
     background-size: cover;
@@ -22,7 +17,29 @@
     padding-bottom: 63px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
 
+.contacts.nowebp {
+  background-image: url("../img/bg-watercolor5-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor5-desktop@2x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background: none;
+  }
+}
+
+.contact.webp {
+  background-image: url("../img/bg-watercolor5-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor5-desktop@2x.webp");
+  }
+
+  @media (max-width: $mobile-width) {
     background: none;
   }
 }

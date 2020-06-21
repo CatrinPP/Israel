@@ -6,16 +6,9 @@
   padding-bottom: 120px;
 
   background-color: $color-secondary;
-  background-image: url("../img/bg-watercolor2-desktop@1x.png"),
-    url("../img/watch-desktop@1x.png");
   background-position: center -42px, 103% 72%;
   background-repeat: no-repeat;
   background-size: contain, 124px;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-watercolor2-desktop@2x.png"),
-      url("../img/watch-desktop@2x.png");
-  }
 
   h2 {
     @include header;
@@ -58,8 +51,6 @@
     padding-right: 0;
     padding-bottom: 75px;
 
-    background: none;
-
     h2 {
       padding-left: 16px;
       padding-right: 16px;
@@ -74,6 +65,34 @@
       line-height: 165%;
       text-align: left;
     }
+  }
+}
+
+.gallery.nowebp {
+  background-image: url("../img/bg-watercolor2-desktop@1x.png"),
+    url("../img/watch-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor2-desktop@2x.png"),
+      url("../img/watch-desktop@2x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background: none;
+  }
+}
+
+.gallery.webp {
+  background-image: url("../img/bg-watercolor2-desktop@1x.webp"),
+    url("../img/watch-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-watercolor2-desktop@2x.webp"),
+      url("../img/watch-desktop@2x.webp");
+  }
+
+  @media (max-width: $mobile-width) {
+    background: none;
   }
 }
 

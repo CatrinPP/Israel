@@ -83,7 +83,6 @@ input[type="radio"].visually-hidden {
 .header {
   position: relative;
   min-height: 896px;
-  background-image: url("../img/bg-main-desktop@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -112,18 +111,35 @@ input[type="radio"].visually-hidden {
     @media (max-width: 767px) {
       .header::after {
         top: 415px; } }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .header {
-      background-image: url("../img/bg-main-desktop@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
   @media (max-width: 767px) {
     .header {
       min-height: 605px;
-      background-image: url("../img/bg-main-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%);
       background-size: cover;
       background-position: center 30px; } }
+
+.header.nowebp {
+  background-image: url("../img/bg-main-desktop@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header.nowebp {
+      background-image: url("../img/bg-main-desktop@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
+  @media (max-width: 767px) {
+    .header.nowebp {
+      background-image: url("../img/bg-main-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .header {
+    .header.nowebp {
       background-image: url("../img/bg-main-mobile@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
+
+.header.webp {
+  background-image: url("../img/bg-main-desktop@1x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header.webp {
+      background-image: url("../img/bg-main-desktop@2x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
+  @media (max-width: 767px) {
+    .header.webp {
+      background-image: url("../img/bg-main-mobile@1x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .header.webp {
+      background-image: url("../img/bg-main-mobile@2x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 100%); } }
 
 .header__top {
   display: -webkit-box;
@@ -595,13 +611,9 @@ input[type="radio"].visually-hidden {
   width: 100%;
   padding-bottom: 98px;
   background-color: #ffffff;
-  background-image: url("../img/bg-watercolor1-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .about {
-      background-image: url("../img/bg-watercolor1-desktop@2x.png"); } }
   .about h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -634,17 +646,36 @@ input[type="radio"].visually-hidden {
     .about {
       padding-top: 27px;
       padding-bottom: 80px;
-      background-image: url("../img/bg-watercolor1-mobile@1x.png");
-      background-position: center; } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .about {
-      background-image: url("../img/bg-watercolor1-mobile@2x.png"); } }
-  @media (max-width: 767px) {
+      background-position: center; }
       .about p {
         padding-left: 16px;
         padding-right: 16px;
         font-size: 16px;
         line-height: 165%; } }
+
+.about.nowebp {
+  background-image: url("../img/bg-watercolor1-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .about.nowebp {
+      background-image: url("../img/bg-watercolor1-desktop@2x.png"); } }
+  @media (max-width: 767px) {
+    .about.nowebp {
+      background-image: url("../img/bg-watercolor1-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .about.nowebp {
+      background-image: url("../img/bg-watercolor1-mobile@2x.png"); } }
+
+.about.webp {
+  background-image: url("../img/bg-watercolor1-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .about.webp {
+      background-image: url("../img/bg-watercolor1-desktop@2x.webp"); } }
+  @media (max-width: 767px) {
+    .about.webp {
+      background-image: url("../img/bg-watercolor1-mobile@1x.webp"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .about.webp {
+      background-image: url("../img/bg-watercolor1-mobile@2x.webp"); } }
 
 .about__video {
   position: relative; }
@@ -723,15 +754,11 @@ input[type="radio"].visually-hidden {
   padding-top: 104px;
   padding-left: calc(16% - 10px);
   margin-bottom: 12px;
-  background-image: url("../img/bg-sketch-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 680px;
   background-position: right 56px;
   overflow-y: auto;
   overflow-x: hidden; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .programs {
-      background-image: url("../img/bg-sketch-desktop@2x.png"); } }
   .programs h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -774,7 +801,6 @@ input[type="radio"].visually-hidden {
       padding-left: 0;
       padding-bottom: 0;
       padding-top: 0;
-      background-image: url("../img/bg-sketch-mobile@1x.png");
       background-size: 296px; }
       .programs h2 {
         margin-bottom: 17px;
@@ -784,9 +810,30 @@ input[type="radio"].visually-hidden {
         font-size: 24px;
         font-weight: 700;
         line-height: 29px; } }
+
+.programs.nowebp {
+  background-image: url("../img/bg-sketch-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs.nowebp {
+      background-image: url("../img/bg-sketch-desktop@2x.png"); } }
+  @media (max-width: 767px) {
+    .programs.nowebp {
+      background-image: url("../img/bg-sketch-mobile@1x.png"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .programs {
+    .programs.nowebp {
       background-image: url("../img/bg-sketch-mobile@2x.png"); } }
+
+.programs.webp {
+  background-image: url("../img/bg-sketch-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs.webp {
+      background-image: url("../img/bg-sketch-desktop@2x.webp"); } }
+  @media (max-width: 767px) {
+    .programs.webp {
+      background-image: url("../img/bg-sketch-mobile@1x.webp"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .programs.webp {
+      background-image: url("../img/bg-sketch-mobile@2x.webp"); } }
 
 .programs__wrapper {
   display: -webkit-box;
@@ -918,13 +965,9 @@ input[type="radio"].visually-hidden {
   padding-top: 209px;
   padding-left: 14%;
   padding-bottom: 153px;
-  background-image: url("../img/backpack-desktop@1x.png"), url("../img/bg-girl-desktop@1x.png");
   background-position: -73px 138px, right top;
   background-repeat: no-repeat;
   background-size: 220px, 60vw; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .request {
-      background-image: url("../img/backpack-desktop@2x.png"), url("../img/bg-girl-desktop@2x.png"); } }
   .request h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -956,7 +999,6 @@ input[type="radio"].visually-hidden {
       width: 100%;
       padding: 56px 16px 308px;
       margin-bottom: 69px;
-      background-image: url("../img/backpack-mobile@1x.png"), url("../img/bg-girl-mobile@1x.png");
       background-position: -53px 9px, center bottom;
       background-size: 158px, 424px; }
       .request h2 {
@@ -971,12 +1013,33 @@ input[type="radio"].visually-hidden {
         text-align: center;
         background: none;
         border-radius: 0; } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .request {
-      background-image: url("../img/backpack-mobile@2x.png"), url("../img/bg-girl-mobile@2x.png"); } }
   @media (max-width: 767px) {
     .request p {
       text-align: left; } }
+
+.request.nowebp {
+  background-image: url("../img/backpack-desktop@1x.png"), url("../img/bg-girl-desktop@1x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .request.nowebp {
+      background-image: url("../img/backpack-desktop@2x.png"), url("../img/bg-girl-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .request.nowebp {
+      background-image: url("../img/backpack-mobile@1x.png"), url("../img/bg-girl-mobile@1x.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .request.nowebp {
+      background-image: url("../img/backpack-mobile@2x.png"), url("../img/bg-girl-mobile@2x.jpg"); } }
+
+.request.webp {
+  background-image: url("../img/backpack-desktop@1x.webp"), url("../img/bg-girl-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .request.webp {
+      background-image: url("../img/backpack-desktop@2x.webp"), url("../img/bg-girl-desktop@2x.webp"); } }
+  @media (max-width: 1023px) {
+    .request.webp {
+      background-image: url("../img/backpack-mobile@1x.webp"), url("../img/bg-girl-mobile@1x.webp"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .request.webp {
+      background-image: url("../img/backpack-mobile@2x.webp"), url("../img/bg-girl-mobile@2x.webp"); } }
 
 .request__form {
   margin-left: 20px; }
@@ -1006,28 +1069,44 @@ input[type="radio"].visually-hidden {
   padding-top: 159px;
   padding-bottom: 168px;
   background-color: #ffffff;
-  background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/stamp-desktop@1x.png"), url("../img/bg-watercolorhowto-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: 12px 128px, 112% 340px, left -72px;
   background-size: 581px, 337px, contain; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .preparation {
-      background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("../img/bg-watercolorhowto-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .preparation {
       min-height: 607px;
       padding: 10px 55px 96px;
-      background-image: url("../img/stamp-mobile@1x.png");
       background-position: 103px 280px;
       background-size: 264px; } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .preparation {
-      background-image: url("../img/stamp-mobile@2x.png"); } }
   @media (max-width: 767px) {
     .preparation {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 55px; } }
+
+.preparation.nowebp {
+  background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/stamp-desktop@1x.png"), url("../img/bg-watercolorhowto-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .preparation.nowebp {
+      background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("../img/bg-watercolorhowto-desktop@2x.png"); } }
+  @media (max-width: 1023px) {
+    .preparation.nowebp {
+      background-image: url("../img/stamp-mobile@1x.png"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .preparation.nowebp {
+      background-image: url("../img/stamp-mobile@2x.png"); } }
+
+.preparation.webp {
+  background-image: url("../img/bg-howto-desktop@1x.webp"), url("../img/stamp-desktop@1x.webp"), url("../img/bg-watercolorhowto-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .preparation.webp {
+      background-image: url("../img/bg-howto-desktop@2x.webp"), url("../img/stamp-desktop@2x.webp"), url("../img/bg-watercolorhowto-desktop@2x.webp"); } }
+  @media (max-width: 1023px) {
+    .preparation.webp {
+      background-image: url("../img/stamp-mobile@1x.webp"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .preparation.webp {
+      background-image: url("../img/stamp-mobile@2x.webp"); } }
 
 .preparation__content {
   width: 50%;
@@ -1169,13 +1248,9 @@ input[type="radio"].visually-hidden {
   padding-right: calc(35% - 388px);
   padding-bottom: 120px;
   background-color: #ffffff;
-  background-image: url("../img/bg-watercolor2-desktop@1x.png"), url("../img/watch-desktop@1x.png");
   background-position: center -42px, 103% 72%;
   background-repeat: no-repeat;
   background-size: contain, 124px; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .gallery {
-      background-image: url("../img/bg-watercolor2-desktop@2x.png"), url("../img/watch-desktop@2x.png"); } }
   .gallery h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -1216,8 +1291,7 @@ input[type="radio"].visually-hidden {
       min-height: 783px;
       padding-left: 0;
       padding-right: 0;
-      padding-bottom: 75px;
-      background: none; }
+      padding-bottom: 75px; }
       .gallery h2 {
         padding-left: 16px;
         padding-right: 16px; }
@@ -1228,6 +1302,24 @@ input[type="radio"].visually-hidden {
         font-size: 16px;
         line-height: 165%;
         text-align: left; } }
+
+.gallery.nowebp {
+  background-image: url("../img/bg-watercolor2-desktop@1x.png"), url("../img/watch-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .gallery.nowebp {
+      background-image: url("../img/bg-watercolor2-desktop@2x.png"), url("../img/watch-desktop@2x.png"); } }
+  @media (max-width: 767px) {
+    .gallery.nowebp {
+      background: none; } }
+
+.gallery.webp {
+  background-image: url("../img/bg-watercolor2-desktop@1x.webp"), url("../img/watch-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .gallery.webp {
+      background-image: url("../img/bg-watercolor2-desktop@2x.webp"), url("../img/watch-desktop@2x.webp"); } }
+  @media (max-width: 767px) {
+    .gallery.webp {
+      background: none; } }
 
 .gallery__wrapper {
   position: relative;
@@ -1357,12 +1449,8 @@ input[type="radio"].visually-hidden {
   padding-right: 12%;
   margin-bottom: 60px;
   background-color: #c19f88;
-  background-image: url("../img/bg-masa-desktop@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .instagram-invitation {
-      background-image: url("../img/bg-masa-desktop@2x.jpg"); } }
   @media (max-width: 767px) {
     .instagram-invitation {
       min-height: 400px;
@@ -1371,12 +1459,32 @@ input[type="radio"].visually-hidden {
       padding-right: 0;
       margin-bottom: 0;
       background-color: transparent;
-      background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%);
       background-position: calc(50% + 85px) 45px;
       background-size: 632px; } }
+
+.instagram-invitation.nowebp {
+  background-image: url("../img/bg-masa-desktop@1x.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .instagram-invitation.nowebp {
+      background-image: url("../img/bg-masa-desktop@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .instagram-invitation.nowebp {
+      background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .instagram-invitation {
+    .instagram-invitation.nowebp {
       background-image: url("../img/bg-masa-mobile@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
+
+.instagram-invitation.webp {
+  background-image: url("../img/bg-masa-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .instagram-invitation.webp {
+      background-image: url("../img/bg-masa-desktop@2x.webp"); } }
+  @media (max-width: 767px) {
+    .instagram-invitation.webp {
+      background-image: url("../img/bg-masa-mobile@1x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .instagram-invitation.webp {
+      background-image: url("../img/bg-masa-mobile@2x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
 
 .instagram-invitation__content {
   width: 400px;
@@ -1449,26 +1557,42 @@ input[type="radio"].visually-hidden {
   padding-bottom: 124px;
   padding-left: 108px;
   background-color: #ffffff;
-  background-image: url("../img/bg-girls-desktop@1x.png"), url("../img/bag-desktop@1x.png"), url("../img/bg-watercolor3-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right 77px, -40px bottom, left top;
   background-size: 47%, 194px, contain; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .faq {
-      background-image: url("../img/bg-girls-desktop@2x.png"), url("../img/bag-desktop@2x.png"), url("../img/bg-watercolor3-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .faq {
       padding-left: 0;
-      background-image: url("../img/bag-desktop@1x.png");
       background-size: 194px;
       background-position: -48px 78%; } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .faq {
-      background-image: url("../img/bag-desktop@2x.png"); } }
   @media (max-width: 767px) {
     .faq {
       padding-top: 26px;
       padding-bottom: 42px; } }
+
+.faq.nowebp {
+  background-image: url("../img/bg-girls-desktop@1x.png"), url("../img/bag-desktop@1x.png"), url("../img/bg-watercolor3-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .faq.nowebp {
+      background-image: url("../img/bg-girls-desktop@2x.png"), url("../img/bag-desktop@2x.png"), url("../img/bg-watercolor3-desktop@2x.png"); } }
+  @media (max-width: 1023px) {
+    .faq.nowebp {
+      background-image: url("../img/bag-desktop@1x.png"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .faq.nowebp {
+      background-image: url("../img/bag-desktop@2x.png"); } }
+
+.faq.webp {
+  background-image: url("../img/bg-girls-desktop@1x.webp"), url("../img/bag-desktop@1x.webp"), url("../img/bg-watercolor3-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .faq.webp {
+      background-image: url("../img/bg-girls-desktop@2x.webp"), url("../img/bag-desktop@2x.webp"), url("../img/bg-watercolor3-desktop@2x.webp"); } }
+  @media (max-width: 1023px) {
+    .faq.webp {
+      background-image: url("../img/bag-desktop@1x.webp"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .faq.webp {
+      background-image: url("../img/bag-desktop@2x.webp"); } }
 
 .faq__content {
   width: 43%; }
@@ -1574,7 +1698,6 @@ input[type="radio"].visually-hidden {
   padding-top: 27px;
   margin-bottom: 109px;
   background-color: #ffffff;
-  background-image: url("../img/bg-watercolor4-desktop@1x.png"), url("../img/bg-sketch2-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: contain, 535px;
   background-position: center, 101% 83px; }
@@ -1594,21 +1717,13 @@ input[type="radio"].visually-hidden {
       .reviews h2 {
         font-size: 32px;
         line-height: 39px; } }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .reviews {
-      background-image: url("../img/bg-watercolor4-desktop@2x.png"), url("../img/bg-sketch2-desktop@2x.png"); } }
   @media (max-width: 767px) {
     .reviews {
       padding-left: 16px;
       padding-right: 16px;
       margin-bottom: 77px;
       background-size: contain, 439px;
-      background-position: center, 32px 551px;
-      background-image: url("../img/bg-watercolor4-mobile@1x.png"), url("../img/bg-sketch2-mobile@1x.png"); } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .reviews {
-      background-image: url("../img/bg-watercolor4-mobile@2x.png"), url("../img/bg-sketch2-mobile@2x.png"); } }
-  @media (max-width: 767px) {
+      background-position: center, 32px 551px; }
       .reviews h2 {
         margin: 0;
         margin-bottom: 24px;
@@ -1625,6 +1740,30 @@ input[type="radio"].visually-hidden {
       .reviews h2 {
         font-size: 32px;
         line-height: 39px; } }
+
+.review.nowebp {
+  background-image: url("../img/bg-watercolor4-desktop@1x.png"), url("../img/bg-sketch2-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .review.nowebp {
+      background-image: url("../img/bg-watercolor4-desktop@2x.png"), url("../img/bg-sketch2-desktop@2x.png"); } }
+  @media (max-width: 767px) {
+    .review.nowebp {
+      background-image: url("../img/bg-watercolor4-mobile@1x.png"), url("../img/bg-sketch2-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .review.nowebp {
+      background-image: url("../img/bg-watercolor4-mobile@2x.png"), url("../img/bg-sketch2-mobile@2x.png"); } }
+
+.reviews.webp {
+  background-image: url("../img/bg-watercolor4-desktop@1x.webp"), url("../img/bg-sketch2-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .reviews.webp {
+      background-image: url("../img/bg-watercolor4-desktop@2x.webp"), url("../img/bg-sketch2-desktop@2x.webp"); } }
+  @media (max-width: 767px) {
+    .reviews.webp {
+      background-image: url("../img/bg-watercolor4-mobile@1x.webp"), url("../img/bg-sketch2-mobile@1x.webp"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .reviews.webp {
+      background-image: url("../img/bg-watercolor4-mobile@2x.webp"), url("../img/bg-sketch2-mobile@2x.webp"); } }
 
 .reviews__list {
   margin: 0;
@@ -1830,13 +1969,9 @@ input[type="radio"].visually-hidden {
   padding-left: calc(15% - 97px);
   padding-bottom: 60px;
   background-color: #ffffff;
-  background-image: url("../img/bg-watercolor5-desktop@1x.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left -90px; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .contacts {
-      background-image: url("../img/bg-watercolor5-desktop@2x.png"); } }
   @media (max-width: 1023px) {
     .contacts {
       background-size: cover;
@@ -1846,7 +1981,24 @@ input[type="radio"].visually-hidden {
     .contacts {
       padding-bottom: 63px;
       padding-left: 0;
-      padding-right: 0;
+      padding-right: 0; } }
+
+.contacts.nowebp {
+  background-image: url("../img/bg-watercolor5-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts.nowebp {
+      background-image: url("../img/bg-watercolor5-desktop@2x.png"); } }
+  @media (max-width: 767px) {
+    .contacts.nowebp {
+      background: none; } }
+
+.contact.webp {
+  background-image: url("../img/bg-watercolor5-desktop@1x.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contact.webp {
+      background-image: url("../img/bg-watercolor5-desktop@2x.webp"); } }
+  @media (max-width: 767px) {
+    .contact.webp {
       background: none; } }
 
 .contacts__content {

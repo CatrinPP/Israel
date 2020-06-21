@@ -4,12 +4,27 @@
   padding-left: 108px;
 
   background-color: $color-secondary;
-  background-image: url("../img/bg-girls-desktop@1x.png"),
-    url("../img/bag-desktop@1x.png"),
-    url("../img/bg-watercolor3-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right 77px, -40px bottom, left top;
   background-size: 47%, 194px, contain;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+
+    background-size: 194px;
+    background-position: -48px 78%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 26px;
+    padding-bottom: 42px;
+  }
+}
+
+.faq.nowebp {
+  background-image: url("../img/bg-girls-desktop@1x.png"),
+    url("../img/bag-desktop@1x.png"),
+    url("../img/bg-watercolor3-desktop@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-girls-desktop@2x.png"),
@@ -18,20 +33,31 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-left: 0;
-
     background-image: url("../img/bag-desktop@1x.png");
-    background-size: 194px;
-    background-position: -48px 78%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bag-desktop@2x.png");
     }
   }
+}
 
-  @media (max-width: $mobile-width) {
-    padding-top: 26px;
-    padding-bottom: 42px;
+.faq.webp {
+  background-image: url("../img/bg-girls-desktop@1x.webp"),
+    url("../img/bag-desktop@1x.webp"),
+    url("../img/bg-watercolor3-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-girls-desktop@2x.webp"),
+      url("../img/bag-desktop@2x.webp"),
+      url("../img/bg-watercolor3-desktop@2x.webp");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/bag-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bag-desktop@2x.webp");
+    }
   }
 }
 
