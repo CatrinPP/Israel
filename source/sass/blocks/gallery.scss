@@ -94,6 +94,7 @@
   @media (max-width: $mobile-width) {
     display: block;
     overflow-x: hidden;
+    text-align: center;
   }
 }
 
@@ -146,7 +147,8 @@
   @media (max-width: $mobile-width) {
     display: none;
     margin: 0 auto 16px;
-    width: fit-content;
+
+    text-align: center;
 
     img {
       width: auto;
@@ -156,13 +158,15 @@
     }
 
     &--active {
-      display: flex;
+      display: inline-block;
     }
 
     p {
-      left: 0;
+      left: 16px;
       bottom: 24px;
-      width: 100%;
+
+      padding-left: 0;
+      padding-right: 0;
 
       font-size: 18px;
       line-height: 21px;

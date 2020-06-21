@@ -152,19 +152,20 @@
   var programs = document.querySelectorAll('.programs__item');
 
   function disactivateProgramsButtons() {
-    programButtons.forEach(function (button) {
-      button.classList.remove('programs__button--active');
-    });
+    for (var i = 0; i < programButtons.length; i++) {
+      programButtons[i].classList.remove('programs__button--active');
+    }
   }
 
   function hideAllPrograms() {
-    programs.forEach(function (program) {
-      program.classList.remove('programs__item--active');
-    });
+    for (var i = 0; i < programs.length; i++) {
+      programs[i].classList.remove('programs__item--active');
+    }
   }
 
   function showProgram(title) {
     var programClass = '.programs__item--' + title;
+
     document.querySelector(programClass).classList.add('programs__item--active');
   }
 
@@ -184,22 +185,23 @@
 
     showProgram(title);
   }
+
   programsControlsBlock.addEventListener('click', onControlsClick);
 
   /* Слайдер галереи */
-  var galleryControls = Array.from(document.querySelectorAll('.gallery__control'));
-  var galleryPictures = Array.from(document.querySelectorAll('.gallery__picture'));
+  var galleryControls = document.querySelectorAll('.gallery__control');
+  var galleryPictures = document.querySelectorAll('.gallery__picture');
 
   function disactivateGalleryControls() {
-    galleryControls.forEach(function (control) {
-      control.classList.remove('gallery__control--active');
-    });
+    for (var i = 0; i < galleryControls.length; i++) {
+      galleryControls[i].classList.remove('gallery__control--active');
+    }
   }
 
   function hideAllGalleryPictures() {
-    galleryPictures.forEach(function (picture) {
-      picture.classList.remove('gallery__picture--active');
-    });
+    for (var i = 0; i < galleryPictures.length; i++) {
+      galleryPictures[i].classList.remove('gallery__picture--active');
+    }
   }
 
   function showPicture(index) {
@@ -207,45 +209,63 @@
   }
 
   function onGalleryControlClick(evt) {
+    var index;
+
     evt.preventDefault();
-    var index = galleryControls.indexOf(evt.target);
+
+    for (var i = 0; i < galleryControls.length; i++) {
+      if (galleryControls.item(i) === evt.target) {
+        index = i;
+      }
+    }
+
     disactivateGalleryControls();
     evt.target.classList.add('gallery__control--active');
     hideAllGalleryPictures();
     showPicture(index);
   }
 
-  galleryControls.forEach(function (control) {
-    control.addEventListener('click', onGalleryControlClick);
-  });
+  function setGalleryControlsListeners() {
+    for (var i = 0; i < galleryControls.length; i++) {
+      galleryControls[i].addEventListener('click', onGalleryControlClick);
+    }
+  }
+
+  setGalleryControlsListeners();
 
   /* Аккордеон FAQ */
   var faqButtons = document.querySelectorAll('.faq__button');
 
   function toggleFaqItemStatus(id) {
     var faqItemClassName = '.faq__item--' + id;
+
     document.querySelector(faqItemClassName).classList.toggle('faq__item--active');
   }
 
   function onFaqButtonClick(evt) {
-    evt.preventDefault();
     var id = evt.currentTarget.dataset.id;
+
+    evt.preventDefault();
     toggleFaqItemStatus(id);
   }
 
-  faqButtons.forEach(function (button) {
-    button.addEventListener('click', onFaqButtonClick);
-  });
+  function setFaqButtonsListeners() {
+    for (var i = 0; i < faqButtons.length; i++) {
+      faqButtons[i].addEventListener('click', onFaqButtonClick);
+    }
+  }
+
+  setFaqButtonsListeners();
 
   /* Слайдер отзывы */
-  var reviews = Array.from(document.querySelectorAll('.review'));
-  var previousButtons = Array.from(document.querySelectorAll('.review__button--previous'));
-  var nextButtons = Array.from(document.querySelectorAll('.review__button--next'));
+  var reviews = document.querySelectorAll('.review');
+  var previousButtons = document.querySelectorAll('.review__button--previous');
+  var nextButtons = document.querySelectorAll('.review__button--next');
 
   function hideAllReviews() {
-    reviews.forEach(function (review) {
-      review.classList.remove('review--active');
-    });
+    for (var i = 0; i < reviews.length; i++) {
+      reviews[i].classList.remove('review--active');
+    }
   }
 
   function showReview(index) {
@@ -253,24 +273,47 @@
   }
 
   function onPreviousButtonClick(evt) {
+    var index;
+
     evt.preventDefault();
     hideAllReviews();
-    var index = previousButtons.indexOf(evt.target);
+
+    for (var i = 0; i < previousButtons.length; i++) {
+      if (previousButtons.item(i) === evt.target) {
+        index = i;
+      }
+    }
+
     showReview(index - 1);
   }
 
   function onNextButtonClick(evt) {
+    var index;
+
     evt.preventDefault();
     hideAllReviews();
-    var index = nextButtons.indexOf(evt.target);
+
+    for (var i = 0; i < nextButtons.length; i++) {
+      if (nextButtons.item(i) === evt.target) {
+        index = i;
+      }
+    }
+
     showReview(index + 1);
   }
 
-  previousButtons.forEach(function (button) {
-    button.addEventListener('click', onPreviousButtonClick);
-  });
+  function setPreviousButtonsListeners() {
+    for (var i = 0; i < previousButtons.length; i++) {
+      previousButtons[i].addEventListener('click', onPreviousButtonClick);
+    }
+  }
 
-  nextButtons.forEach(function (button) {
-    button.addEventListener('click', onNextButtonClick);
-  });
+  function setNextButtonsListeners() {
+    for (var i = 0; i < nextButtons.length; i++) {
+      nextButtons[i].addEventListener('click', onNextButtonClick);
+    }
+  }
+
+  setPreviousButtonsListeners();
+  setNextButtonsListeners();
 })();

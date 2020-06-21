@@ -71,11 +71,15 @@
 }
 
 .programs__controls {
+  margin-right: 64px;
+
   @media (max-width: $mobile-width) {
     display: flex;
     flex-wrap: nowrap;
     padding: 0;
     min-height: 48px;
+    align-items: flex-start;
+    margin-right: 0;
     overflow-x: auto;
   }
 }
@@ -96,7 +100,6 @@
   display: block;
   width: 228px;
   padding: 25px 40px 29px 72px;
-  margin-right: 64px;
 
   font-size: 15px;
   font-weight: 400;
@@ -148,13 +151,18 @@
       background: $gradient;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @media all and (-ms-high-contrast: none) {
+        color: $darkyellow;
+        background: none;
+      }
     }
   }
 
   @media (max-width: $mobile-width) {
     width: auto;
+    flex-shrink: 0;
     padding: 14px 11px 14px 55px;
-    margin-right: 0;
 
     opacity: 0.4;
 

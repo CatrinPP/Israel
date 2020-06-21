@@ -109,7 +109,7 @@
     background-image: url("../img/pin-gray.png");
   }
 
-  button {
+  .contacts__city-button {
     position: relative;
     padding: 0;
 
@@ -120,6 +120,7 @@
     border: none;
     background: none;
     border-bottom: 1px dashed $color-heading;
+    overflow: visible;
     cursor: pointer;
 
     &::after {

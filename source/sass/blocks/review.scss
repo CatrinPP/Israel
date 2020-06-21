@@ -173,6 +173,7 @@
   box-shadow: 0 -4px 4px rgba($color: $color-main, $alpha: 0.2);
   transform: rotate(135deg);
   cursor: pointer;
+  overflow: visible;
 
   &::before {
     content: "";

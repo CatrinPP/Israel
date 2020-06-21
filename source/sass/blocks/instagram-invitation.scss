@@ -2,7 +2,9 @@
   min-height: 583px;
   display: flex;
   flex-direction: column;
-  padding: 120px calc(50% - 518px);
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-right: 12%;
   margin-bottom: 60px;
 
   background-color: #c19f88;
@@ -18,6 +20,7 @@
     min-height: 400px;
     padding-top: 0;
     padding-bottom: 75px;
+    padding-right: 0;
     margin-bottom: 0;
 
     background-color: transparent;
@@ -32,8 +35,8 @@
 }
 
 .instagram-invitation__content {
+  width: 400px;
   margin-left: auto;
-  max-width: 400px;
 
   h2 {
     @include header;
