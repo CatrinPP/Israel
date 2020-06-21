@@ -851,13 +851,13 @@ input[type="radio"].visually-hidden {
       background-position-y: 0; }
     .programs__button--active:hover, .programs__button--active:focus {
       opacity: 0.87; }
-  .programs__button:hover:not(.programs__button--active) {
+  .programs__button:hover:not(.programs__button--active)::before {
+    background-position-y: 35px; }
+  .programs__button:hover:not(.programs__button--active) span {
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent; }
-    .programs__button:hover:not(.programs__button--active)::before {
-      background-position-y: 35px; }
   @media (max-width: 767px) {
     .programs__button {
       width: auto;

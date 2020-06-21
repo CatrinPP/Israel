@@ -169,11 +169,20 @@
   }
 
   function onControlsClick(evt) {
-    var title = evt.target.dataset.title;
+    var title;
+
     hideAllPrograms();
     disactivateProgramsButtons();
+
+    if (evt.target.tagName === 'BUTTON') {
+      title = evt.target.dataset.title;
+      evt.target.classList.add('programs__button--active');
+    } else if (evt.target.tagName === 'SPAN') {
+      title = evt.target.parentElement.dataset.title;
+      evt.target.parentElement.classList.add('programs__button--active');
+    }
+
     showProgram(title);
-    evt.target.classList.add('programs__button--active');
   }
   programsControlsBlock.addEventListener('click', onControlsClick);
 

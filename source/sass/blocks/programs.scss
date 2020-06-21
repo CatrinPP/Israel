@@ -140,12 +140,14 @@
   }
 
   &:hover:not(.programs__button--active) {
-    background: $gradient;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
     &::before {
       background-position-y: 35px;
+    }
+
+    span {
+      background: $gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
