@@ -1878,18 +1878,16 @@ input[type="radio"].visually-hidden {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 106px;
+  width: 104px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .review__navigation p {
     margin: 0;
-    margin-right: 27px;
     font-size: 17px;
     font-weight: 400;
     line-height: 150%;
-    opacity: 0.5;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+    opacity: 0.5; }
   @media (max-width: 767px) {
     .review__navigation {
       -webkit-box-ordinal-group: 3;
@@ -1910,48 +1908,45 @@ input[type="radio"].visually-hidden {
 
 .review__button {
   position: relative;
-  width: 12px;
-  height: 2px;
+  width: 25px;
+  height: 25px;
   margin: 0;
   padding: 0;
-  margin-top: 6px;
-  margin-right: 10px;
-  background: transparent;
+  background: none;
   border: none;
-  background-color: rgba(72, 72, 72, 0.2);
-  -webkit-box-shadow: 0 -4px 4px rgba(72, 72, 72, 0.2);
-          box-shadow: 0 -4px 4px rgba(72, 72, 72, 0.2);
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  cursor: pointer;
-  overflow: visible; }
-  .review__button::before {
+  overflow: visible;
+  cursor: pointer; }
+  .review__button::before, .review__button::after {
     content: "";
     position: absolute;
-    top: -6px;
+    top: 14px;
     left: 6px;
     width: 12px;
     height: 2px;
     margin: 0;
     padding: 0;
-    background: transparent;
-    border: none;
     background-color: rgba(72, 72, 72, 0.2);
-    -webkit-box-shadow: 0 -4px 4px rgba(72, 72, 72, 0.2);
-            box-shadow: 0 -4px 4px rgba(72, 72, 72, 0.2);
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    cursor: pointer; }
-  .review__button:hover, .review__button:hover::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .review__button::after {
+    width: 11px;
+    top: 6px;
+    left: 7px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+  .review__button:hover::before, .review__button:hover::after {
     background-color: rgba(72, 72, 72, 0.7); }
   .review__button--next {
-    margin-left: auto;
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg); }
+    margin-left: auto; }
     .review__button--next::before {
-      top: -6px;
-      left: auto;
-      right: 6px; }
+      right: 6px;
+      -webkit-transform: rotate(135deg);
+              transform: rotate(135deg); }
+    .review__button--next::after {
+      left: 6px;
+      width: 11px;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
 
 .review__social {
   display: -webkit-inline-box;
@@ -2240,9 +2235,6 @@ input[type="radio"].visually-hidden {
       .footer p {
         padding-left: 0;
         margin-bottom: 25px; } }
-
-.footer__logo:hover {
-  opacity: 0.7; }
 
 .footer__logo img {
   width: 85px;
