@@ -5,14 +5,14 @@
 
   background-color: $color-secondary;
   background-repeat: no-repeat;
-  background-position: right 77px, -40px bottom, left top;
-  background-size: 47%, 194px, contain;
+  background-position: right 77px, -40px 804px, left top;
+  background-size: 47%, 194px, 1366px;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
 
     background-size: 194px;
-    background-position: -48px 78%;
+    background-position: -48px 685px;
   }
 
   @media (max-width: $mobile-width) {
