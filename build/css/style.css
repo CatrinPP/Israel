@@ -114,17 +114,6 @@ input[type="radio"].visually-hidden {
         margin-top: 240px;
         font-size: 20px;
         line-height: 24px; } }
-  .header::after {
-    position: absolute;
-    content: "";
-    top: 628px;
-    left: calc(50% - 38px);
-    width: 76px;
-    height: 131px;
-    background-image: url("../img/scroll.png"); }
-    @media (max-width: 767px) {
-      .header::after {
-        top: 415px; } }
   @media (max-width: 767px) {
     .header {
       min-height: 605px;
@@ -218,6 +207,22 @@ input[type="radio"].visually-hidden {
 @media (max-width: 767px) {
   .header__tel {
     margin-bottom: 8px; } }
+
+.header__scroll {
+  display: inline-block;
+  width: 76px;
+  height: 131px; }
+  .header__scroll::after {
+    position: absolute;
+    content: "";
+    top: 628px;
+    left: calc(50% - 38px);
+    width: 76px;
+    height: 131px;
+    background-image: url("../img/scroll.png"); }
+    @media (max-width: 767px) {
+      .header__scroll::after {
+        top: 415px; } }
 
 .modal {
   position: fixed;

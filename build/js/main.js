@@ -347,4 +347,17 @@
 
   setPreviousButtonsListeners();
   setNextButtonsListeners();
+
+  /* Якорный скролл */
+  var scroll = document.querySelector('.header__scroll');
+
+  scroll.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    // var id = scroll.getAttribute('href');
+
+    document.querySelector('.main').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
 })();
