@@ -1,6 +1,9 @@
 .page {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   max-width: 1366px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
 
@@ -22,4 +25,8 @@
 .page img {
   max-width: 100%;
   height: auto;
+}
+
+.page__content {
+  flex: 1 0 auto;
 }
