@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: flex-end;
   min-height: 707px;
-  padding-top: 159px;
+  padding-top: 165px;
   padding-bottom: 168px;
 
   background-color: $color-secondary;
   background-repeat: no-repeat;
-  background-position: 12px 128px, 112% 340px, left -72px;
-  background-size: 581px, 337px, contain;
+  background-position: 12px 133px, 112% 340px, left -67px;
+  background-size: 581px, 337px, 1366px;
 
   @media (max-width: $tablet-width) {
     min-height: 607px;

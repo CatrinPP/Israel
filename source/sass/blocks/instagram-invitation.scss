@@ -2,9 +2,7 @@
   min-height: 583px;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  padding-right: 12%;
+  padding: 128px 12% 120px;
   margin-bottom: 60px;
 
   background-color: #c19f88;
@@ -13,9 +11,7 @@
 
   @media (max-width: $mobile-width) {
     min-height: 400px;
-    padding-top: 0;
-    padding-bottom: 75px;
-    padding-right: 0;
+    padding: 0 0 75px;
     margin-bottom: 0;
 
     background-color: transparent;
@@ -101,8 +97,8 @@
   }
 
   @media (max-width: $mobile-width) {
+    width: 100%;
     padding-top: 0;
-    max-width: 100%;
     margin-left: 0;
     margin-right: auto;
 

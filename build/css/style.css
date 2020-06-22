@@ -511,7 +511,8 @@ input[type="radio"].visually-hidden {
             -ms-flex-direction: column;
                 flex-direction: column;
         width: 100%;
-        margin-bottom: 18px; } }
+        margin-bottom: 18px;
+        padding-right: 16px; } }
 
 .form__field {
   position: relative; }
@@ -566,7 +567,7 @@ input[type="radio"].visually-hidden {
     right: -2px;
     z-index: 200;
     width: 216px;
-    padding: 22px;
+    padding: 20px;
     margin-bottom: 0; }
   @media (max-width: 1023px) {
     .form--single-input {
@@ -583,7 +584,7 @@ input[type="radio"].visually-hidden {
       padding-right: 0;
       padding-left: 0; }
       .form--single-input input[type="tel"] {
-        margin-bottom: 3px;
+        margin-bottom: 9px;
         padding-right: 20px; } }
 
 .button {
@@ -998,7 +999,7 @@ input[type="radio"].visually-hidden {
       min-height: 595px;
       width: 100%;
       padding: 56px 16px 308px;
-      margin-bottom: 69px;
+      margin-bottom: 72px;
       background-position: -53px 9px, center bottom;
       background-size: 158px, 424px; }
       .request h2 {
@@ -1066,12 +1067,12 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: end;
           align-items: flex-end;
   min-height: 707px;
-  padding-top: 159px;
+  padding-top: 165px;
   padding-bottom: 168px;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-position: 12px 128px, 112% 340px, left -72px;
-  background-size: 581px, 337px, contain; }
+  background-position: 12px 133px, 112% 340px, left -67px;
+  background-size: 581px, 337px, 1366px; }
   @media (max-width: 1023px) {
     .preparation {
       min-height: 607px;
@@ -1272,7 +1273,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     z-index: 5;
     width: 723px;
-    margin: 0 auto 49px 200px;
+    margin: 0 auto 42px 200px;
     font-size: 17px;
     font-weight: 400;
     line-height: 170%;
@@ -1354,7 +1355,7 @@ input[type="radio"].visually-hidden {
   .gallery__picture:first-child {
     position: absolute;
     left: 0;
-    top: -72px;
+    top: -63px;
     z-index: 0;
     max-width: 36vw; }
   .gallery__picture:nth-child(2n) {
@@ -1446,9 +1447,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  padding-right: 12%;
+  padding: 128px 12% 120px;
   margin-bottom: 60px;
   background-color: #c19f88;
   background-size: cover;
@@ -1456,9 +1455,7 @@ input[type="radio"].visually-hidden {
   @media (max-width: 767px) {
     .instagram-invitation {
       min-height: 400px;
-      padding-top: 0;
-      padding-bottom: 75px;
-      padding-right: 0;
+      padding: 0 0 75px;
       margin-bottom: 0;
       background-color: transparent;
       background-position: calc(50% + 85px) 45px;
@@ -1531,8 +1528,8 @@ input[type="radio"].visually-hidden {
       padding-top: 150px; } }
   @media (max-width: 767px) {
     .instagram-invitation__content {
+      width: 100%;
       padding-top: 0;
-      max-width: 100%;
       margin-left: 0;
       margin-right: auto; }
       .instagram-invitation__content h2 {
@@ -1555,12 +1552,12 @@ input[type="radio"].visually-hidden {
         left: 60px; } }
 
 .faq {
-  padding-top: 79px;
+  padding-top: 83px;
   padding-bottom: 124px;
   padding-left: 108px;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-position: right 77px, -40px 804px, left top;
+  background-position: right 84px, -40px 811px, left top;
   background-size: 47%, 194px, 1366px; }
   @media (max-width: 1023px) {
     .faq {
@@ -1570,7 +1567,7 @@ input[type="radio"].visually-hidden {
   @media (max-width: 767px) {
     .faq {
       padding-top: 26px;
-      padding-bottom: 42px; } }
+      padding-bottom: 47px; } }
 
 .faq.nowebp {
   background-image: url("../img/bg-girls-desktop@1x.png"), url("../img/bag-desktop@1x.png"), url("../img/bg-watercolor3-desktop@1x.png"); }
@@ -1625,7 +1622,7 @@ input[type="radio"].visually-hidden {
       padding-left: 16px;
       padding-right: 16px; }
       .faq__content h2 {
-        margin-bottom: 9px; } }
+        margin-bottom: 7px; } }
 
 .faq__list {
   padding: 0;
@@ -1634,7 +1631,7 @@ input[type="radio"].visually-hidden {
 
 .faq__item {
   width: 100%;
-  padding: 35px 60px 30px 0;
+  padding: 36px 60px 30px 0;
   text-align: left;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2); }
   .faq__item button {
@@ -1697,7 +1694,7 @@ input[type="radio"].visually-hidden {
   display: block; }
 
 .reviews {
-  padding-top: 27px;
+  padding-top: 23px;
   margin-bottom: 109px;
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -1963,7 +1960,10 @@ input[type="radio"].visually-hidden {
     opacity: 0.5; }
   @media (max-width: 767px) {
     .social__link:not(:last-child) {
-      margin-right: 25px; } }
+      margin-right: 13px; }
+    .social__link svg {
+      width: 32px;
+      height: 32px; } }
 
 .social--supervisor .social__link {
   margin-right: 5px; }
@@ -1982,7 +1982,7 @@ input[type="radio"].visually-hidden {
       padding-right: 55px; } }
   @media (max-width: 767px) {
     .contacts {
-      padding-bottom: 63px;
+      padding-bottom: 60px;
       padding-left: 0;
       padding-right: 0; } }
 
@@ -2130,6 +2130,7 @@ input[type="radio"].visually-hidden {
 .supervisor {
   margin-bottom: 128px; }
   .supervisor p {
+    max-width: 500px;
     margin: 0;
     font-size: 17px;
     font-weight: 400;
@@ -2179,7 +2180,7 @@ input[type="radio"].visually-hidden {
               flex-direction: column;
       width: 100%;
       padding-left: 0;
-      margin-bottom: 29px; }
+      margin-bottom: 35px; }
       .supervisor__details img,
       .supervisor__details picture {
         position: static;

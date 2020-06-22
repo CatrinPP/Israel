@@ -184,6 +184,7 @@
       flex-direction: column;
       width: 100%;
       margin-bottom: 18px;
+      padding-right: 16px;
     }
   }
 }
@@ -268,7 +269,7 @@
     z-index: 200;
 
     width: 216px;
-    padding: 22px;
+    padding: 20px;
     margin-bottom: 0;
   }
 
@@ -293,7 +294,7 @@
     padding-left: 0;
 
     input[type="tel"] {
-      margin-bottom: 3px;
+      margin-bottom: 9px;
       padding-right: 20px;
     }
   }

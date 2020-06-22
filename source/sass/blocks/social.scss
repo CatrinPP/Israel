@@ -17,7 +17,12 @@
 
   @media (max-width: $mobile-width) {
     &:not(:last-child) {
-      margin-right: 25px;
+      margin-right: 13px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
     }
   }
 }
