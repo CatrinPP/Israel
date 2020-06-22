@@ -128,15 +128,11 @@
   border-bottom: 1px dashed $color-main;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.7;
-  }
+  @include basic-interactive-effect;
 }
 
 .header__tel {
-  &:hover {
-    opacity: 0.7;
-  }
+  @include basic-interactive-effect;
 
   @media (max-width: $mobile-width) {
     margin-bottom: 8px;

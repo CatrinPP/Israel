@@ -7,12 +7,10 @@
 
   opacity: 0.2;
 
+  @include basic-interactive-effect;
+
   &:not(:last-child) {
     margin-right: 14px;
-  }
-
-  &:hover {
-    opacity: 0.5;
   }
 
   @media (max-width: $mobile-width) {

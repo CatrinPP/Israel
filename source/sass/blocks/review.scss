@@ -83,9 +83,7 @@
     line-height: 150%;
     text-decoration: underline;
 
-    &:hover {
-      opacity: 0.7;
-    }
+    @include basic-interactive-effect;
   }
 
   @media (max-width: $tablet-width) {
@@ -196,6 +194,11 @@
   &:hover::before,
   &:hover::after {
     background-color: rgba($color: $color-main, $alpha: 0.7);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba($color: $color-main, $alpha: 0.5);
   }
 
   &--next {

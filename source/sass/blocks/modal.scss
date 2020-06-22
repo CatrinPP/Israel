@@ -92,9 +92,7 @@
   background: none;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.7;
-  }
+  @include basic-interactive-effect;
 
   @media (max-width: $mobile-width) {
     right: 25px;

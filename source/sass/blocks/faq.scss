@@ -117,9 +117,7 @@
     cursor: pointer;
     overflow: visible;
 
-    &:hover {
-      opacity: 0.7;
-    }
+    @include basic-interactive-effect;
 
     &::before {
       content: "";

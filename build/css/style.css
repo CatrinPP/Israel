@@ -192,9 +192,14 @@ input[type="radio"].visually-hidden {
   cursor: pointer; }
   .header__button:hover {
     opacity: 0.7; }
+  .header__button:active {
+    opacity: 0.5; }
 
 .header__tel:hover {
   opacity: 0.7; }
+
+.header__tel:active {
+  opacity: 0.5; }
 
 @media (max-width: 767px) {
   .header__tel {
@@ -280,6 +285,8 @@ input[type="radio"].visually-hidden {
   cursor: pointer; }
   .modal__close:hover {
     opacity: 0.7; }
+  .modal__close:active {
+    opacity: 0.5; }
   @media (max-width: 767px) {
     .modal__close {
       right: 25px;
@@ -1664,6 +1671,8 @@ input[type="radio"].visually-hidden {
     overflow: visible; }
     .faq__item button:hover {
       opacity: 0.7; }
+    .faq__item button:active {
+      opacity: 0.5; }
     .faq__item button::before {
       content: "";
       position: absolute;
@@ -1854,6 +1863,8 @@ input[type="radio"].visually-hidden {
     text-decoration: underline; }
     .review__text a:hover {
       opacity: 0.7; }
+    .review__text a:active {
+      opacity: 0.5; }
   @media (max-width: 1023px) {
     .review__text {
       padding-right: 55px;
@@ -1941,6 +1952,8 @@ input[type="radio"].visually-hidden {
             transform: rotate(135deg); }
   .review__button:hover::before, .review__button:hover::after {
     background-color: rgba(72, 72, 72, 0.7); }
+  .review__button:active::before, .review__button:active::after {
+    background-color: rgba(72, 72, 72, 0.5); }
   .review__button--next {
     margin-left: auto; }
     .review__button--next::before {
@@ -1970,10 +1983,12 @@ input[type="radio"].visually-hidden {
   height: 24px;
   vertical-align: middle;
   opacity: 0.2; }
+  .social__link:hover {
+    opacity: 0.7; }
+  .social__link:active {
+    opacity: 0.5; }
   .social__link:not(:last-child) {
     margin-right: 14px; }
-  .social__link:hover {
-    opacity: 0.5; }
   @media (max-width: 767px) {
     .social__link:not(:last-child) {
       margin-right: 13px; }
@@ -2111,6 +2126,10 @@ input[type="radio"].visually-hidden {
     border-bottom: 1px dashed #1fc0fc;
     overflow: visible;
     cursor: pointer; }
+    .contacts__city .contacts__city-button:hover {
+      opacity: 0.7; }
+    .contacts__city .contacts__city-button:active {
+      opacity: 0.5; }
     .contacts__city .contacts__city-button::after {
       content: "";
       position: absolute;
@@ -2119,8 +2138,6 @@ input[type="radio"].visually-hidden {
       width: 16px;
       height: 15px;
       background-image: url("../img/gps.png"); }
-    .contacts__city .contacts__city-button:hover {
-      opacity: 0.7; }
   .contacts__city p {
     margin: 0;
     margin-right: 21px;
