@@ -1165,11 +1165,11 @@ input[type="radio"].visually-hidden {
         line-height: 160%; } }
 
 .preparation__requirements {
-  position: relative;
-  padding: 0;
   margin: 0;
-  padding-left: 44px;
-  list-style: none; }
+  padding: 0;
+  list-style: none;
+  position: relative;
+  padding-left: 44px; }
   .preparation__requirements::before {
     content: "";
     position: absolute;
@@ -1636,8 +1636,8 @@ input[type="radio"].visually-hidden {
         margin-bottom: 7px; } }
 
 .faq__list {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none; }
 
 .faq__item {

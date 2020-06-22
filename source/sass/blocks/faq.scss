@@ -90,10 +90,7 @@
 }
 
 .faq__list {
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
+  @include reset-default-list;
 }
 
 .faq__item {

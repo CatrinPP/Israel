@@ -48,3 +48,10 @@
     line-height: 39px;
   }
 }
+
+@mixin reset-default-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
