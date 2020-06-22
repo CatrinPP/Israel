@@ -206,7 +206,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 300;
   display: none;
   width: 100%;
   height: 100%;
@@ -384,6 +384,16 @@ input[type="radio"].visually-hidden {
     height: 59px;
     background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     border-radius: 80px; }
+
+.form input[type="tel"]:not(:placeholder-shown) + label::after {
+  content: "";
+  position: absolute;
+  left: 67px;
+  top: 40px;
+  width: 111px;
+  height: 2px;
+  z-index: 100;
+  background-image: url("../img/underline.svg"); }
 
 .form input::-webkit-input-placeholder {
   color: rgba(72, 72, 72, 0.5);
@@ -1421,6 +1431,9 @@ input[type="radio"].visually-hidden {
           -ms-flex-pack: center;
               justify-content: center; } }
 
+.gallery--nojs .gallery__controls {
+  display: none; }
+
 .gallery__control {
   width: 6px;
   height: 6px;
@@ -1690,7 +1703,8 @@ input[type="radio"].visually-hidden {
       .faq__item svg {
         right: -25px; } }
 
-.faq__item--active p {
+.faq__item--active p,
+.faq--nojs p {
   display: block; }
 
 .reviews {
@@ -1891,6 +1905,9 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex;
   width: 50px; }
+
+.reviews--nojs .review__controls {
+  display: none; }
 
 .review__button {
   position: relative;

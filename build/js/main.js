@@ -1,18 +1,19 @@
 'use strict';
 
 (function () {
-  /* Проверка поддержки webp */
+  /* Проверка поддержки webp и JS*/
+  var headerElement = document.querySelector('.header');
+  var aboutElement = document.querySelector('.about');
+  var programsElement = document.querySelector('.programs');
+  var requestElement = document.querySelector('.request');
+  var preparationElement = document.querySelector('.preparation');
+  var galleryElement = document.querySelector('.gallery');
+  var invitationElement = document.querySelector('.instagram-invitation');
+  var faqElement = document.querySelector('.faq');
+  var reviewsElement = document.querySelector('.reviews');
+  var contactsElement = document.querySelector('.contacts');
+
   function checkWebpSupport() {
-    var headerElement = document.querySelector('.header');
-    var aboutElement = document.querySelector('.about');
-    var programsElement = document.querySelector('.programs');
-    var requestElement = document.querySelector('.request');
-    var preparationElement = document.querySelector('.preparation');
-    var galleryElement = document.querySelector('.gallery');
-    var invitationElement = document.querySelector('.instagram-invitation');
-    var faqElement = document.querySelector('.faq');
-    var reviewsElement = document.querySelector('.reviews');
-    var contactsElement = document.querySelector('.contacts');
     var WebP = new Image();
 
     function renameElement(element) {
@@ -37,6 +38,10 @@
     };
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
+
+  faqElement.classList.remove('faq--nojs');
+  galleryElement.classList.remove('gallery--nojs');
+  reviewsElement.classList.remove('reviews--nojs');
 
   checkWebpSupport();
 
@@ -87,8 +92,11 @@
   };
 
   var onSubmit = function (evt) {
-    localStorage.setItem('userName', evt.target.querySelector('#user-name').value);
-    localStorage.setItem('userTel', evt.target.querySelector('#user-tel').value);
+    evt.preventDefault();
+    var userName = evt.target.querySelector('#user-name') ? evt.target.querySelector('#user-name').value : '';
+    var userTel = evt.target.querySelector('#user-tel') ? evt.target.querySelector('#user-tel').value : '';
+    localStorage.setItem('userName', userName);
+    localStorage.setItem('userTel', userTel);
     evt.preventDefault();
     closeAnyActivePopup();
     openSuccessPopup();
@@ -116,7 +124,7 @@
   callButton.addEventListener('click', onCallButtonClick);
 
   /* Маска для ввода телефона */
-  var input = document.querySelector('#user-tel');
+  var inputs = document.querySelectorAll('input[type="tel"]');
 
   var setCursorPosition = function (position, element) {
     element.focus();
@@ -132,6 +140,7 @@
   };
 
   var mask = function (event) {
+    var input = event.target;
     var matrix = '+7 (___) ___ __ __';
     var index = 0;
     var newValue = matrix.replace(/\D/g, '');
@@ -158,10 +167,15 @@
     }
   };
 
-  input.addEventListener('input', mask, false);
-  input.addEventListener('focus', mask, false);
-  input.addEventListener('blur', mask, false);
+  function setInputsListeners(array) {
+    for (var i = 0; i < array.length; i++) {
+      array[i].addEventListener('input', mask, false);
+      array[i].addEventListener('focus', mask, false);
+      array[i].addEventListener('blur', mask, false);
+    }
+  }
 
+  setInputsListeners(inputs);
 
   /* Переключение табов программ */
   var programsControlsBlock = document.querySelector('.programs__controls');

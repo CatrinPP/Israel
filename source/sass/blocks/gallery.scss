@@ -215,6 +215,10 @@
   }
 }
 
+.gallery--nojs .gallery__controls {
+  display: none;
+}
+
 .gallery__control {
   width: 6px;
   height: 6px;

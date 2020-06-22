@@ -63,6 +63,18 @@
     }
   }
 
+  input[type="tel"]:not(:placeholder-shown) + label::after {
+    content: "";
+    position: absolute;
+    left: 67px;
+    top: 40px;
+    width: 111px;
+    height: 2px;
+    z-index: 100;
+
+    background-image: url("../img/underline.svg");
+  }
+
   input::placeholder {
     color: rgba($color: $color-main, $alpha: 0.5);
     font-weight: 500;

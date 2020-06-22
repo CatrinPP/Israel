@@ -157,6 +157,10 @@
   width: 50px;
 }
 
+.reviews--nojs .review__controls {
+  display: none;
+}
+
 .review__button {
   position: relative;
 
