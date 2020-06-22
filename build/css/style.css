@@ -527,7 +527,12 @@ input[type="radio"].visually-hidden {
 
 .form__bottom-wrapper {
   position: relative;
-  left: 12px; }
+  left: 12px;
+  width: 264px;
+  margin: 0 auto; }
+  .form__bottom-wrapper input[type="checkbox"] {
+    margin-top: 15px;
+    margin-left: 8px; }
   .form__bottom-wrapper label {
     cursor: pointer; }
     .form__bottom-wrapper label:hover {
