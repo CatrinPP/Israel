@@ -1228,14 +1228,14 @@ input[type="radio"].visually-hidden {
       .preparation__requirements-item:first-child {
         margin-bottom: 61px; } }
 
-.preparation__annotaion {
+.preparation__annotation {
   position: relative;
   padding-left: 18px;
   font-size: 15px;
   font-weight: 400;
   line-height: 140%;
   opacity: 0.5; }
-  .preparation__annotaion::before {
+  .preparation__annotation::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1244,11 +1244,11 @@ input[type="radio"].visually-hidden {
     height: 100%;
     background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
   @media (max-width: 1023px) {
-    .preparation__annotaion {
+    .preparation__annotation {
       padding-left: 8px;
       font-size: 14px;
       line-height: 160%; }
-      .preparation__annotaion::before {
+      .preparation__annotation::before {
         left: -5px; } }
 
 .gallery {
