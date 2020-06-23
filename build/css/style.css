@@ -1673,12 +1673,13 @@ input[type="radio"].visually-hidden {
 
 .faq__item {
   width: 100%;
-  padding: 36px 60px 30px 0;
+  padding: 36px 0 30px;
   text-align: left;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2); }
   .faq__item button {
     position: relative;
     padding-left: 30px;
+    padding-right: 60px;
     width: 100%;
     font-size: 17px;
     font-weight: 400;
@@ -1701,10 +1702,20 @@ input[type="radio"].visually-hidden {
       height: 20px;
       background-image: url("../img/1.svg");
       background-repeat: no-repeat; }
+    .faq__item button::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      width: 17px;
+      height: 11px;
+      background-image: url("../img/icon-down.svg");
+      background-repeat: no-repeat; }
   .faq__item p {
     display: none;
     margin: 0;
     margin-top: 27px;
+    padding-right: 30px;
     font-weight: 400;
     line-height: 140%; }
   .faq__item--2 button::before {
@@ -1735,9 +1746,17 @@ input[type="radio"].visually-hidden {
       .faq__item svg {
         right: -25px; } }
 
-.faq__item--active p,
+.faq__item--active p {
+  display: block; }
+
+.faq__item--active button::after {
+  background-image: url("../img/icon-up.svg"); }
+
 .faq--nojs p {
   display: block; }
+
+.faq--nojs button::after {
+  background: none; }
 
 .reviews {
   padding-top: 23px;

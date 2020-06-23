@@ -353,9 +353,9 @@
 
   scroll.addEventListener('click', function (evt) {
     evt.preventDefault();
-    // var id = scroll.getAttribute('href');
+    var id = scroll.getAttribute('href');
 
-    document.querySelector('.main').scrollIntoView({
+    document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
