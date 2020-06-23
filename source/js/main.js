@@ -77,6 +77,7 @@
 
   var openSuccessPopup = function () {
     successPopup.classList.add('modal--show');
+    document.body.style.overflow = 'hidden';
     successPopupConfirmButton.addEventListener('click', function () {
       closePopup(successPopup);
     });
