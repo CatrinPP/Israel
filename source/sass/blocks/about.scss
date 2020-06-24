@@ -11,6 +11,8 @@
   h2 {
     @include header;
     text-align: center;
+    line-height: 30px;
+    margin-bottom: 35px;
   }
 
   p {
@@ -46,6 +48,10 @@
 
       font-size: 16px;
       line-height: 165%;
+    }
+
+    h2 {
+      margin-bottom: 25px;
     }
   }
 }

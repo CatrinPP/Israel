@@ -1,34 +1,18 @@
 .header {
   position: relative;
 
-  min-height: 896px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vw / 1.51);
+  padding-bottom: 10.5%;
 
   background-position: center top;
-  background-size: cover;
+  background-size: 100vw;
   background-repeat: no-repeat;
-
-  h1 {
-    width: 350px;
-    margin: 428px auto 0 auto;
-
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 700;
-
-    color: $color-secondary;
-    text-align: center;
-
-    @media (max-width: $mobile-width) {
-      width: 290px;
-      margin-top: 240px;
-
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
 
   @media (max-width: $mobile-width) {
     min-height: 605px;
+    padding-bottom: 59px;
 
     background-size: cover;
     background-position: center 30px;
@@ -68,11 +52,13 @@
 }
 
 .header__top {
+  flex: 1 0 auto;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  padding: 32px 110px;
+  padding: 50px 110px 32px;
 
   @media (max-width: $mobile-width) {
     position: relative;
@@ -81,6 +67,7 @@
     padding-right: 10px;
     padding-top: 20px;
     align-items: flex-end;
+    justify-content: flex-start;
 
     font-size: 14px;
     line-height: 17px;
@@ -91,6 +78,7 @@
   width: 137px;
   height: 48px;
   margin-right: 20px;
+  margin-top: -18px;
 
   @media (max-width: $mobile-width) {
     position: absolute;
@@ -99,6 +87,7 @@
 
     width: 120px;
     height: 42px;
+    margin-top: 0;
   }
 }
 
@@ -123,17 +112,40 @@
   }
 }
 
-.header__scroll {
-  position: absolute;
-  top: 628px;
-  left: calc(50% - 38px);
+.header__bottom {
+  flex-shrink: 0;
+  width: 350px;
+  margin: 0 auto;
 
-  img {
-    width: 76px;
-    height: 131px;
+  h1 {
+    margin: 0 0 32px;
+
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+
+    color: $color-secondary;
+    text-align: center;
   }
 
   @media (max-width: $mobile-width) {
-    top: 415px;
+    width: 290px;
+
+    h1 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+.header__scroll {
+  display: block;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    width: 76px;
+    height: 131px;
+    margin: 0 auto;
   }
 }
