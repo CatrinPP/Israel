@@ -1,4 +1,5 @@
 .contacts {
+  @include desktop-container;
   padding-left: calc(15% - 97px);
   padding-bottom: 60px;
 

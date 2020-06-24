@@ -1,4 +1,8 @@
 .instagram-invitation {
+  @include desktop-container;
+}
+
+.invitation__wrapper {
   min-height: 583px;
   display: flex;
   flex-direction: column;
@@ -20,7 +24,7 @@
   }
 }
 
-.instagram-invitation.nowebp {
+.nowebp > .invitation__wrapper {
   background-image: url("../img/bg-masa-desktop@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -36,7 +40,7 @@
   }
 }
 
-.instagram-invitation.webp {
+.webp > .invitation__wrapper {
   background-image: url("../img/bg-masa-desktop@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

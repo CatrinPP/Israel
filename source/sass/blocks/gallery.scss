@@ -1,14 +1,18 @@
 .gallery {
   max-width: 1366px;
-  min-height: 843px;
-  padding-left: calc(35% - 370px);
-  padding-right: calc(35% - 388px);
-  padding-bottom: 120px;
+  margin: 0 auto;
 
   background-color: $color-secondary;
   background-position: center -42px, 103% 72%;
   background-repeat: no-repeat;
   background-size: contain, 124px;
+}
+
+.gallery__external-wrapper {
+  min-height: 843px;
+  padding-left: calc(35% - 370px);
+  padding-right: calc(35% - 388px);
+  padding-bottom: 120px;
 
   h2 {
     @include header;

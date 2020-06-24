@@ -65,3 +65,15 @@
     opacity: 0.5;
   }
 }
+
+@mixin desktop-container {
+  max-width: 1366px;
+  min-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: auto;
+    min-width: auto;
+  }
+}

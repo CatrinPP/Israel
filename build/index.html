@@ -116,21 +116,24 @@
       </section>
 
       <section class="main__request  request  webp">
-        <h2>Хочу поехать!</h2>
-        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-        <form class="request__form  form  form--single-input" action="https://echo.htmlacademy.ru" method="POST">
-          <input id="user-tel--request" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
-          <label for="user-tel--request" aria-label="Введите номер телефона"></label>
-          <button class="button" type="submit">Перезвоните мне</button>
-        </form>
+        <div class="request__wrapper">
+          <h2>Хочу поехать!</h2>
+          <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+          <form class="request__form  form  form--single-input" action="https://echo.htmlacademy.ru" method="POST">
+            <input id="user-tel--request" name="tel" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Телефон" required="">
+            <label for="user-tel--request" aria-label="Введите номер телефона"></label>
+            <button class="button" type="submit">Перезвоните мне</button>
+          </form>
+        </div>
       </section>
 
       <section class="main__preparation  preparation  webp">
-        <div class="preparation__content">
-          <h2>Как поехать</h2>
-          <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе.
-            Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
-          <p><b>Чтобы иметь возможность получить грант на обучение от&nbsp;4200 до 8400$, вы должны:</b></p>
+        <div class="preparation__wrapper">
+          <div class="preparation__content">
+            <h2>Как поехать</h2>
+            <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе.
+              Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+            <p><b>Чтобы иметь возможность получить грант на обучение от&nbsp;4200 до 8400$, вы должны:</b></p>
             <ul class="preparation__requirements">
               <li class="preparation__requirements-item"><span>1</span>Быть в возрасте от 16 до 30 лет</li>
               <li class="preparation__requirements-item"><span>2</span>Иметь оконченное среднее образование</li>
@@ -141,129 +144,136 @@
             <p class="preparation__annotation"><span>Если вы не подходите по этим правилам, вы всё равно можете
               принять участие в программе «Маса», оплатив её полную стоимость.</span></p>
           </div>
+        </div>
       </section>
 
       <article class="main__gallery  gallery  gallery--nojs  webp">
-        <h2>Жизнь в&nbsp;Израиле</h2>
-        <p>Помимо учёбы, в рамках программе у&nbsp;вас будет возможность путешествовать по стране и
-          познакомиться с богатой культурно&#8209;исторической жизнью Израиля и его жителей.</p>
-        <div class="gallery__wrapper">
-          <div class="gallery__picture  gallery__picture--active">
-            <picture>
-              <!-- 1х: 288px; 2x: 576px -->
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.webp 1x, ./img/lifefoto1-mobile@2x.webp 2x">
-              <source type="image/webp" srcset="./img/lifefoto1-desktop@1x.webp 1x, ./img/lifefoto1-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.png 1x, ./img/lifefoto1-mobile@2x.png 2x">
-              <!-- 1х: 482px; 2x: 964px -->
-              <img src="./img/lifefoto1-desktop@1x.png" loading="lazy" width="482" height="732" alt="Купольный храм">
-            </picture>
-            <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
-          </div>
-          <div class="gallery__picture">
-            <picture>
-              <!-- 1х: 288px; 2x: 576px -->
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.webp 1x, ./img/lifefoto2-mobile@2x.webp 2x">
-              <source type="image/webp" srcset="./img/lifefoto2-desktop@1x.webp 1x, ./img/lifefoto2-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.png 1x, ./img/lifefoto2-mobile@2x.png 2x">
-              <!-- 1х: 211px; 2x: 422px -->
-              <img src="./img/lifefoto2-desktop@1x.png" loading="lazy" width="211" height="318" alt="Молодой человек работает за ноутбуком">
-            </picture>
-            <p>Изучение иврита</p>
-          </div>
-          <div class="gallery__picture">
-            <picture>
-              <!-- 1х: 288px; 2x: 576px -->
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.webp 1x, ./img/lifefoto3-mobile@2x.webp 2x">
-              <source type="image/webp" srcset="./img/lifefoto3-desktop@1x.webp 1x, ./img/lifefoto3-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.png 1x, ./img/lifefoto3-mobile@2x.png 2x">
-              <!-- 1х: 411px; 2x: 822px -->
-              <img src="./img/lifefoto3-desktop@1x.png" loading="lazy" width="411" height="318" alt="Молодой человек обучает другого">
-            </picture>
-            <p>Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
-          </div>
-          <div class="gallery__picture">
-            <picture>
-              <!-- 1х: 288px; 2x: 576px -->
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.webp 1x, ./img/lifefoto4-mobile@2x.webp 2x">
-              <source type="image/webp" srcset="./img/lifefoto4-desktop@1x.webp 1x, ./img/lifefoto4-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.png 1x, ./img/lifefoto4-mobile@2x.png 2x">
-              <!-- 1х: 411px; 2x: 822px -->
-              <img src="./img/lifefoto4-desktop@1x.png" loading="lazy" width="411" height="318" alt="Компания улыбающихся ребят">
-            </picture>
-            <p>Совместные творческие проекты с израильской молодёжью</p>
-          </div>
-          <div class="gallery__picture">
-            <picture>
-              <!-- 1х: 288px; 2x: 576px -->
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.webp 1x, ./img/lifefoto5-mobile@2x.webp 2x">
-              <source type="image/webp" srcset="./img/lifefoto5-desktop@1x.webp 1x, ./img/lifefoto5-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.png 1x, ./img/lifefoto5-mobile@2x.png 2x">
-              <!-- 1х: 214px; 2x: 428px -->
-              <img src="./img/lifefoto5-desktop@1x.png" loading="lazy" width="214" height="318" alt="Мужчина в горах смотрит в закат">
-            </picture>
-            <p>Развитие лидерства</p>
-          </div>
-          <div class="gallery__controls">
-            <button class="gallery__control  gallery__control--active" type="button" aria-label="Показать первое фото"></button>
-            <button class="gallery__control" type="button" aria-label="Показать второе фото"></button>
-            <button class="gallery__control" type="button" aria-label="Показать третье фото"></button>
-            <button class="gallery__control" type="button" aria-label="Показать четвертое фото"></button>
-            <button class="gallery__control" type="button" aria-label="Показать пятое фото"></button>
+        <div class="gallery__external-wrapper">
+          <h2>Жизнь в&nbsp;Израиле</h2>
+          <p>Помимо учёбы, в рамках программе у&nbsp;вас будет возможность путешествовать по стране и
+            познакомиться с богатой культурно&#8209;исторической жизнью Израиля и его жителей.</p>
+          <div class="gallery__wrapper">
+            <div class="gallery__picture  gallery__picture--active">
+              <picture>
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.webp 1x, ./img/lifefoto1-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/lifefoto1-desktop@1x.webp 1x, ./img/lifefoto1-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.png 1x, ./img/lifefoto1-mobile@2x.png 2x">
+                <!-- 1х: 482px; 2x: 964px -->
+                <img src="./img/lifefoto1-desktop@1x.png" loading="lazy" width="482" height="732" alt="Купольный храм">
+              </picture>
+              <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
+            </div>
+            <div class="gallery__picture">
+              <picture>
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.webp 1x, ./img/lifefoto2-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/lifefoto2-desktop@1x.webp 1x, ./img/lifefoto2-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.png 1x, ./img/lifefoto2-mobile@2x.png 2x">
+                <!-- 1х: 211px; 2x: 422px -->
+                <img src="./img/lifefoto2-desktop@1x.png" loading="lazy" width="211" height="318" alt="Молодой человек работает за ноутбуком">
+              </picture>
+              <p>Изучение иврита</p>
+            </div>
+            <div class="gallery__picture">
+              <picture>
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.webp 1x, ./img/lifefoto3-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/lifefoto3-desktop@1x.webp 1x, ./img/lifefoto3-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.png 1x, ./img/lifefoto3-mobile@2x.png 2x">
+                <!-- 1х: 411px; 2x: 822px -->
+                <img src="./img/lifefoto3-desktop@1x.png" loading="lazy" width="411" height="318" alt="Молодой человек обучает другого">
+              </picture>
+              <p>Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
+            </div>
+            <div class="gallery__picture">
+              <picture>
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.webp 1x, ./img/lifefoto4-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/lifefoto4-desktop@1x.webp 1x, ./img/lifefoto4-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.png 1x, ./img/lifefoto4-mobile@2x.png 2x">
+                <!-- 1х: 411px; 2x: 822px -->
+                <img src="./img/lifefoto4-desktop@1x.png" loading="lazy" width="411" height="318" alt="Компания улыбающихся ребят">
+              </picture>
+              <p>Совместные творческие проекты с израильской молодёжью</p>
+            </div>
+            <div class="gallery__picture">
+              <picture>
+                <!-- 1х: 288px; 2x: 576px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.webp 1x, ./img/lifefoto5-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="./img/lifefoto5-desktop@1x.webp 1x, ./img/lifefoto5-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.png 1x, ./img/lifefoto5-mobile@2x.png 2x">
+                <!-- 1х: 214px; 2x: 428px -->
+                <img src="./img/lifefoto5-desktop@1x.png" loading="lazy" width="214" height="318" alt="Мужчина в горах смотрит в закат">
+              </picture>
+              <p>Развитие лидерства</p>
+            </div>
+            <div class="gallery__controls">
+              <button class="gallery__control  gallery__control--active" type="button" aria-label="Показать первое фото"></button>
+              <button class="gallery__control" type="button" aria-label="Показать второе фото"></button>
+              <button class="gallery__control" type="button" aria-label="Показать третье фото"></button>
+              <button class="gallery__control" type="button" aria-label="Показать четвертое фото"></button>
+              <button class="gallery__control" type="button" aria-label="Показать пятое фото"></button>
+            </div>
           </div>
         </div>
       </article>
 
       <section class="main__instagram-invitation  instagram-invitation  webp">
-        <div class="instagram-invitation__content">
-          <h2>#Masaisrael</h2>
-          <p>Познакомьтесь с программой  от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
-          <a class="button" href="#"><span>Смотреть фото</span>
-            <svg width="24" height="24"><use xlink:href="./img/sprite_auto.svg#icon-instagram"></use></svg>
-          </a>
+        <div class="invitation__wrapper">
+          <div class="instagram-invitation__content">
+            <h2>#Masaisrael</h2>
+            <p>Познакомьтесь с программой  от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
+            <a class="button" href="#"><span>Смотреть фото</span>
+              <svg width="24" height="24"><use xlink:href="./img/sprite_auto.svg#icon-instagram"></use></svg>
+            </a>
+          </div>
         </div>
       </section>
 
       <section class="main__faq  faq  faq--nojs  webp">
-        <div class="faq__content">
-          <h2>Частые вопросы</h2>
-          <ul class="faq__list">
-            <li class="faq__item  faq__item--1">
-              <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="1"><span>Кто организатор? Какие сроки у программы?</span></button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
-                и поэтому предусматривается определённая доля личного участия.</p>
-            </li>
-            <li class="faq__item  faq__item--2">
-              <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="2"><span>Что такое грант на обучение?</span></button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
-                и поэтому предусматривается определённая доля личного участия.</p>
-            </li>
-            <li class="faq__item  faq__item--3  faq__item--active">
-              <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="3"><span>Как определяется стоимость программы?</span></button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
-                и поэтому предусматривается определённая доля личного участия.</p>
-            </li>
-            <li class="faq__item  faq__item--4">
-              <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="4"><span>Что такое грант на обучение?</span></button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
-                и поэтому предусматривается определённая доля личного участия.</p>
-            </li>
-            <li class="faq__item  faq__item--5">
-              <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="5"><span>Признаётся ли учеба в рамках проекта для дальнейшего обучения?</span></button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
-                и поэтому предусматривается определённая доля личного участия.</p>
-            </li>
-            <li class="faq__item  faq__item--6">
-              <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="6"><span>Как выглядит полный процесс&nbsp;регистрации на&nbsp;программу «Маса»?</span></button>
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
-                и поэтому предусматривается определённая доля личного участия.</p>
-            </li>
-          </ul>
+        <div class="faq__wrapper">
+          <div class="faq__content">
+            <h2>Частые вопросы</h2>
+            <ul class="faq__list">
+              <li class="faq__item  faq__item--1">
+                <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="1"><span>Кто организатор? Какие сроки у программы?</span></button>
+                <p>Полная стоимость определяется организаторами в зависимости от направления.
+                  В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                  и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="faq__item  faq__item--2">
+                <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="2"><span>Что такое грант на обучение?</span></button>
+                <p>Полная стоимость определяется организаторами в зависимости от направления.
+                  В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                  и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="faq__item  faq__item--3  faq__item--active">
+                <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="3"><span>Как определяется стоимость программы?</span></button>
+                <p>Полная стоимость определяется организаторами в зависимости от направления.
+                  В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                  и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="faq__item  faq__item--4">
+                <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="4"><span>Что такое грант на обучение?</span></button>
+                <p>Полная стоимость определяется организаторами в зависимости от направления.
+                  В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                  и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="faq__item  faq__item--5">
+                <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="5"><span>Признаётся ли учеба в рамках проекта для дальнейшего обучения?</span></button>
+                <p>Полная стоимость определяется организаторами в зависимости от направления.
+                  В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                  и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="faq__item  faq__item--6">
+                <button class="faq__button" type="button" aria-label="Переключить видимость ответа" data-id="6"><span>Как выглядит полный процесс&nbsp;регистрации на&nbsp;программу «Маса»?</span></button>
+                <p>Полная стоимость определяется организаторами в зависимости от направления.
+                  В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                  и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

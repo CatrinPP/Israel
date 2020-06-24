@@ -1,18 +1,28 @@
 .faq {
+  background-color: $color-secondary;
+  background-repeat: no-repeat;
+  background-position: -40px 811px, left top;
+  background-size: 194px, cover;
+
+  @media (max-width: $tablet-width) {
+    background-size: 194px;
+    background-position: -48px 685px;
+  }
+}
+
+.faq__wrapper {
+  @include desktop-container;
+
   padding-top: 83px;
   padding-bottom: 124px;
   padding-left: 108px;
 
-  background-color: $color-secondary;
   background-repeat: no-repeat;
-  background-position: right 84px, -40px 811px, left top;
-  background-size: 47%, 194px, 1366px;
+  background-position: right 84px;
+  background-size: 47%;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
-
-    background-size: 194px;
-    background-position: -48px 685px;
   }
 
   @media (max-width: $mobile-width) {
@@ -22,13 +32,11 @@
 }
 
 .faq.nowebp {
-  background-image: url("../img/bg-girls-desktop@1x.png"),
-    url("../img/bag-desktop@1x.png"),
+  background-image: url("../img/bag-desktop@1x.png"),
     url("../img/bg-watercolor3-desktop@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-girls-desktop@2x.png"),
-      url("../img/bag-desktop@2x.png"),
+    background-image: url("../img/bag-desktop@2x.png"),
       url("../img/bg-watercolor3-desktop@2x.png");
   }
 
@@ -42,13 +50,11 @@
 }
 
 .faq.webp {
-  background-image: url("../img/bg-girls-desktop@1x.webp"),
-    url("../img/bag-desktop@1x.webp"),
+  background-image: url("../img/bag-desktop@1x.webp"),
     url("../img/bg-watercolor3-desktop@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-girls-desktop@2x.webp"),
-      url("../img/bag-desktop@2x.webp"),
+    background-image: url("../img/bag-desktop@2x.webp"),
       url("../img/bg-watercolor3-desktop@2x.webp");
   }
 
@@ -58,6 +64,30 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bag-desktop@2x.webp");
     }
+  }
+}
+
+.noweb > .faq__wrapper {
+  background-image: url("../img/bg-girls-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-girls-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background: none;
+  }
+}
+
+.webp > .faq__wrapper {
+  background-image: url("../img/bg-girls-desktop@1x.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-girls-desktop@2x.webp");
+  }
+
+  @media (max-width: $tablet-width) {
+    background: none;
   }
 }
 
@@ -81,7 +111,7 @@
 
   @media (max-width: $mobile-width) {
     padding-left: 16px;
-    padding-right: 0;
+    padding-right: 16px;
 
     h2 {
       margin-bottom: 7px;
@@ -187,10 +217,15 @@
     padding: 28px 0 23px 0;
 
     button {
-      padding-left: 20px;
+      padding-left: 25px;
+      padding-right: 30px;
 
       font-size: 16px;
       line-height: 170%;
+
+      &::after {
+        right: 0;
+      }
     }
 
     p {

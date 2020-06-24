@@ -1,4 +1,5 @@
 .programs {
+  @include desktop-container;
   position: relative;
 
   padding-top: 104px;
