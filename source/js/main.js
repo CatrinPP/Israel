@@ -225,7 +225,7 @@
   var MIN_PICTURES_INDEX_COUNT = 0;
   var SLIDER_STEP = 1;
   var galleryControls = document.querySelectorAll('.gallery__control');
-  var galleryPictures = document.querySelectorAll('.gallery__picture');
+  var galleryPictures = document.querySelectorAll('.gallery__item');
   var gallerySlider = document.querySelector('.gallery__wrapper');
   var currentPictureIndex = 0;
 
@@ -257,7 +257,7 @@
 
   function hideAllGalleryPictures() {
     for (var i = 0; i < galleryPictures.length; i++) {
-      galleryPictures[i].classList.remove('gallery__picture--active');
+      galleryPictures[i].classList.remove('gallery__item--active');
     }
   }
 
@@ -266,7 +266,7 @@
   }
 
   function showPicture(index) {
-    galleryPictures[index].classList.add('gallery__picture--active');
+    galleryPictures[index].classList.add('gallery__item--active');
   }
 
   function onGalleryControlClick(evt) {

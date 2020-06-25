@@ -39,12 +39,15 @@
           В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
           <div class="about__video">
             <picture>
-              <!-- 1х: 424px; 2x: 848px -->
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about-mobile@1x.webp 1x, ./img/about-mobile@2x.webp 2x">
-              <source type="image/webp" srcset="./img/about-desktop@1x.webp 1x, ./img/about-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/about-mobile@1x.png 1x, ./img/about-mobile@2x.png 2x">
+              <source type="image/webp" srcset="./img/about-mobile@1x.webp 424w,
+                      ./img/about-mobile@2x.webp 848w,
+                      ./img/about-desktop@1x.webp 870w,
+                      ./img/about-desktop@2x.webp 1740w" sizes="100vw">
               <!-- 1х: 870px; 2x: 1740px -->
-              <img src="./img/about-desktop@1x.png" srcset="./img/about-desktop@2x.png 2x" loading="lazy" width="870" height="460" alt="Группа ребят у костра">
+              <img src="./img/about-desktop@1x.png" srcset="./img/about-mobile@1x.png 424w,
+                        ./img/about-mobile@2x.png 848w,
+                        ./img/about-desktop@1x.png 870w,
+                        ./img/about-desktop@2x.png 1740w" sizes="(min-width: 768px) 100vw" loading="lazy" alt="Группа ребят у костра">
             </picture>
             <button class="about__play-button" type="button"><span class="visually-hidden">Включить видео</span></button>
           </div>
@@ -153,61 +156,23 @@
           <p>Помимо учёбы, в рамках программе у&nbsp;вас будет возможность путешествовать по стране и
             познакомиться с богатой культурно&#8209;исторической жизнью Израиля и его жителей.</p>
           <div class="gallery__wrapper">
-            <div class="gallery__picture  gallery__picture--active">
-              <picture>
-                <!-- 1х: 288px; 2x: 576px -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.webp 1x, ./img/lifefoto1-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="./img/lifefoto1-desktop@1x.webp 1x, ./img/lifefoto1-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="./img/lifefoto1-mobile@1x.png 1x, ./img/lifefoto1-mobile@2x.png 2x">
-                <!-- 1х: 482px; 2x: 964px -->
-                <img src="./img/lifefoto1-desktop@1x.png" loading="lazy" width="482" height="732" alt="Купольный храм">
-              </picture>
-              <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
-            </div>
-            <div class="gallery__picture">
-              <picture>
-                <!-- 1х: 288px; 2x: 576px -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.webp 1x, ./img/lifefoto2-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="./img/lifefoto2-desktop@1x.webp 1x, ./img/lifefoto2-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="./img/lifefoto2-mobile@1x.png 1x, ./img/lifefoto2-mobile@2x.png 2x">
-                <!-- 1х: 211px; 2x: 422px -->
-                <img src="./img/lifefoto2-desktop@1x.png" loading="lazy" width="211" height="318" alt="Молодой человек работает за ноутбуком">
-              </picture>
-              <p>Изучение иврита</p>
-            </div>
-            <div class="gallery__picture">
-              <picture>
-                <!-- 1х: 288px; 2x: 576px -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.webp 1x, ./img/lifefoto3-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="./img/lifefoto3-desktop@1x.webp 1x, ./img/lifefoto3-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="./img/lifefoto3-mobile@1x.png 1x, ./img/lifefoto3-mobile@2x.png 2x">
-                <!-- 1х: 411px; 2x: 822px -->
-                <img src="./img/lifefoto3-desktop@1x.png" loading="lazy" width="411" height="318" alt="Молодой человек обучает другого">
-              </picture>
-              <p>Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
-            </div>
-            <div class="gallery__picture">
-              <picture>
-                <!-- 1х: 288px; 2x: 576px -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.webp 1x, ./img/lifefoto4-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="./img/lifefoto4-desktop@1x.webp 1x, ./img/lifefoto4-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="./img/lifefoto4-mobile@1x.png 1x, ./img/lifefoto4-mobile@2x.png 2x">
-                <!-- 1х: 411px; 2x: 822px -->
-                <img src="./img/lifefoto4-desktop@1x.png" loading="lazy" width="411" height="318" alt="Компания улыбающихся ребят">
-              </picture>
-              <p>Совместные творческие проекты с израильской молодёжью</p>
-            </div>
-            <div class="gallery__picture">
-              <picture>
-                <!-- 1х: 288px; 2x: 576px -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.webp 1x, ./img/lifefoto5-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="./img/lifefoto5-desktop@1x.webp 1x, ./img/lifefoto5-desktop@2x.webp 2x">
-                <source media="(max-width: 767px)" srcset="./img/lifefoto5-mobile@1x.png 1x, ./img/lifefoto5-mobile@2x.png 2x">
-                <!-- 1х: 214px; 2x: 428px -->
-                <img src="./img/lifefoto5-desktop@1x.png" loading="lazy" width="214" height="318" alt="Мужчина в горах смотрит в закат">
-              </picture>
-              <p>Развитие лидерства</p>
-            </div>
+            <ul class="gallery__list">
+              <li class="gallery__item  gallery__item--active  gallery__item--excursions">
+                <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
+              </li>
+              <li class="gallery__item  gallery__item--language">
+                <p>Изучение иврита</p>
+              </li>
+              <li class="gallery__item  gallery__item--profession">
+                <p>Обучение современным навыкам&nbsp;и&nbsp;профессиям</p>
+              </li>
+              <li class="gallery__item  gallery__item--cooperation">
+                <p>Совместные творческие проекты с израильской молодёжью</p>
+              </li>
+              <li class="gallery__item  gallery__item--leadership">
+                <p>Развитие лидерства</p>
+              </li>
+            </ul>
             <div class="gallery__controls">
               <button class="gallery__control  gallery__control--active" type="button" aria-label="Показать первое фото"></button>
               <button class="gallery__control" type="button" aria-label="Показать второе фото"></button>

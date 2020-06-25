@@ -1406,7 +1406,7 @@ input[type="radio"].visually-hidden {
   min-height: 843px;
   padding-left: calc(35% - 370px);
   padding-right: calc(35% - 388px);
-  padding-bottom: 120px; }
+  padding-bottom: 128px; }
   .gallery__external-wrapper h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -1444,10 +1444,10 @@ input[type="radio"].visually-hidden {
         text-align: center; } }
   @media (max-width: 767px) {
     .gallery__external-wrapper {
-      min-height: 783px;
+      min-height: 100%;
       padding-left: 0;
       padding-right: 0;
-      padding-bottom: 75px; }
+      padding-bottom: 79px; }
       .gallery__external-wrapper h2 {
         padding-left: 16px;
         padding-right: 16px; }
@@ -1483,6 +1483,20 @@ input[type="radio"].visually-hidden {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   padding-left: calc(56% - 190px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1490,31 +1504,64 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: center;
           justify-content: center; }
   @media (max-width: 1023px) {
-    .gallery__wrapper {
+    .gallery__list {
       padding-left: 0;
       -webkit-box-align: end;
           -ms-flex-align: end;
               align-items: flex-end; } }
   @media (max-width: 767px) {
-    .gallery__wrapper {
+    .gallery__list {
       display: block;
       overflow-x: hidden;
       text-align: center; } }
 
-.gallery__picture {
+.gallery__item {
   position: relative;
   width: auto;
-  max-width: 432px;
-  margin-bottom: 30px; }
-  .gallery__picture:first-child {
+  height: 318px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .gallery__item--excursions {
     position: absolute;
     left: 0;
     top: -63px;
     z-index: 0;
-    max-width: 36vw; }
-  .gallery__picture:nth-child(2n) {
+    width: 36vw;
+    max-width: 482px;
+    height: calc(36vw * 1.5);
+    max-height: 732px;
+    background-image: url("../img/lifefoto1-desktop@1x.webp"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .gallery__item--excursions {
+        background-image: url("../img/lifefoto1-desktop@2x.webp"); } }
+  .gallery__item--language {
+    width: 211px;
+    background-image: url("../img/lifefoto2-desktop@1x.webp"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .gallery__item--language {
+        background-image: url("../img/lifefoto2-desktop@2x.webp"); } }
+  .gallery__item--profession {
+    width: 411px;
+    background-image: url("../img/lifefoto3-desktop@1x.webp"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .gallery__item--profession {
+        background-image: url("../img/lifefoto3-desktop@2x.webp"); } }
+  .gallery__item--cooperation {
+    width: 411px;
+    background-image: url("../img/lifefoto4-desktop@1x.webp"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .gallery__item--cooperation {
+        background-image: url("../img/lifefoto4-desktop@2x.webp"); } }
+  .gallery__item--leadership {
+    width: 214px;
+    background-image: url("../img/lifefoto5-desktop@1x.webp"); }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .gallery__item--leadership {
+        background-image: url("../img/lifefoto5-desktop@2x.webp"); } }
+  .gallery__item:nth-child(2n) {
     margin-right: calc(20% - 120px); }
-  .gallery__picture p {
+  .gallery__item p {
     position: absolute;
     bottom: 32px;
     left: 32px;
@@ -1528,7 +1575,7 @@ input[type="radio"].visually-hidden {
     text-align: left;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
   @media (max-width: 1023px) {
-    .gallery__picture:first-child {
+    .gallery__item:first-child {
       position: relative;
       top: 0;
       left: 0;
@@ -1536,20 +1583,16 @@ input[type="radio"].visually-hidden {
           -ms-flex-order: 5;
               order: 5; } }
   @media (max-width: 767px) {
-    .gallery__picture {
+    .gallery__item {
       display: none;
       margin: 0 auto 16px;
+      width: 288px;
+      height: 400px;
       text-align: center; }
-      .gallery__picture img {
-        width: auto;
-        height: 400px;
-        margin: 0 auto;
-        -o-object-fit: cover;
-           object-fit: cover; }
-      .gallery__picture--active {
+      .gallery__item--active {
         display: inline-block;
         vertical-align: middle; }
-      .gallery__picture p {
+      .gallery__item p {
         left: 16px;
         bottom: 24px;
         padding-left: 0;
@@ -1557,10 +1600,103 @@ input[type="radio"].visually-hidden {
         font-size: 18px;
         line-height: 21px;
         text-align: center; }
-      .gallery__picture:first-child {
-        max-width: 100%; }
-      .gallery__picture:nth-child(2n) {
+      .gallery__item--excursions {
+        background-image: url("../img/lifefoto1-mobile@1x.webp"); } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+      .gallery__item--excursions {
+        background-image: url("../img/lifefoto1-mobile@2x.webp"); } }
+  @media (max-width: 767px) {
+      .gallery__item--language {
+        background-image: url("../img/lifefoto2-mobile@1x.webp"); } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+      .gallery__item--language {
+        background-image: url("../img/lifefoto2-mobile@2x.webp"); } }
+  @media (max-width: 767px) {
+      .gallery__item--profession {
+        background-image: url("../img/lifefoto3-mobile@1x.webp"); } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+      .gallery__item--profession {
+        background-image: url("../img/lifefoto3-mobile@2x.webp"); } }
+  @media (max-width: 767px) {
+      .gallery__item--cooperation {
+        background-image: url("../img/lifefoto4-mobile@1x.webp"); } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+      .gallery__item--cooperation {
+        background-image: url("../img/lifefoto4-mobile@2x.webp"); } }
+  @media (max-width: 767px) {
+      .gallery__item--leadership {
+        background-image: url("../img/lifefoto5-mobile@1x.webp"); } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+      .gallery__item--leadership {
+        background-image: url("../img/lifefoto5-mobile@2x.webp"); } }
+  @media (max-width: 767px) {
+      .gallery__item:nth-child(2n) {
         margin-right: auto; } }
+
+.nowebp .gallery__item--excursions {
+  background-image: url("../img/lifefoto1-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--excursions {
+      background-image: url("../img/lifefoto1-desktop@2x.png"); } }
+
+.nowebp .gallery__item--language {
+  background-image: url("../img/lifefoto2-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--language {
+      background-image: url("../img/lifefoto2-desktop@2x.png"); } }
+
+.nowebp .gallery__item--profession {
+  background-image: url("../img/lifefoto3-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--profession {
+      background-image: url("../img/lifefoto3-desktop@2x.png"); } }
+
+.nowebp .gallery__item--cooperation {
+  background-image: url("../img/lifefoto4-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--cooperation {
+      background-image: url("../img/lifefoto4-desktop@2x.png"); } }
+
+.nowebp .gallery__item--leadership {
+  background-image: url("../img/lifefoto5-desktop@1x.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--leadership {
+      background-image: url("../img/lifefoto5-desktop@2x.png"); } }
+
+@media (max-width: 767px) {
+  .nowebp .gallery__item--excursions {
+    background-image: url("../img/lifefoto1-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--excursions {
+      background-image: url("../img/lifefoto1-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
+  .nowebp .gallery__item--language {
+    background-image: url("../img/lifefoto2-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--language {
+      background-image: url("../img/lifefoto2-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
+  .nowebp .gallery__item--profession {
+    background-image: url("../img/lifefoto3-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--profession {
+      background-image: url("../img/lifefoto3-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
+  .nowebp .gallery__item--cooperation {
+    background-image: url("../img/lifefoto4-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--cooperation {
+      background-image: url("../img/lifefoto4-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
+  .nowebp .gallery__item--leadership {
+    background-image: url("../img/lifefoto5-mobile@1x.png"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .nowebp .gallery__item--leadership {
+      background-image: url("../img/lifefoto5-mobile@2x.png"); } }
 
 .gallery__controls {
   display: none; }
@@ -2382,6 +2518,10 @@ input[type="radio"].visually-hidden {
         margin-right: 18px; }
       .contacts__city::before {
         left: 20px; } }
+  @media (max-width: 767px) {
+    .contacts__city {
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
 
 @media (max-width: 1023px) {
   .contacts__supervisor {

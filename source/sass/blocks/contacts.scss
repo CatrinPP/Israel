@@ -177,6 +177,10 @@
       left: 20px;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    align-self: flex-start;
+  }
 }
 
 .contacts__supervisor {

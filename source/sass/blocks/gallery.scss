@@ -12,7 +12,7 @@
   min-height: 843px;
   padding-left: calc(35% - 370px);
   padding-right: calc(35% - 388px);
-  padding-bottom: 120px;
+  padding-bottom: 128px;
 
   h2 {
     @include header;
@@ -50,10 +50,10 @@
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 783px;
+    min-height: 100%;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 75px;
+    padding-bottom: 79px;
 
     h2 {
       padding-left: 16px;
@@ -105,6 +105,15 @@
 
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery__list {
+  @include reset-default-list;
+
+  display: flex;
+  width: 100%;
   padding-left: calc(56% - 190px);
   flex-wrap: wrap;
   justify-content: center;
@@ -121,19 +130,70 @@
   }
 }
 
-.gallery__picture {
+.gallery__item {
   position: relative;
   width: auto;
-  max-width: 432px;
+  height: 318px;
   margin-bottom: 30px;
 
-  &:first-child {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--excursions {
     position: absolute;
     left: 0;
     top: -63px;
     z-index: 0;
 
-    max-width: 36vw;
+    width: 36vw;
+    max-width: 482px;
+    height: calc(36vw * 1.5);
+    max-height: 732px;
+    background-image: url("../img/lifefoto1-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto1-desktop@2x.webp");
+    }
+  }
+
+  &--language {
+    width: 211px;
+
+    background-image: url("../img/lifefoto2-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto2-desktop@2x.webp");
+    }
+  }
+
+  &--profession {
+    width: 411px;
+
+    background-image: url("../img/lifefoto3-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto3-desktop@2x.webp");
+    }
+  }
+
+  &--cooperation {
+    width: 411px;
+
+    background-image: url("../img/lifefoto4-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto4-desktop@2x.webp");
+    }
+  }
+
+  &--leadership {
+    width: 214px;
+
+    background-image: url("../img/lifefoto5-desktop@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto5-desktop@2x.webp");
+    }
   }
 
   &:nth-child(2n) {
@@ -170,15 +230,10 @@
   @media (max-width: $mobile-width) {
     display: none;
     margin: 0 auto 16px;
+    width: 288px;
+    height: 400px;
 
     text-align: center;
-
-    img {
-      width: auto;
-      height: 400px;
-      margin: 0 auto;
-      object-fit: cover;
-    }
 
     &--active {
       display: inline-block;
@@ -198,12 +253,132 @@
       text-align: center;
     }
 
-    &:first-child {
-      max-width: 100%;
+    &--excursions {
+      background-image: url("../img/lifefoto1-mobile@1x.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto1-mobile@2x.webp");
+      }
+    }
+
+    &--language {
+      background-image: url("../img/lifefoto2-mobile@1x.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto2-mobile@2x.webp");
+      }
+    }
+
+    &--profession {
+      background-image: url("../img/lifefoto3-mobile@1x.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto3-mobile@2x.webp");
+      }
+    }
+
+    &--cooperation {
+      background-image: url("../img/lifefoto4-mobile@1x.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto4-mobile@2x.webp");
+      }
+    }
+
+    &--leadership {
+      background-image: url("../img/lifefoto5-mobile@1x.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto5-mobile@2x.webp");
+      }
     }
 
     &:nth-child(2n) {
       margin-right: auto;
+    }
+  }
+}
+
+.nowebp .gallery__item {
+  &--excursions {
+    background-image: url("../img/lifefoto1-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto1-desktop@2x.png");
+    }
+  }
+
+  &--language {
+    background-image: url("../img/lifefoto2-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto2-desktop@2x.png");
+    }
+  }
+
+  &--profession {
+    background-image: url("../img/lifefoto3-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto3-desktop@2x.png");
+    }
+  }
+
+  &--cooperation {
+    background-image: url("../img/lifefoto4-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto4-desktop@2x.png");
+    }
+  }
+
+  &--leadership {
+    background-image: url("../img/lifefoto5-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/lifefoto5-desktop@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--excursions {
+      background-image: url("../img/lifefoto1-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto1-mobile@2x.png");
+      }
+    }
+
+    &--language {
+      background-image: url("../img/lifefoto2-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto2-mobile@2x.png");
+      }
+    }
+
+    &--profession {
+      background-image: url("../img/lifefoto3-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto3-mobile@2x.png");
+      }
+    }
+
+    &--cooperation {
+      background-image: url("../img/lifefoto4-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto4-mobile@2x.png");
+      }
+    }
+
+    &--leadership {
+      background-image: url("../img/lifefoto5-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/lifefoto5-mobile@2x.png");
+      }
     }
   }
 }
