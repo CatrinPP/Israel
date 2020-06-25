@@ -221,8 +221,33 @@
   programsControlsBlock.addEventListener('click', onControlsClick);
 
   /* Слайдер галереи */
+  var MAX_PICTURES_INDEX_COUNT = 4;
+  var MIN_PICTURES_INDEX_COUNT = 0;
+  var SLIDER_STEP = 1;
   var galleryControls = document.querySelectorAll('.gallery__control');
   var galleryPictures = document.querySelectorAll('.gallery__picture');
+  var gallerySlider = document.querySelector('.gallery__wrapper');
+  var currentPictureIndex = 0;
+
+  function leftSwipeGalleryhandler() {
+    if (currentPictureIndex < MAX_PICTURES_INDEX_COUNT) {
+      currentPictureIndex += SLIDER_STEP;
+      disactivateGalleryControls();
+      hideAllGalleryPictures();
+      showPicture(currentPictureIndex);
+      showActiveButton(currentPictureIndex);
+    }
+  }
+
+  function rightSwipeGalleryhandler() {
+    if (currentPictureIndex > MIN_PICTURES_INDEX_COUNT) {
+      currentPictureIndex -= SLIDER_STEP;
+      disactivateGalleryControls();
+      hideAllGalleryPictures();
+      showPicture(currentPictureIndex);
+      showActiveButton(currentPictureIndex);
+    }
+  }
 
   function disactivateGalleryControls() {
     for (var i = 0; i < galleryControls.length; i++) {
@@ -236,13 +261,16 @@
     }
   }
 
+  function showActiveButton(index) {
+    galleryControls[index].classList.add('gallery__control--active');
+  }
+
   function showPicture(index) {
     galleryPictures[index].classList.add('gallery__picture--active');
   }
 
   function onGalleryControlClick(evt) {
     var index;
-
     evt.preventDefault();
 
     for (var i = 0; i < galleryControls.length; i++) {
@@ -290,9 +318,13 @@
   setFaqButtonsListeners();
 
   /* Слайдер отзывы */
+  var MAX_REVIEWS_INDEX_COUNT = 5;
+  var MIN_REVIEWS_INDEX_COUNT = 0;
   var reviews = document.querySelectorAll('.review');
   var previousButtons = document.querySelectorAll('.review__button--previous');
   var nextButtons = document.querySelectorAll('.review__button--next');
+  var reviewsSlider = document.querySelector('.reviews__list');
+  var currenReviewIndex = 0;
 
   function hideAllReviews() {
     for (var i = 0; i < reviews.length; i++) {
@@ -346,6 +378,22 @@
     }
   }
 
+  function leftSwipeReviewshandler() {
+    if (currenReviewIndex < MAX_REVIEWS_INDEX_COUNT) {
+      currenReviewIndex += SLIDER_STEP;
+      hideAllReviews();
+      showReview(currenReviewIndex);
+    }
+  }
+
+  function rightSwipeReviewshandler() {
+    if (currenReviewIndex > MIN_REVIEWS_INDEX_COUNT) {
+      currenReviewIndex -= SLIDER_STEP;
+      hideAllReviews();
+      showReview(currenReviewIndex);
+    }
+  }
+
   setPreviousButtonsListeners();
   setNextButtonsListeners();
 
@@ -361,4 +409,35 @@
       block: 'start'
     });
   });
+
+  /* Свайп для слайдеров*/
+  function addSwipeEventsListener(element, leftSwipehandler, rightSwipehandler) {
+    var touchstartX = 0;
+    var touchendX = 0;
+
+    element.addEventListener('touchstart', function (event) {
+      touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    element.addEventListener('touchend', function (event) {
+      touchendX = event.changedTouches[0].screenX;
+      if (Math.abs(touchendX - touchstartX) > 50) {
+        handleSwipe();
+      }
+    }, false);
+
+    function handleSwipe() {
+      if (touchendX < touchstartX) {
+        leftSwipehandler();
+      }
+      if (touchendX > touchstartX) {
+        rightSwipehandler();
+      }
+    }
+  }
+
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    addSwipeEventsListener(gallerySlider, leftSwipeGalleryhandler, rightSwipeGalleryhandler);
+    addSwipeEventsListener(reviewsSlider, leftSwipeReviewshandler, rightSwipeReviewshandler);
+  }
 })();

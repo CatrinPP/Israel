@@ -19,6 +19,7 @@
   &:hover,
   &:focus {
     background: $gradient-hover;
+    outline: none;
   }
 
   &:active {

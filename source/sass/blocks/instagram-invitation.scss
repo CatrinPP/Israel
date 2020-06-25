@@ -2,7 +2,7 @@
   @include desktop-container;
 }
 
-.invitation__wrapper {
+.instagram-invitation__wrapper {
   min-height: 583px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   }
 }
 
-.nowebp > .invitation__wrapper {
+.nowebp > .instagram-invitation__wrapper {
   background-image: url("../img/bg-masa-desktop@1x.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -40,7 +40,7 @@
   }
 }
 
-.webp > .invitation__wrapper {
+.webp > .instagram-invitation__wrapper {
   background-image: url("../img/bg-masa-desktop@1x.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -101,9 +101,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 100%;
+    width: 320px;
     padding-top: 0;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
 
     h2 {

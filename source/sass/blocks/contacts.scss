@@ -1,6 +1,6 @@
 .contacts {
   @include desktop-container;
-  padding-left: calc(15% - 97px);
+  padding-left: 110px;
   padding-bottom: 60px;
 
   background-color: $color-secondary;
@@ -9,6 +9,10 @@
   background-position: left -90px;
 
   @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background-size: cover;
     padding-left: 55px;
     padding-right: 55px;
@@ -50,25 +54,20 @@
 
   h2 {
     @include header;
-    position: relative;
-    z-index: 100;
-
     margin-bottom: 49px;
   }
 
   img {
-    position: relative;
     float: right;
-    top: -92px;
-
     width: 702px;
-    height: 448px;
+    max-width: 55vw;
     margin-bottom: -30px;
   }
 
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
 
     picture,
@@ -81,6 +80,7 @@
 
       height: 420px;
       width: auto;
+      max-width: 100%;
       margin: 0 auto;
       float: none;
       margin-bottom: 14px;

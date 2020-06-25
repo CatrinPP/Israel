@@ -656,7 +656,8 @@ input[type="radio"].visually-hidden {
   border-radius: 80px;
   cursor: pointer; }
   .button:hover, .button:focus {
-    background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
+    background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
+    outline: none; }
   .button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
 
@@ -862,7 +863,6 @@ input[type="radio"].visually-hidden {
       padding-left: calc(10% - 10px); } }
   @media (max-width: 767px) {
     .programs {
-      min-height: 525px;
       padding-left: 0;
       padding-bottom: 0;
       padding-top: 0;
@@ -1253,7 +1253,6 @@ input[type="radio"].visually-hidden {
 
 .preparation__content {
   width: 50%;
-  padding-left: 17px;
   padding-right: 134px; }
   .preparation__content h2 {
     margin: 0;
@@ -1264,7 +1263,8 @@ input[type="radio"].visually-hidden {
     line-height: 49px;
     font-weight: 700;
     letter-spacing: -0.02em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-left: 17px; }
     @media (max-width: 767px) {
       .preparation__content h2 {
         font-size: 32px;
@@ -1272,6 +1272,7 @@ input[type="radio"].visually-hidden {
   .preparation__content p {
     margin: 0;
     margin-bottom: 37px;
+    padding-left: 17px;
     font-weight: 400;
     line-height: 170%; }
     .preparation__content p + p {
@@ -1297,17 +1298,20 @@ input[type="radio"].visually-hidden {
         width: 100%;
         font-size: 16px;
         line-height: 160%; } }
+  @media (max-width: 1023px) {
+    .preparation__content {
+      padding-left: 0; } }
 
 .preparation__requirements {
   margin: 0;
   padding: 0;
   list-style: none;
   position: relative;
-  padding-left: 44px; }
+  padding-left: 60px; }
   .preparation__requirements::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: 17px;
     top: 0;
     z-index: 0;
     width: 2px;
@@ -1316,7 +1320,7 @@ input[type="radio"].visually-hidden {
     opacity: 0.2; }
   @media (max-width: 1023px) {
     .preparation__requirements::before {
-      left: 9px;
+      left: 24px;
       top: -9px; } }
 
 .preparation__requirements-item {
@@ -1341,7 +1345,7 @@ input[type="radio"].visually-hidden {
   .preparation__requirements-item span {
     position: absolute;
     top: calc(50% - 14px);
-    left: -48px;
+    left: -46px;
     color: #ffc341;
     font-size: 17px;
     line-height: 170%;
@@ -1364,7 +1368,6 @@ input[type="radio"].visually-hidden {
 
 .preparation__annotation {
   position: relative;
-  padding-left: 18px;
   font-size: 15px;
   font-weight: 400;
   line-height: 140%;
@@ -1372,18 +1375,24 @@ input[type="radio"].visually-hidden {
   .preparation__annotation::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 15px;
+    top: 5%;
     width: 4px;
-    height: 100%;
+    height: 90%;
     background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
+  .preparation__annotation span {
+    display: inline-block;
+    padding-left: 15px;
+    vertical-align: middle; }
   @media (max-width: 1023px) {
     .preparation__annotation {
       padding-left: 8px;
       font-size: 14px;
       line-height: 160%; }
       .preparation__annotation::before {
-        left: -5px; } }
+        left: 9px; }
+      .preparation__annotation span {
+        padding-left: 7px; } }
 
 .gallery {
   max-width: 1366px;
@@ -1596,7 +1605,7 @@ input[type="radio"].visually-hidden {
       max-width: auto;
       min-width: auto; } }
 
-.invitation__wrapper {
+.instagram-invitation__wrapper {
   min-height: 583px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1611,7 +1620,7 @@ input[type="radio"].visually-hidden {
   background-size: cover;
   background-repeat: no-repeat; }
   @media (max-width: 767px) {
-    .invitation__wrapper {
+    .instagram-invitation__wrapper {
       min-height: 400px;
       padding: 0 0 75px;
       margin-bottom: 0;
@@ -1619,28 +1628,28 @@ input[type="radio"].visually-hidden {
       background-position: calc(50% + 85px) 45px;
       background-size: 632px; } }
 
-.nowebp > .invitation__wrapper {
+.nowebp > .instagram-invitation__wrapper {
   background-image: url("../img/bg-masa-desktop@1x.jpg"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .nowebp > .invitation__wrapper {
+    .nowebp > .instagram-invitation__wrapper {
       background-image: url("../img/bg-masa-desktop@2x.jpg"); } }
   @media (max-width: 767px) {
-    .nowebp > .invitation__wrapper {
+    .nowebp > .instagram-invitation__wrapper {
       background-image: url("../img/bg-masa-mobile@1x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .nowebp > .invitation__wrapper {
+    .nowebp > .instagram-invitation__wrapper {
       background-image: url("../img/bg-masa-mobile@2x.jpg"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
 
-.webp > .invitation__wrapper {
+.webp > .instagram-invitation__wrapper {
   background-image: url("../img/bg-masa-desktop@1x.webp"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .webp > .invitation__wrapper {
+    .webp > .instagram-invitation__wrapper {
       background-image: url("../img/bg-masa-desktop@2x.webp"); } }
   @media (max-width: 767px) {
-    .webp > .invitation__wrapper {
+    .webp > .instagram-invitation__wrapper {
       background-image: url("../img/bg-masa-mobile@1x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .webp > .invitation__wrapper {
+    .webp > .instagram-invitation__wrapper {
       background-image: url("../img/bg-masa-mobile@2x.webp"), linear-gradient(#ffffff 0%, #ffffff 100px, #c19f88 100px, #c19f88 200px, #ffffff 200px, #ffffff 100%); } }
 
 .instagram-invitation__content {
@@ -1686,9 +1695,9 @@ input[type="radio"].visually-hidden {
       padding-top: 150px; } }
   @media (max-width: 767px) {
     .instagram-invitation__content {
-      width: 100%;
+      width: 320px;
       padding-top: 0;
-      margin-left: 0;
+      margin-left: auto;
       margin-right: auto; }
       .instagram-invitation__content h2 {
         margin-bottom: 97px;
@@ -1843,6 +1852,9 @@ input[type="radio"].visually-hidden {
       opacity: 0.7; }
     .faq__item button:active {
       opacity: 0.5; }
+    .faq__item button:focus {
+      opacity: 0.7;
+      outline: none; }
     .faq__item button::before {
       content: "";
       position: absolute;
@@ -2203,7 +2215,7 @@ input[type="radio"].visually-hidden {
   min-width: 1024px;
   width: 100%;
   margin: 0 auto;
-  padding-left: calc(15% - 97px);
+  padding-left: 110px;
   padding-bottom: 60px;
   background-color: #ffffff;
   background-size: contain;
@@ -2215,6 +2227,16 @@ input[type="radio"].visually-hidden {
       min-width: auto; } }
   @media (max-width: 1023px) {
     .contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       background-size: cover;
       padding-left: 55px;
       padding-right: 55px; } }
@@ -2254,19 +2276,15 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    position: relative;
-    z-index: 100;
     margin-bottom: 49px; }
     @media (max-width: 767px) {
       .contacts__content h2 {
         font-size: 32px;
         line-height: 39px; } }
   .contacts__content img {
-    position: relative;
     float: right;
-    top: -92px;
     width: 702px;
-    height: 448px;
+    max-width: 55vw;
     margin-bottom: -30px; }
   @media (max-width: 1023px) {
     .contacts__content {
@@ -2277,6 +2295,9 @@ input[type="radio"].visually-hidden {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       overflow-x: hidden; }
       .contacts__content picture,
       .contacts__content img {
@@ -2287,6 +2308,7 @@ input[type="radio"].visually-hidden {
         top: 0;
         height: 420px;
         width: auto;
+        max-width: 100%;
         margin: 0 auto;
         float: none;
         margin-bottom: 14px;
