@@ -2,7 +2,7 @@
   background-color: $color-secondary;
   background-repeat: no-repeat;
   background-position: -40px 811px, left top;
-  background-size: 194px, cover;
+  background-size: 194px, 100%;
 
   @media (max-width: $tablet-width) {
     background-size: 194px;
@@ -13,6 +13,7 @@
 .faq__wrapper {
   @include desktop-container;
 
+  min-height: 990px;
   padding-top: 83px;
   padding-bottom: 124px;
   padding-left: 108px;
@@ -22,6 +23,7 @@
   background-size: 47%;
 
   @media (max-width: $tablet-width) {
+    min-height: 850px;
     padding-left: 0;
   }
 
@@ -67,7 +69,7 @@
   }
 }
 
-.noweb > .faq__wrapper {
+.nowebp > .faq__wrapper {
   background-image: url("../img/bg-girls-desktop@1x.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

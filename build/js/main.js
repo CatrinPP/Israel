@@ -324,7 +324,7 @@
   var previousButtons = document.querySelectorAll('.review__button--previous');
   var nextButtons = document.querySelectorAll('.review__button--next');
   var reviewsSlider = document.querySelector('.reviews__list');
-  var currenReviewIndex = 0;
+  var currenReviewIndex = 2;
 
   function hideAllReviews() {
     for (var i = 0; i < reviews.length; i++) {

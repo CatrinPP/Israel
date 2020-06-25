@@ -1859,7 +1859,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: -40px 811px, left top;
-  background-size: 194px, cover; }
+  background-size: 194px, 100%; }
   @media (max-width: 1023px) {
     .faq {
       background-size: 194px;
@@ -1870,6 +1870,7 @@ input[type="radio"].visually-hidden {
   min-width: 1024px;
   width: 100%;
   margin: 0 auto;
+  min-height: 990px;
   padding-top: 83px;
   padding-bottom: 124px;
   padding-left: 108px;
@@ -1882,6 +1883,7 @@ input[type="radio"].visually-hidden {
       min-width: auto; } }
   @media (max-width: 1023px) {
     .faq__wrapper {
+      min-height: 850px;
       padding-left: 0; } }
   @media (max-width: 767px) {
     .faq__wrapper {
@@ -1912,13 +1914,13 @@ input[type="radio"].visually-hidden {
     .faq.webp {
       background-image: url("../img/bag-desktop@2x.webp"); } }
 
-.noweb > .faq__wrapper {
+.nowebp > .faq__wrapper {
   background-image: url("../img/bg-girls-desktop@1x.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .noweb > .faq__wrapper {
+    .nowebp > .faq__wrapper {
       background-image: url("../img/bg-girls-desktop@2x.png"); } }
   @media (max-width: 1023px) {
-    .noweb > .faq__wrapper {
+    .nowebp > .faq__wrapper {
       background: none; } }
 
 .webp > .faq__wrapper {
@@ -2338,10 +2340,7 @@ input[type="radio"].visually-hidden {
     margin-right: 14px; }
   @media (max-width: 767px) {
     .social__link:not(:last-child) {
-      margin-right: 13px; }
-    .social__link svg {
-      width: 32px;
-      height: 32px; } }
+      margin-right: 13px; } }
 
 .social--supervisor .social__link {
   margin-right: 5px; }

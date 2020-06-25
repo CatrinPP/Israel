@@ -320,11 +320,12 @@
   /* Слайдер отзывы */
   var MAX_REVIEWS_INDEX_COUNT = 5;
   var MIN_REVIEWS_INDEX_COUNT = 0;
+  var START_REVIEW_INDEX = 2;
   var reviews = document.querySelectorAll('.review');
   var previousButtons = document.querySelectorAll('.review__button--previous');
   var nextButtons = document.querySelectorAll('.review__button--next');
   var reviewsSlider = document.querySelector('.reviews__list');
-  var currenReviewIndex = 0;
+  var currenReviewIndex = START_REVIEW_INDEX;
 
   function hideAllReviews() {
     for (var i = 0; i < reviews.length; i++) {
